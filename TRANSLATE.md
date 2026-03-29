@@ -263,7 +263,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/react-dom/components/input.md`
 - [ ] `src/content/reference/react-dom/components/link.md`
 - [ ] `src/content/reference/react-dom/components/meta.md`
-- [ ] `src/content/reference/react-dom/components/option.md`
+- [x] `src/content/reference/react-dom/components/option.md`
 - [x] `src/content/reference/react-dom/components/progress.md`
 - [ ] `src/content/reference/react-dom/components/script.md`
 - [ ] `src/content/reference/react-dom/components/select.md`
