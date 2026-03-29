@@ -94,7 +94,7 @@ This checklist is based on:
 
 - [ ] `src/content/community/acknowledgements.md`
 - [ ] `src/content/community/conferences.md`
-- [ ] `src/content/community/docs-contributors.md`
+- [x] `src/content/community/docs-contributors.md`
 - [ ] `src/content/community/index.md`
 - [ ] `src/content/community/meetups.md`
 - [ ] `src/content/community/team.md`
