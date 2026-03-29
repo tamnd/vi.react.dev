@@ -228,7 +228,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/dev-tools/react-performance-tracks.md`
 - [x] `src/content/reference/eslint-plugin-react-hooks/index.md`
 - [ ] `src/content/reference/eslint-plugin-react-hooks/lints/component-hook-factories.md`
-- [ ] `src/content/reference/eslint-plugin-react-hooks/lints/config.md`
+- [x] `src/content/reference/eslint-plugin-react-hooks/lints/config.md`
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/error-boundaries.md`
 - [ ] `src/content/reference/eslint-plugin-react-hooks/lints/exhaustive-deps.md`
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/gating.md`
