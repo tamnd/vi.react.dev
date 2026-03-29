@@ -85,7 +85,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [ ] `src/content/learn/state-a-components-memory.md`
 - [ ] `src/content/learn/adding-interactivity.md`
 - [ ] `src/content/learn/managing-state.md`
-- [ ] `src/content/reference/react/index.md`
+- [x] `src/content/reference/react/index.md`
 - [x] `src/content/reference/react/apis.md`
 - [x] `src/content/reference/react/components.md`
 - [ ] `src/content/reference/react/hooks.md`
@@ -114,7 +114,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/learn/state-a-components-memory.md`
 - [ ] `src/content/learn/adding-interactivity.md`
 - [ ] `src/content/learn/managing-state.md`
-- [ ] `src/content/reference/react/index.md`
+- [x] `src/content/reference/react/index.md`
 
 ## `src/content` Translation Checklist
 
@@ -317,7 +317,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/react/experimental_taintUniqueValue.md`
 - [ ] `src/content/reference/react/forwardRef.md`
 - [ ] `src/content/reference/react/hooks.md`
-- [ ] `src/content/reference/react/index.md`
+- [x] `src/content/reference/react/index.md`
 - [ ] `src/content/reference/react/isValidElement.md`
 - [ ] `src/content/reference/react/lazy.md`
 - [x] `src/content/reference/react/legacy.md`
