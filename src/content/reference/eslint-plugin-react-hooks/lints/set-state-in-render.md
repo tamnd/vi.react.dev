@@ -4,17 +4,17 @@ title: set-state-in-render
 
 <Intro>
 
-Validates against unconditionally setting state during render, which can trigger additional renders and potential infinite render loops.
+Kiểm tra để ngăn việc đặt state vô điều kiện trong lúc kết xuất, vì điều này có thể kích hoạt thêm các lần kết xuất và các vòng lặp kết xuất vô hạn tiềm ẩn.
 
 </Intro>
 
-## Rule Details {/*rule-details*/}
+## Chi tiết luật {/*rule-details*/}
 
-Calling `setState` during render unconditionally triggers another render before the current one finishes. This creates an infinite loop that crashes your app.
+Việc gọi `setState` trong lúc kết xuất một cách vô điều kiện sẽ kích hoạt thêm một lần kết xuất khác trước khi lần hiện tại kết thúc. Điều này tạo ra một vòng lặp vô hạn làm ứng dụng của bạn bị crash.
 
-## Common Violations {/*common-violations*/}
+## Các vi phạm thường gặp {/*common-violations*/}
 
-### Invalid {/*invalid*/}
+### Không hợp lệ {/*invalid*/}
 
 ```js {expectedErrors: {'react-compiler': [4]}}
 // ❌ Unconditional setState directly in render
@@ -25,7 +25,7 @@ function Component({value}) {
 }
 ```
 
-### Valid {/*valid*/}
+### Hợp lệ {/*valid*/}
 
 ```js
 // ✅ Derive during render
@@ -65,11 +65,11 @@ function Component({ items }) {
 }
 ```
 
-## Troubleshooting {/*troubleshooting*/}
+## Khắc phục sự cố {/*troubleshooting*/}
 
-### I want to sync state to a prop {/*clamp-state-to-prop*/}
+### Tôi muốn đồng bộ state với một prop {/*clamp-state-to-prop*/}
 
-A common problem is trying to "fix" state after it renders. Suppose you want to keep a counter from exceeding a `max` prop:
+Một vấn đề phổ biến là cố "sửa" state sau khi nó đã được kết xuất. Giả sử bạn muốn giữ cho bộ đếm không vượt quá prop `max`:
 
 ```js
 // ❌ Wrong: clamps during render
@@ -88,9 +88,9 @@ function Counter({max}) {
 }
 ```
 
-As soon as `count` exceeds `max`, an infinite loop is triggered.
+Ngay khi `count` vượt quá `max`, một vòng lặp vô hạn sẽ bị kích hoạt.
 
-Instead, it's often better to move this logic to the event (the place where the state is first set). For example, you can enforce the maximum at the moment you update state:
+Thay vào đó, thường tốt hơn nếu chuyển logic này vào sự kiện, tức nơi state được đặt lần đầu. Ví dụ, bạn có thể ép giá trị tối đa ngay tại thời điểm cập nhật state:
 
 ```js
 // ✅ Clamp when updating
@@ -105,6 +105,6 @@ function Counter({max}) {
 }
 ```
 
-Now the setter only runs in response to the click, React finishes the render normally, and `count` never crosses `max`.
+Giờ setter chỉ chạy khi phản hồi click, React hoàn tất kết xuất bình thường, và `count` sẽ không bao giờ vượt quá `max`.
 
-In rare cases, you may need to adjust state based on information from previous renders. For those, follow [this pattern](https://react.dev/reference/react/useState#storing-information-from-previous-renders) of setting state conditionally.
+Trong một số trường hợp hiếm gặp, bạn có thể cần điều chỉnh state dựa trên thông tin từ các lần kết xuất trước. Với các trường hợp đó, hãy làm theo [mẫu này](https://react.dev/reference/react/useState#storing-information-from-previous-renders) để đặt state có điều kiện.

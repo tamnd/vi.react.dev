@@ -1,32 +1,32 @@
 ---
-title: React Community
+title: Cộng đồng React
 ---
 
 <Intro>
 
-React has a community of millions of developers. On this page we've listed some React-related communities that you can be a part of; see the other pages in this section for additional online and in-person learning materials.
+React có một cộng đồng gồm hàng triệu nhà phát triển. Trên trang này, chúng tôi liệt kê một số cộng đồng liên quan đến React mà bạn có thể tham gia; hãy xem các trang khác trong mục này để tìm thêm tài nguyên học tập trực tuyến và trực tiếp.
 
 </Intro>
 
-## Code of Conduct {/*code-of-conduct*/}
+## Quy tắc ứng xử {/*code-of-conduct*/}
 
-Before participating in React's communities, [please read our Code of Conduct.](https://github.com/facebook/react/blob/main/CODE_OF_CONDUCT.md) We have adopted the [Contributor Covenant](https://www.contributor-covenant.org/) and we expect that all community members adhere to the guidelines within.
+Trước khi tham gia các cộng đồng của React, [hãy đọc Quy tắc ứng xử của chúng tôi](https://github.com/facebook/react/blob/main/CODE_OF_CONDUCT.md). Chúng tôi đã áp dụng [Contributor Covenant](https://www.contributor-covenant.org/), và kỳ vọng tất cả thành viên cộng đồng đều tuân theo những hướng dẫn trong đó.
 
 ## Stack Overflow {/*stack-overflow*/}
 
-Stack Overflow is a popular forum to ask code-level questions or if you're stuck with a specific error. Read through the [existing questions](https://stackoverflow.com/questions/tagged/reactjs) tagged with **reactjs** or [ask your own](https://stackoverflow.com/questions/ask?tags=reactjs)!
+Stack Overflow là một diễn đàn phổ biến để đặt các câu hỏi ở mức mã nguồn hoặc khi bạn bị mắc kẹt với một lỗi cụ thể. Hãy đọc qua các [câu hỏi hiện có](https://stackoverflow.com/questions/tagged/reactjs) được gắn thẻ **reactjs** hoặc [tự đặt câu hỏi của bạn](https://stackoverflow.com/questions/ask?tags=reactjs)!
 
 ## Popular Discussion Forums {/*popular-discussion-forums*/}
 
-There are many online forums which are a great place for discussion about best practices and application architecture as well as the future of React. If you have an answerable code-level question, Stack Overflow is usually a better fit.
+Có nhiều diễn đàn trực tuyến là nơi rất phù hợp để thảo luận về thực tiễn tốt nhất, kiến trúc ứng dụng, cũng như tương lai của React. Nếu bạn có một câu hỏi cụ thể ở mức mã nguồn có thể trả lời rõ ràng, Stack Overflow thường sẽ phù hợp hơn.
 
-Each community consists of many thousands of React users.
+Mỗi cộng đồng đều có hàng nghìn người dùng React.
 
-* [DEV's React community](https://dev.to/t/react)
-* [Hashnode's React community](https://hashnode.com/n/reactjs)
-* [Reactiflux online chat](https://discord.gg/reactiflux)
-* [Reddit's React community](https://www.reddit.com/r/reactjs/)
+* [Cộng đồng React trên DEV](https://dev.to/t/react)
+* [Cộng đồng React trên Hashnode](https://hashnode.com/n/reactjs)
+* [Phòng chat trực tuyến Reactiflux](https://discord.gg/reactiflux)
+* [Cộng đồng React trên Reddit](https://www.reddit.com/r/reactjs/)
 
-## News {/*news*/}
+## Tin tức {/*news*/}
 
-For the latest news about React, [follow **@reactjs** on Twitter](https://twitter.com/reactjs), [**@react.dev** on Bluesky](https://bsky.app/profile/react.dev) and the [official React blog](/blog/) on this website.
+Để theo dõi tin tức mới nhất về React, hãy [theo dõi **@reactjs** trên Twitter](https://twitter.com/reactjs), [**@react.dev** trên Bluesky](https://bsky.app/profile/react.dev), và [blog chính thức của React](/blog/) trên website này.

@@ -4,44 +4,44 @@ title: globals
 
 <Intro>
 
-Validates against assignment/mutation of globals during render, part of ensuring that [side effects must run outside of render](/reference/rules/components-and-hooks-must-be-pure#side-effects-must-run-outside-of-render).
+Kiểm tra việc gán/thay đổi giá trị toàn cục trong lúc render, như một phần của việc bảo đảm [tác dụng phụ phải chạy bên ngoài render](/reference/rules/components-and-hooks-must-be-pure#side-effects-must-run-outside-of-render).
 
 </Intro>
 
-## Rule Details {/*rule-details*/}
+## Chi tiết quy tắc {/*rule-details*/}
 
-Global variables exist outside React's control. When you modify them during render, you break React's assumption that rendering is pure. This can cause components to behave differently in development vs production, break Fast Refresh, and make your app impossible to optimize with features like React Compiler.
+Biến toàn cục tồn tại ngoài sự kiểm soát của React. Khi bạn sửa đổi chúng trong lúc render, bạn phá vỡ giả định của React rằng quá trình render là thuần. Điều này có thể khiến component hoạt động khác nhau giữa môi trường phát triển và production, làm hỏng Fast Refresh, và khiến ứng dụng của bạn không thể được tối ưu bằng các tính năng như React Compiler.
 
 ### Invalid {/*invalid*/}
 
-Examples of incorrect code for this rule:
+Ví dụ về code không đúng với quy tắc này:
 
 ```js
-// ❌ Global counter
+// ❌ Bộ đếm toàn cục
 let renderCount = 0;
 function Component() {
-  renderCount++; // Mutating global
+  renderCount++; // Thay đổi biến toàn cục
   return <div>Count: {renderCount}</div>;
 }
 
-// ❌ Modifying window properties
+// ❌ Sửa đổi thuộc tính trên window
 function Component({userId}) {
-  window.currentUser = userId; // Global mutation
+  window.currentUser = userId; // Thay đổi giá trị toàn cục
   return <div>User: {userId}</div>;
 }
 
-// ❌ Global array push
+// ❌ push vào mảng toàn cục
 const events = [];
 function Component({event}) {
-  events.push(event); // Mutating global array
+  events.push(event); // Thay đổi mảng toàn cục
   return <div>Events: {events.length}</div>;
 }
 
-// ❌ Cache manipulation
+// ❌ Thao tác với cache
 const cache = {};
 function Component({id}) {
   if (!cache[id]) {
-    cache[id] = fetchData(id); // Modifying cache during render
+    cache[id] = fetchData(id); // Sửa đổi cache trong lúc render
   }
   return <div>{cache[id]}</div>;
 }
@@ -49,10 +49,10 @@ function Component({id}) {
 
 ### Valid {/*valid*/}
 
-Examples of correct code for this rule:
+Ví dụ về code đúng với quy tắc này:
 
 ```js
-// ✅ Use state for counters
+// ✅ Dùng state cho bộ đếm
 function Component() {
   const [clickCount, setClickCount] = useState(0);
 
@@ -62,23 +62,23 @@ function Component() {
 
   return (
     <button onClick={handleClick}>
-      Clicked: {clickCount} times
+      Đã nhấp: {clickCount} lần
     </button>
   );
 }
 
-// ✅ Use context for global values
+// ✅ Dùng context cho giá trị toàn cục
 function Component() {
   const user = useContext(UserContext);
   return <div>User: {user.id}</div>;
 }
 
-// ✅ Synchronize external state with React
+// ✅ Đồng bộ trạng thái bên ngoài với React
 function Component({title}) {
   useEffect(() => {
-    document.title = title; // OK in effect
+    document.title = title; // OK trong effect
   }, [title]);
 
-  return <div>Page: {title}</div>;
+  return <div>Trang: {title}</div>;
 }
 ```

@@ -65,11 +65,11 @@ function CopyAsMarkdownButton() {
     <Button onClick={handleCopy} className="text-sm py-1 px-3">
       <IconCopy className="w-3.5 h-3.5 me-1.5" />
       {copied ? (
-        'Copied!'
+        'Đã sao chép!'
       ) : (
         <>
-          <span className="hidden sm:inline">Copy page</span>
-          <span className="sm:hidden">Copy</span>
+          <span className="hidden sm:inline">Sao chép trang</span>
+          <span className="sm:hidden">Sao chép</span>
         </>
       )}
     </Button>
@@ -96,19 +96,19 @@ function PageHeading({
           {title}
           {version === 'canary' && (
             <IconCanary
-              title=" - This feature is available in the latest Canary version of React"
+              title=" - Tính năng này có trong phiên bản Canary mới nhất của React"
               className="ms-4 mt-1 text-gray-50 dark:text-gray-40 inline-block w-6 h-6 align-[-1px]"
             />
           )}
           {version === 'rc' && (
             <IconCanary
-              title=" - This feature is available in the latest RC version"
+              title=" - Tính năng này có trong phiên bản RC mới nhất"
               className="ms-4 mt-1 text-gray-50 dark:text-gray-40 inline-block w-6 h-6 align-[-1px]"
             />
           )}
           {version === 'experimental' && (
             <IconExperimental
-              title=" - This feature is available in the latest Experimental version of React"
+              title=" - Tính năng này có trong phiên bản Experimental mới nhất của React"
               className="ms-4 mt-1 text-gray-50 dark:text-gray-40 inline-block w-6 h-6 align-[-1px]"
             />
           )}

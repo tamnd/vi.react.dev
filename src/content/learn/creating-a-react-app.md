@@ -1,78 +1,78 @@
 ---
-title: Creating a React App
+title: Tạo một ứng dụng React
 ---
 
 <Intro>
 
-If you want to build a new app or website with React, we recommend starting with a framework.
+Nếu bạn muốn xây dựng một ứng dụng hoặc website mới với React, chúng tôi khuyên bạn nên bắt đầu bằng một framework.
 
 </Intro>
 
-If your app has constraints not well-served by existing frameworks, you prefer to build your own framework, or you just want to learn the basics of a React app, you can [build a React app from scratch](/learn/build-a-react-app-from-scratch).
+Nếu ứng dụng của bạn có những ràng buộc mà các framework hiện có chưa phục vụ tốt, bạn muốn tự xây dựng framework riêng, hoặc chỉ muốn học những điều cơ bản của một ứng dụng React, bạn có thể [xây dựng ứng dụng React từ đầu](/learn/build-a-react-app-from-scratch).
 
-## Full-stack frameworks {/*full-stack-frameworks*/}
+## Framework full-stack {/*full-stack-frameworks*/}
 
-These recommended frameworks support all the features you need to deploy and scale your app in production. They have integrated the latest React features and take advantage of React’s architecture.
+Những framework được khuyến nghị này hỗ trợ đầy đủ các tính năng bạn cần để triển khai và mở rộng ứng dụng trong môi trường production. Chúng đã tích hợp những tính năng React mới nhất và tận dụng kiến trúc của React.
 
 <Note>
 
-#### Full-stack frameworks do not require a server. {/*react-frameworks-do-not-require-a-server*/}
+#### Framework full-stack không bắt buộc phải có server. {/*react-frameworks-do-not-require-a-server*/}
 
-All the frameworks on this page support client-side rendering ([CSR](https://developer.mozilla.org/en-US/docs/Glossary/CSR)), single-page apps ([SPA](https://developer.mozilla.org/en-US/docs/Glossary/SPA)), and static-site generation ([SSG](https://developer.mozilla.org/en-US/docs/Glossary/SSG)). These apps can be deployed to a [CDN](https://developer.mozilla.org/en-US/docs/Glossary/CDN) or static hosting service without a server. Additionally, these frameworks allow you to add server-side rendering on a per-route basis, when it makes sense for your use case.
+Mọi framework trên trang này đều hỗ trợ client-side rendering ([CSR](https://developer.mozilla.org/en-US/docs/Glossary/CSR)), single-page app ([SPA](https://developer.mozilla.org/en-US/docs/Glossary/SPA)) và static-site generation ([SSG](https://developer.mozilla.org/en-US/docs/Glossary/SSG)). Những ứng dụng này có thể được triển khai lên [CDN](https://developer.mozilla.org/en-US/docs/Glossary/CDN) hoặc dịch vụ hosting tĩnh mà không cần server. Ngoài ra, các framework này cho phép bạn thêm server-side rendering theo từng route khi phù hợp với nhu cầu của mình.
 
-This allows you to start with a client-only app, and if your needs change later, you can opt-in to using server features on individual routes without rewriting your app. See your framework's documentation for configuring the rendering strategy.
+Điều này cho phép bạn bắt đầu với một ứng dụng chỉ có client, rồi sau này nếu nhu cầu thay đổi, bạn có thể chọn bật các tính năng phía server trên từng route mà không phải viết lại toàn bộ ứng dụng. Hãy xem tài liệu của framework bạn dùng để cấu hình chiến lược kết xuất.
 
 </Note>
 
 ### Next.js (App Router) {/*nextjs-app-router*/}
 
-**[Next.js's App Router](https://nextjs.org/docs) is a React framework that takes full advantage of React's architecture to enable full-stack React apps.**
+**[App Router của Next.js](https://nextjs.org/docs) là một framework React tận dụng đầy đủ kiến trúc của React để hỗ trợ các ứng dụng React full-stack.**
 
 <TerminalBlock>
 npx create-next-app@latest
 </TerminalBlock>
 
-Next.js is maintained by [Vercel](https://vercel.com/). You can [deploy a Next.js app](https://nextjs.org/docs/app/building-your-application/deploying) to any hosting provider that supports Node.js or Docker containers, or to your own server. Next.js also supports [static export](https://nextjs.org/docs/app/building-your-application/deploying/static-exports) which doesn't require a server.
+Next.js được duy trì bởi [Vercel](https://vercel.com/). Bạn có thể [triển khai ứng dụng Next.js](https://nextjs.org/docs/app/building-your-application/deploying) lên bất kỳ nhà cung cấp hosting nào hỗ trợ Node.js hoặc container Docker, hoặc lên server riêng của bạn. Next.js cũng hỗ trợ [static export](https://nextjs.org/docs/app/building-your-application/deploying/static-exports), không yêu cầu server.
 
 ### React Router (v7) {/*react-router-v7*/}
 
-**[React Router](https://reactrouter.com/start/framework/installation) is the most popular routing library for React and can be paired with Vite to create a full-stack React framework**. It emphasizes standard Web APIs and has several [ready to deploy templates](https://github.com/remix-run/react-router-templates) for various JavaScript runtimes and platforms.
+**[React Router](https://reactrouter.com/start/framework/installation) là thư viện routing phổ biến nhất cho React và có thể kết hợp với Vite để tạo thành một framework React full-stack**. Nó nhấn mạnh các Web API tiêu chuẩn và có nhiều [template sẵn sàng để triển khai](https://github.com/remix-run/react-router-templates) cho nhiều runtime và nền tảng JavaScript khác nhau.
 
-To create a new React Router framework project, run:
+Để tạo một dự án framework React Router mới, hãy chạy:
 
 <TerminalBlock>
 npx create-react-router@latest
 </TerminalBlock>
 
-React Router is maintained by [Shopify](https://www.shopify.com).
+React Router được duy trì bởi [Shopify](https://www.shopify.com).
 
-### Expo (for native apps) {/*expo*/}
+### Expo (dành cho ứng dụng native) {/*expo*/}
 
-**[Expo](https://expo.dev/) is a React framework that lets you create universal Android, iOS, and web apps with truly native UIs.** It provides an SDK for [React Native](https://reactnative.dev/) that makes the native parts easier to use. To create a new Expo project, run:
+**[Expo](https://expo.dev/) là một framework React cho phép bạn tạo ứng dụng Android, iOS và web dùng chung với UI thực sự native.** Nó cung cấp một SDK cho [React Native](https://reactnative.dev/) giúp các phần native dễ dùng hơn. Để tạo một dự án Expo mới, hãy chạy:
 
 <TerminalBlock>
 npx create-expo-app@latest
 </TerminalBlock>
 
-If you're new to Expo, check out the [Expo tutorial](https://docs.expo.dev/tutorial/introduction/).
+Nếu bạn chưa quen với Expo, hãy xem [hướng dẫn Expo](https://docs.expo.dev/tutorial/introduction/).
 
-Expo is maintained by [Expo (the company)](https://expo.dev/about). Building apps with Expo is free, and you can submit them to the Google and Apple app stores without restrictions. Expo additionally provides opt-in paid cloud services.
+Expo được duy trì bởi [Expo (công ty)](https://expo.dev/about). Xây dựng ứng dụng với Expo là miễn phí và bạn có thể gửi chúng lên Google Play và App Store mà không bị hạn chế. Expo cũng cung cấp các dịch vụ đám mây trả phí theo lựa chọn.
 
 
-## Other frameworks {/*other-frameworks*/}
+## Các framework khác {/*other-frameworks*/}
 
-There are other up-and-coming frameworks that are working towards our full stack React vision:
+Ngoài ra còn có một số framework mới nổi đang hướng tới tầm nhìn React full-stack của chúng tôi:
 
-- [TanStack Start (Beta)](https://tanstack.com/start/): TanStack Start is a full-stack React framework powered by TanStack Router. It provides a full-document SSR, streaming, server functions, bundling, and more using tools like Nitro and Vite.
-- [RedwoodSDK](https://rwsdk.com/): Redwood is a full stack React framework with lots of pre-installed packages and configuration that makes it easy to build full-stack web applications.
+- [TanStack Start (Beta)](https://tanstack.com/start/): TanStack Start là một framework React full-stack được xây dựng trên TanStack Router. Nó cung cấp SSR cho toàn bộ tài liệu, streaming, server functions, bundling và nhiều hơn nữa bằng các công cụ như Nitro và Vite.
+- [RedwoodSDK](https://rwsdk.com/): Redwood là một framework React full-stack với nhiều gói và cấu hình được cài sẵn, giúp việc xây dựng ứng dụng web full-stack trở nên dễ dàng.
 
 <DeepDive>
 
-#### Which features make up the React team’s full-stack architecture vision? {/*which-features-make-up-the-react-teams-full-stack-architecture-vision*/}
+#### Những tính năng nào tạo nên tầm nhìn kiến trúc full-stack của nhóm React? {/*which-features-make-up-the-react-teams-full-stack-architecture-vision*/}
 
-Next.js's App Router bundler fully implements the official [React Server Components specification](https://github.com/reactjs/rfcs/blob/main/text/0188-server-components.md). This lets you mix build-time, server-only, and interactive components in a single React tree.
+Trình bundler của App Router trong Next.js hiện thực đầy đủ [đặc tả React Server Components chính thức](https://github.com/reactjs/rfcs/blob/main/text/0188-server-components.md). Điều này cho phép bạn kết hợp các thành phần chạy ở thời điểm build, chỉ chạy trên server và thành phần tương tác trong cùng một cây React.
 
-For example, you can write a server-only React component as an `async` function that reads from a database or from a file. Then you can pass data down from it to your interactive components:
+Ví dụ, bạn có thể viết một thành phần React chỉ chạy trên server dưới dạng hàm `async` đọc dữ liệu từ cơ sở dữ liệu hoặc từ tệp. Sau đó bạn có thể truyền dữ liệu từ nó xuống các thành phần tương tác:
 
 ```js
 // This component runs *only* on the server (or during the build).
@@ -88,7 +88,7 @@ async function Talks({ confId }) {
 }
 ```
 
-Next.js's App Router also integrates [data fetching with Suspense](/blog/2022/03/29/react-v18#suspense-in-data-frameworks). This lets you specify a loading state (like a skeleton placeholder) for different parts of your user interface directly in your React tree:
+App Router của Next.js cũng tích hợp [data fetching với Suspense](/blog/2022/03/29/react-v18#suspense-in-data-frameworks). Điều này cho phép bạn chỉ định trạng thái tải, chẳng hạn skeleton placeholder, cho những phần khác nhau của giao diện người dùng trực tiếp trong cây React:
 
 ```js
 <Suspense fallback={<TalksLoading />}>
@@ -96,18 +96,18 @@ Next.js's App Router also integrates [data fetching with Suspense](/blog/2022/03
 </Suspense>
 ```
 
-Server Components and Suspense are React features rather than Next.js features. However, adopting them at the framework level requires buy-in and non-trivial implementation work. At the moment, the Next.js App Router is the most complete implementation. The React team is working with bundler developers to make these features easier to implement in the next generation of frameworks.
+Server Components và Suspense là các tính năng của React chứ không phải của riêng Next.js. Tuy nhiên, để áp dụng chúng ở cấp framework cần có sự đầu tư và công sức triển khai đáng kể. Hiện tại, App Router của Next.js là hiện thực đầy đủ nhất. Nhóm React đang làm việc với các nhà phát triển bundler để giúp những tính năng này dễ triển khai hơn trong thế hệ framework tiếp theo.
 
 </DeepDive>
 
-## Start From Scratch {/*start-from-scratch*/}
+## Bắt đầu từ đầu {/*start-from-scratch*/}
 
-If your app has constraints not well-served by existing frameworks, you prefer to build your own framework, or you just want to learn the basics of a React app, there are other options available for starting a React project from scratch.
+Nếu ứng dụng của bạn có những ràng buộc mà các framework hiện có chưa phục vụ tốt, bạn muốn tự xây dựng framework riêng hoặc chỉ muốn học những điều cơ bản của một ứng dụng React, vẫn có những lựa chọn khác để bắt đầu một dự án React từ đầu.
 
-Starting from scratch gives you more flexibility, but does require that you make choices on which tools to use for routing, data fetching, and other common usage patterns.  It's a lot like building your own framework, instead of using a framework that already exists. The [frameworks we recommend](#full-stack-frameworks) have built-in solutions for these problems.  
+Bắt đầu từ đầu cho bạn nhiều linh hoạt hơn, nhưng cũng đòi hỏi bạn phải tự chọn công cụ cho routing, data fetching và các mẫu sử dụng phổ biến khác. Nó gần giống như tự xây dựng framework của riêng mình thay vì dùng một framework đã tồn tại. [Những framework chúng tôi khuyên dùng](#full-stack-frameworks) đã có sẵn giải pháp cho các vấn đề này.
 
-If you want to build your own solutions, see our guide to [build a React app from Scratch](/learn/build-a-react-app-from-scratch) for instructions on how to set up a new React project starting with a build tool like [Vite](https://vite.dev/), [Parcel](https://parceljs.org/), or [RSbuild](https://rsbuild.dev/).
+Nếu bạn muốn xây dựng giải pháp riêng, hãy xem hướng dẫn [xây dựng ứng dụng React từ đầu](/learn/build-a-react-app-from-scratch) của chúng tôi để biết cách thiết lập một dự án React mới với công cụ build như [Vite](https://vite.dev/), [Parcel](https://parceljs.org/) hoặc [RSbuild](https://rsbuild.dev/).
 
 -----
 
-_If you’re a framework author interested in being included on this page, [please let us know](https://github.com/reactjs/react.dev/issues/new?assignees=&labels=type%3A+framework&projects=&template=3-framework.yml&title=%5BFramework%5D%3A+)._
+_Nếu bạn là tác giả của một framework và muốn được đưa vào trang này, [hãy cho chúng tôi biết](https://github.com/reactjs/react.dev/issues/new?assignees=&labels=type%3A+framework&projects=&template=3-framework.yml&title=%5BFramework%5D%3A+)_

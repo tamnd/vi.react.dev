@@ -4,23 +4,23 @@ title: exhaustive-deps
 
 <Intro>
 
-Validates that dependency arrays for React hooks contain all necessary dependencies.
+Kiểm tra để bảo đảm mảng dependency của các React Hook chứa đầy đủ mọi dependency cần thiết.
 
 </Intro>
 
-## Rule Details {/*rule-details*/}
+## Chi tiết luật {/*rule-details*/}
 
-React hooks like `useEffect`, `useMemo`, and `useCallback` accept dependency arrays. When a value referenced inside these hooks isn't included in the dependency array, React won't re-run the effect or recalculate the value when that dependency changes. This causes stale closures where the hook uses outdated values.
+Các React Hook như `useEffect`, `useMemo` và `useCallback` chấp nhận mảng dependency. Khi một giá trị được tham chiếu bên trong các Hook đó không được đưa vào mảng dependency, React sẽ không chạy lại effect hoặc tính lại giá trị khi dependency đó thay đổi. Điều này gây ra stale closure, nơi Hook dùng các giá trị đã cũ.
 
-## Common Violations {/*common-violations*/}
+## Các vi phạm thường gặp {/*common-violations*/}
 
-This error often happens when you try to "trick" React about dependencies to control when an effect runs. Effects should synchronize your component with external systems. The dependency array tells React which values the effect uses, so React knows when to re-synchronize.
+Lỗi này thường xảy ra khi bạn cố "đánh lừa" React về dependency để kiểm soát thời điểm effect chạy. Effect phải đồng bộ component của bạn với các hệ thống bên ngoài. Mảng dependency cho React biết effect dùng những giá trị nào để React biết khi nào cần đồng bộ lại.
 
-If you find yourself fighting with the linter, you likely need to restructure your code. See [Removing Effect Dependencies](/learn/removing-effect-dependencies) to learn how.
+Nếu bạn thấy mình đang vật lộn với linter, rất có thể bạn cần tổ chức lại code. Hãy xem [Loại bỏ Dependency của Effect](/learn/removing-effect-dependencies) để tìm hiểu cách làm.
 
-### Invalid {/*invalid*/}
+### Không hợp lệ {/*invalid*/}
 
-Examples of incorrect code for this rule:
+Ví dụ về mã không đúng cho luật này:
 
 ```js
 // ❌ Missing dependency
@@ -39,9 +39,9 @@ useMemo(() => {
 }, [items]); // Missing 'sortOrder'
 ```
 
-### Valid {/*valid*/}
+### Hợp lệ {/*valid*/}
 
-Examples of correct code for this rule:
+Ví dụ về mã đúng cho luật này:
 
 ```js
 // ✅ All dependencies included
@@ -55,11 +55,11 @@ useEffect(() => {
 }, [userId]);
 ```
 
-## Troubleshooting {/*troubleshooting*/}
+## Khắc phục sự cố {/*troubleshooting*/}
 
-### Adding a function dependency causes infinite loops {/*function-dependency-loops*/}
+### Việc thêm dependency là hàm gây ra vòng lặp vô hạn {/*function-dependency-loops*/}
 
-You have an effect, but you're creating a new function on every render:
+Bạn có một effect nhưng lại tạo một hàm mới ở mỗi lần kết xuất:
 
 ```js
 // ❌ Causes infinite loop
@@ -72,7 +72,7 @@ useEffect(() => {
 }, [logItems]); // Infinite loop!
 ```
 
-In most cases, you don't need the effect. Call the function where the action happens instead:
+Trong hầu hết trường hợp, bạn không cần effect. Hãy gọi hàm ở nơi hành động xảy ra:
 
 ```js
 // ✅ Call it from the event handler
@@ -88,7 +88,7 @@ items.forEach(item => {
 });
 ```
 
-If you genuinely need the effect (for example, to subscribe to something external), make the dependency stable:
+Nếu bạn thực sự cần effect, ví dụ để subscribe vào thứ gì đó bên ngoài, hãy làm cho dependency ổn định:
 
 ```js
 // ✅ useCallback keeps the function reference stable
@@ -106,9 +106,9 @@ useEffect(() => {
 }, [items]);
 ```
 
-### Running an effect only once {/*effect-on-mount*/}
+### Chỉ chạy effect đúng một lần {/*effect-on-mount*/}
 
-You want to run an effect once on mount, but the linter complains about missing dependencies:
+Bạn muốn chạy effect một lần khi mount, nhưng linter phàn nàn về dependency bị thiếu:
 
 ```js
 // ❌ Missing dependency
@@ -117,7 +117,7 @@ useEffect(() => {
 }, []); // Missing 'userId'
 ```
 
-Either include the dependency (recommended) or use a ref if you truly need to run once:
+Hoặc là thêm dependency, được khuyên dùng, hoặc dùng ref nếu bạn thật sự cần chỉ chạy một lần:
 
 ```js
 // ✅ Include dependency
@@ -138,9 +138,9 @@ useEffect(() => {
 }, [userId]);
 ```
 
-## Options {/*options*/}
+## Tùy chọn {/*options*/}
 
-You can configure custom effect hooks using shared ESLint settings (available in `eslint-plugin-react-hooks` 6.1.1 and later):
+Bạn có thể cấu hình custom effect hook bằng cài đặt ESLint dùng chung, khả dụng từ `eslint-plugin-react-hooks` 6.1.1 trở lên:
 
 ```js
 {
@@ -152,9 +152,9 @@ You can configure custom effect hooks using shared ESLint settings (available in
 }
 ```
 
-- `additionalEffectHooks`: Regex pattern matching custom hooks that should be checked for exhaustive dependencies. This configuration is shared across all `react-hooks` rules.
+- `additionalEffectHooks`: Mẫu regex khớp với các custom Hook nên được kiểm tra exhaustive dependencies. Cấu hình này được chia sẻ cho mọi luật `react-hooks`.
 
-For backward compatibility, this rule also accepts a rule-level option:
+Để tương thích ngược, luật này cũng chấp nhận tùy chọn ở cấp luật:
 
 ```js
 {
@@ -166,4 +166,4 @@ For backward compatibility, this rule also accepts a rule-level option:
 }
 ```
 
-- `additionalHooks`: Regex for hooks that should be checked for exhaustive dependencies. **Note:** If this rule-level option is specified, it takes precedence over the shared `settings` configuration.
+- `additionalHooks`: Regex cho các Hook nên được kiểm tra exhaustive dependencies. **Lưu ý:** Nếu tùy chọn ở cấp luật này được chỉ định, nó sẽ được ưu tiên hơn cấu hình `settings` dùng chung.

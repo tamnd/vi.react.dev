@@ -4,35 +4,35 @@ title: error-boundaries
 
 <Intro>
 
-Validates usage of Error Boundaries instead of try/catch for errors in child components.
+Kiểm tra việc dùng Error Boundaries thay vì try/catch cho lỗi xảy ra trong component con.
 
 </Intro>
 
-## Rule Details {/*rule-details*/}
+## Chi tiết quy tắc {/*rule-details*/}
 
-Try/catch blocks can't catch errors that happen during React's rendering process. Errors thrown in rendering methods or hooks bubble up through the component tree. Only [Error Boundaries](/reference/react/Component#catching-rendering-errors-with-an-error-boundary) can catch these errors.
+Khối try/catch không thể bắt lỗi xảy ra trong quá trình React render. Những lỗi được ném ra trong phương thức render hoặc Hook sẽ nổi lên qua cây component. Chỉ [Error Boundaries](/reference/react/Component#catching-rendering-errors-with-an-error-boundary) mới có thể bắt được các lỗi này.
 
 ### Invalid {/*invalid*/}
 
-Examples of incorrect code for this rule:
+Ví dụ về code không đúng với quy tắc này:
 
 ```js {expectedErrors: {'react-compiler': [4]}}
-// ❌ Try/catch won't catch render errors
+// ❌ Try/catch sẽ không bắt được lỗi render
 function Parent() {
   try {
-    return <ChildComponent />; // If this throws, catch won't help
+    return <ChildComponent />; // Nếu chỗ này ném lỗi, catch cũng không giúp được
   } catch (error) {
-    return <div>Error occurred</div>;
+    return <div>Đã xảy ra lỗi</div>;
   }
 }
 ```
 
 ### Valid {/*valid*/}
 
-Examples of correct code for this rule:
+Ví dụ về code đúng với quy tắc này:
 
 ```js
-// ✅ Using error boundary
+// ✅ Dùng error boundary
 function Parent() {
   return (
     <ErrorBoundary>
@@ -42,28 +42,28 @@ function Parent() {
 }
 ```
 
-## Troubleshooting {/*troubleshooting*/}
+## Khắc phục sự cố {/*troubleshooting*/}
 
-### Why is the linter telling me not to wrap `use` in `try`/`catch`? {/*why-is-the-linter-telling-me-not-to-wrap-use-in-trycatch*/}
+### Tại sao linter bảo tôi không nên bọc `use` trong `try`/`catch`? {/*why-is-the-linter-telling-me-not-to-wrap-use-in-trycatch*/}
 
-The `use` hook doesn't throw errors in the traditional sense, it suspends component execution. When `use` encounters a pending promise, it suspends the component and lets React show a fallback. Only Suspense and Error Boundaries can handle these cases. The linter warns against `try`/`catch` around `use` to prevent confusion as the `catch` block would never run.
+Hook `use` không ném lỗi theo nghĩa truyền thống, mà nó tạm ngưng việc thực thi component. Khi `use` gặp một promise đang chờ, nó sẽ tạm ngưng component và để React hiển thị fallback. Chỉ Suspense và Error Boundaries mới có thể xử lý các trường hợp này. Linter cảnh báo việc bọc `use` trong `try`/`catch` để tránh gây nhầm lẫn vì khối `catch` sẽ không bao giờ chạy.
 
 ```js {expectedErrors: {'react-compiler': [5]}}
-// ❌ Try/catch around `use` hook
+// ❌ Try/catch quanh hook `use`
 function Component({promise}) {
   try {
-    const data = use(promise); // Won't catch - `use` suspends, not throws
+    const data = use(promise); // Sẽ không bắt được - `use` tạm ngưng chứ không ném lỗi
     return <div>{data}</div>;
   } catch (error) {
-    return <div>Failed to load</div>; // Unreachable
+    return <div>Tải thất bại</div>; // Không thể chạy tới đây
   }
 }
 
-// ✅ Error boundary catches `use` errors
+// ✅ Error boundary bắt lỗi từ `use`
 function App() {
   return (
-    <ErrorBoundary fallback={<div>Failed to load</div>}>
-      <Suspense fallback={<div>Loading...</div>}>
+    <ErrorBoundary fallback={<div>Tải thất bại</div>}>
+      <Suspense fallback={<div>Đang tải...</div>}>
         <DataComponent promise={fetchData()} />
       </Suspense>
     </ErrorBoundary>

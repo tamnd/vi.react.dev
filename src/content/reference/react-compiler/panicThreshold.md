@@ -4,7 +4,7 @@ title: panicThreshold
 
 <Intro>
 
-The `panicThreshold` option controls how the React Compiler handles errors during compilation.
+Tùy chọn `panicThreshold` kiểm soát cách React Compiler xử lý lỗi trong quá trình biên dịch.
 
 </Intro>
 
@@ -22,7 +22,7 @@ The `panicThreshold` option controls how the React Compiler handles errors durin
 
 ### `panicThreshold` {/*panicthreshold*/}
 
-Determines whether compilation errors should fail the build or skip optimization.
+Xác định xem lỗi biên dịch có làm build thất bại hay chỉ bỏ qua tối ưu hóa.
 
 #### Type {/*type*/}
 
@@ -30,30 +30,30 @@ Determines whether compilation errors should fail the build or skip optimization
 'none' | 'critical_errors' | 'all_errors'
 ```
 
-#### Default value {/*default-value*/}
+#### Giá trị mặc định {/*default-value*/}
 
 `'none'`
 
 #### Options {/*options*/}
 
-- **`'none'`** (default, recommended): Skip components that can't be compiled and continue building
-- **`'critical_errors'`**: Fail the build only on critical compiler errors
-- **`'all_errors'`**: Fail the build on any compiler diagnostic
+- **`'none'`** (mặc định, được khuyến nghị): Bỏ qua những component không thể biên dịch và tiếp tục build
+- **`'critical_errors'`**: Chỉ làm build thất bại với các lỗi compiler nghiêm trọng
+- **`'all_errors'`**: Làm build thất bại với mọi chẩn đoán từ compiler
 
 #### Caveats {/*caveats*/}
 
-- Production builds should always use `'none'`
-- Build failures prevent your application from building
-- The compiler automatically detects and skips problematic code with `'none'`
-- Higher thresholds are only useful during development for debugging
+- Bản build production luôn nên dùng `'none'`
+- Việc build thất bại sẽ ngăn ứng dụng của bạn được build
+- Compiler sẽ tự động phát hiện và bỏ qua code có vấn đề khi dùng `'none'`
+- Ngưỡng cao hơn chỉ hữu ích trong quá trình phát triển để gỡ lỗi
 
 ---
 
 ## Usage {/*usage*/}
 
-### Production configuration (recommended) {/*production-configuration*/}
+### Cấu hình production (khuyến nghị) {/*production-configuration*/}
 
-For production builds, always use `'none'`. This is the default value:
+Với bản build production, luôn dùng `'none'`. Đây là giá trị mặc định:
 
 ```js
 {
@@ -61,15 +61,15 @@ For production builds, always use `'none'`. This is the default value:
 }
 ```
 
-This ensures:
-- Your build never fails due to compiler issues
-- Components that can't be optimized run normally
-- Maximum components get optimized
-- Stable production deployments
+Điều này bảo đảm:
+- Bản build của bạn không bao giờ thất bại vì vấn đề từ compiler
+- Những component không thể tối ưu vẫn chạy bình thường
+- Số lượng component được tối ưu là tối đa
+- Việc triển khai production ổn định
 
-### Development debugging {/*development-debugging*/}
+### Gỡ lỗi khi phát triển {/*development-debugging*/}
 
-Temporarily use stricter thresholds to find issues:
+Hãy tạm thời dùng ngưỡng nghiêm ngặt hơn để tìm ra vấn đề:
 
 ```js
 const isDevelopment = process.env.NODE_ENV === 'development';

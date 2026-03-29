@@ -4,7 +4,7 @@ title: preconnect
 
 <Intro>
 
-`preconnect` lets you eagerly connect to a server that you expect to load resources from.
+`preconnect` cho phép bạn chủ động kết nối sớm tới một server mà bạn dự kiến sẽ tải tài nguyên từ đó.
 
 ```js
 preconnect("https://example.com");
@@ -20,7 +20,7 @@ preconnect("https://example.com");
 
 ### `preconnect(href)` {/*preconnect*/}
 
-To preconnect to a host, call the `preconnect` function from `react-dom`.
+Để preconnect tới một host, hãy gọi hàm `preconnect` từ `react-dom`.
 
 ```js
 import { preconnect } from 'react-dom';
@@ -32,34 +32,34 @@ function AppRoot() {
 
 ```
 
-[See more examples below.](#usage)
+[Xem thêm ví dụ ở bên dưới.](#usage)
 
-The `preconnect` function provides the browser with a hint that it should open a connection to the given server. If the browser chooses to do so, this can speed up the loading of resources from that server. 
+Hàm `preconnect` cung cấp cho trình duyệt một gợi ý rằng nó nên mở kết nối tới server được chỉ định. Nếu trình duyệt chọn làm như vậy, việc này có thể tăng tốc độ tải tài nguyên từ server đó.
 
 #### Parameters {/*parameters*/}
 
-* `href`: a string. The URL of the server you want to connect to.
+* `href`: một chuỗi. URL của server mà bạn muốn kết nối tới.
 
 
 #### Returns {/*returns*/}
 
-`preconnect` returns nothing.
+`preconnect` không trả về gì.
 
 #### Caveats {/*caveats*/}
 
-* Multiple calls to `preconnect` with the same server have the same effect as a single call.
-* In the browser, you can call `preconnect` in any situation: while rendering a component, in an Effect, in an event handler, and so on.
-* In server-side rendering or when rendering Server Components, `preconnect` only has an effect if you call it while rendering a component or in an async context originating from rendering a component. Any other calls will be ignored.
-* If you know the specific resources you'll need, you can call [other functions](/reference/react-dom/#resource-preloading-apis) instead that will start loading the resources right away.
-* There is no benefit to preconnecting to the same server the webpage itself is hosted from because it's already been connected to by the time the hint would be given.
+* Gọi `preconnect` nhiều lần với cùng một server có cùng hiệu ứng như một lần gọi duy nhất.
+* Trong trình duyệt, bạn có thể gọi `preconnect` ở bất kỳ đâu: khi render component, trong một Effect, trong event handler, v.v.
+* Trong server-side rendering hoặc khi render Server Components, `preconnect` chỉ có tác dụng nếu bạn gọi nó trong lúc render một component hoặc trong một ngữ cảnh async bắt nguồn từ việc render component. Mọi lời gọi khác sẽ bị bỏ qua.
+* Nếu bạn biết tài nguyên cụ thể mình sẽ cần, bạn có thể gọi [các hàm khác](/reference/react-dom/#resource-preloading-apis) để bắt đầu tải chúng ngay lập tức.
+* Không có lợi ích gì khi preconnect tới cùng một server đang host chính trang web, vì tới lúc gợi ý được đưa ra thì kết nối đó đã tồn tại rồi.
 
 ---
 
 ## Usage {/*usage*/}
 
-### Preconnecting when rendering {/*preconnecting-when-rendering*/}
+### Preconnect khi render {/*preconnecting-when-rendering*/}
 
-Call `preconnect` when rendering a component if you know that its children will load external resources from that host.
+Hãy gọi `preconnect` khi render một component nếu bạn biết rằng các component con của nó sẽ tải tài nguyên bên ngoài từ host đó.
 
 ```js
 import { preconnect } from 'react-dom';
@@ -70,9 +70,9 @@ function AppRoot() {
 }
 ```
 
-### Preconnecting in an event handler {/*preconnecting-in-an-event-handler*/}
+### Preconnect trong event handler {/*preconnecting-in-an-event-handler*/}
 
-Call `preconnect` in an event handler before transitioning to a page or state where external resources will be needed. This gets the process started earlier than if you call it during the rendering of the new page or state.
+Hãy gọi `preconnect` trong event handler trước khi chuyển sang một trang hoặc trạng thái cần đến tài nguyên bên ngoài. Việc này khởi động quá trình sớm hơn so với việc gọi nó trong lúc render trang hoặc trạng thái mới.
 
 ```js
 import { preconnect } from 'react-dom';

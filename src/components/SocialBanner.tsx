@@ -9,9 +9,9 @@ import {useRef, useEffect} from 'react';
 import cn from 'classnames';
 import {ExternalLink} from './ExternalLink';
 
-const bannerText = 'Join us for React Conf on Oct 7-8.';
+const bannerText = 'Tham gia React Conf cùng chúng tôi vào ngày 7-8 tháng 10.';
 const bannerLink = 'https://conf.react.dev/';
-const bannerLinkText = 'Learn more.';
+const bannerLinkText = 'Tìm hiểu thêm.';
 
 export default function SocialBanner() {
   const ref = useRef<HTMLDivElement | null>(null);

@@ -1,30 +1,30 @@
 ---
-title: Describing the UI
+title: Mô tả UI
 ---
 
 <Intro>
 
-React is a JavaScript library for rendering user interfaces (UI). UI is built from small units like buttons, text, and images. React lets you combine them into reusable, nestable *components.* From web sites to phone apps, everything on the screen can be broken down into components. In this chapter, you'll learn to create, customize, and conditionally display React components.
+React là một thư viện JavaScript để kết xuất giao diện người dùng (UI). UI được tạo nên từ những đơn vị nhỏ như nút bấm, văn bản và hình ảnh. React cho phép bạn kết hợp chúng thành các *thành phần* có thể tái sử dụng và lồng vào nhau. Từ trang web đến ứng dụng điện thoại, mọi thứ trên màn hình đều có thể được chia nhỏ thành các thành phần. Trong chương này, bạn sẽ học cách tạo, tùy chỉnh và hiển thị có điều kiện các thành phần React.
 
 </Intro>
 
 <YouWillLearn isChapter={true}>
 
-* [How to write your first React component](/learn/your-first-component)
-* [When and how to create multi-component files](/learn/importing-and-exporting-components)
-* [How to add markup to JavaScript with JSX](/learn/writing-markup-with-jsx)
-* [How to use curly braces with JSX to access JavaScript functionality from your components](/learn/javascript-in-jsx-with-curly-braces)
-* [How to configure components with props](/learn/passing-props-to-a-component)
-* [How to conditionally render components](/learn/conditional-rendering)
-* [How to render multiple components at a time](/learn/rendering-lists)
-* [How to avoid confusing bugs by keeping components pure](/learn/keeping-components-pure)
-* [Why understanding your UI as trees is useful](/learn/understanding-your-ui-as-a-tree)
+* [Cách viết thành phần React đầu tiên của bạn](/learn/your-first-component)
+* [Khi nào và cách tạo tệp chứa nhiều thành phần](/learn/importing-and-exporting-components)
+* [Cách thêm markup vào JavaScript bằng JSX](/learn/writing-markup-with-jsx)
+* [Cách dùng dấu ngoặc nhọn với JSX để truy cập khả năng của JavaScript từ thành phần của bạn](/learn/javascript-in-jsx-with-curly-braces)
+* [Cách cấu hình thành phần bằng props](/learn/passing-props-to-a-component)
+* [Cách kết xuất có điều kiện các thành phần](/learn/conditional-rendering)
+* [Cách kết xuất nhiều thành phần cùng lúc](/learn/rendering-lists)
+* [Cách tránh những lỗi khó hiểu bằng việc giữ thành phần thuần](/learn/keeping-components-pure)
+* [Vì sao việc hiểu UI của bạn như những cây lại hữu ích](/learn/understanding-your-ui-as-a-tree)
 
 </YouWillLearn>
 
-## Your first component {/*your-first-component*/}
+## Thành phần đầu tiên của bạn {/*your-first-component*/}
 
-React applications are built from isolated pieces of UI called *components*. A React component is a JavaScript function that you can sprinkle with markup. Components can be as small as a button, or as large as an entire page. Here is a `Gallery` component rendering three `Profile` components:
+Ứng dụng React được xây dựng từ các phần UI tách biệt gọi là *thành phần*. Một thành phần React là một hàm JavaScript mà bạn có thể rắc thêm markup vào. Thành phần có thể nhỏ như một nút bấm, hoặc lớn như cả một trang hoàn chỉnh. Đây là thành phần `Gallery` đang kết xuất ba thành phần `Profile`:
 
 <Sandpack>
 
@@ -58,13 +58,13 @@ img { margin: 0 10px 10px 0; height: 90px; }
 
 <LearnMore path="/learn/your-first-component">
 
-Read **[Your First Component](/learn/your-first-component)** to learn how to declare and use React components.
+Đọc **[Thành phần đầu tiên của bạn](/learn/your-first-component)** để tìm hiểu cách khai báo và sử dụng thành phần React.
 
 </LearnMore>
 
-## Importing and exporting components {/*importing-and-exporting-components*/}
+## Import và export thành phần {/*importing-and-exporting-components*/}
 
-You can declare many components in one file, but large files can get difficult to navigate. To solve this, you can *export* a component into its own file, and then *import* that component from another file:
+Bạn có thể khai báo nhiều thành phần trong một tệp, nhưng các tệp lớn sẽ khó theo dõi. Để giải quyết điều này, bạn có thể *export* một thành phần ra tệp riêng, rồi *import* thành phần đó từ một tệp khác:
 
 
 <Sandpack>
@@ -113,15 +113,15 @@ img { margin: 0 10px 10px 0; }
 
 <LearnMore path="/learn/importing-and-exporting-components">
 
-Read **[Importing and Exporting Components](/learn/importing-and-exporting-components)** to learn how to split components into their own files.
+Đọc **[Import và Export Thành phần](/learn/importing-and-exporting-components)** để tìm hiểu cách tách thành phần ra các tệp riêng.
 
 </LearnMore>
 
-## Writing markup with JSX {/*writing-markup-with-jsx*/}
+## Viết markup với JSX {/*writing-markup-with-jsx*/}
 
-Each React component is a JavaScript function that may contain some markup that React renders into the browser. React components use a syntax extension called JSX to represent that markup. JSX looks a lot like HTML, but it is a bit stricter and can display dynamic information.
+Mỗi thành phần React là một hàm JavaScript có thể chứa một ít markup mà React sẽ kết xuất vào trình duyệt. Thành phần React dùng một phần mở rộng cú pháp có tên JSX để biểu diễn markup đó. JSX trông khá giống HTML, nhưng chặt chẽ hơn một chút và có thể hiển thị thông tin động.
 
-If we paste existing HTML markup into a React component, it won't always work:
+Nếu dán markup HTML sẵn có vào một thành phần React, không phải lúc nào nó cũng hoạt động:
 
 <Sandpack>
 
@@ -150,7 +150,7 @@ img { height: 90px; }
 
 </Sandpack>
 
-If you have existing HTML like this, you can fix it using a [converter](https://transform.tools/html-to-jsx):
+Nếu bạn có HTML sẵn như vậy, bạn có thể sửa nó bằng [trình chuyển đổi](https://transform.tools/html-to-jsx):
 
 <Sandpack>
 
@@ -182,13 +182,13 @@ img { height: 90px; }
 
 <LearnMore path="/learn/writing-markup-with-jsx">
 
-Read **[Writing Markup with JSX](/learn/writing-markup-with-jsx)** to learn how to write valid JSX.
+Đọc **[Viết Markup với JSX](/learn/writing-markup-with-jsx)** để tìm hiểu cách viết JSX hợp lệ.
 
 </LearnMore>
 
-## JavaScript in JSX with curly braces {/*javascript-in-jsx-with-curly-braces*/}
+## JavaScript trong JSX với dấu ngoặc nhọn {/*javascript-in-jsx-with-curly-braces*/}
 
-JSX lets you write HTML-like markup inside a JavaScript file, keeping rendering logic and content in the same place. Sometimes you will want to add a little JavaScript logic or reference a dynamic property inside that markup. In this situation, you can use curly braces in your JSX to "open a window" to JavaScript:
+JSX cho phép bạn viết markup giống HTML bên trong tệp JavaScript, giữ logic kết xuất và nội dung ở cùng một chỗ. Đôi khi bạn sẽ muốn thêm một ít logic JavaScript hoặc tham chiếu tới một thuộc tính động trong markup đó. Khi đó, bạn có thể dùng dấu ngoặc nhọn trong JSX để "mở một cửa sổ" sang JavaScript:
 
 <Sandpack>
 
@@ -230,13 +230,13 @@ body > div > div { padding: 20px; }
 
 <LearnMore path="/learn/javascript-in-jsx-with-curly-braces">
 
-Read **[JavaScript in JSX with Curly Braces](/learn/javascript-in-jsx-with-curly-braces)** to learn how to access JavaScript data from JSX.
+Đọc **[JavaScript trong JSX với Dấu ngoặc nhọn](/learn/javascript-in-jsx-with-curly-braces)** để tìm hiểu cách truy cập dữ liệu JavaScript từ JSX.
 
 </LearnMore>
 
-## Passing props to a component {/*passing-props-to-a-component*/}
+## Truyền props cho thành phần {/*passing-props-to-a-component*/}
 
-React components use *props* to communicate with each other. Every parent component can pass some information to its child components by giving them props. Props might remind you of HTML attributes, but you can pass any JavaScript value through them, including objects, arrays, functions, and even JSX!
+Các thành phần React dùng *props* để giao tiếp với nhau. Mỗi thành phần cha có thể truyền một ít thông tin cho các thành phần con bằng cách cung cấp props cho chúng. Props có thể khiến bạn liên tưởng đến thuộc tính HTML, nhưng bạn có thể truyền qua đó bất kỳ giá trị JavaScript nào, bao gồm đối tượng, mảng, hàm và cả JSX!
 
 <Sandpack>
 
@@ -311,15 +311,15 @@ export function getImageUrl(person, size = 's') {
 
 <LearnMore path="/learn/passing-props-to-a-component">
 
-Read **[Passing Props to a Component](/learn/passing-props-to-a-component)** to learn how to pass and read props.
+Đọc **[Truyền Props cho Thành phần](/learn/passing-props-to-a-component)** để tìm hiểu cách truyền và đọc props.
 
 </LearnMore>
 
-## Conditional rendering {/*conditional-rendering*/}
+## Kết xuất có điều kiện {/*conditional-rendering*/}
 
-Your components will often need to display different things depending on different conditions. In React, you can conditionally render JSX using JavaScript syntax like `if` statements, `&&`, and `? :` operators.
+Các thành phần của bạn thường sẽ cần hiển thị những thứ khác nhau tùy theo điều kiện khác nhau. Trong React, bạn có thể kết xuất JSX có điều kiện bằng cú pháp JavaScript như câu lệnh `if`, toán tử `&&` và `? :`.
 
-In this example, the JavaScript `&&` operator is used to conditionally render a checkmark:
+Trong ví dụ này, toán tử JavaScript `&&` được dùng để kết xuất dấu kiểm một cách có điều kiện:
 
 <Sandpack>
 
@@ -359,15 +359,15 @@ export default function PackingList() {
 
 <LearnMore path="/learn/conditional-rendering">
 
-Read **[Conditional Rendering](/learn/conditional-rendering)** to learn the different ways to render content conditionally.
+Đọc **[Kết xuất Có điều kiện](/learn/conditional-rendering)** để tìm hiểu các cách khác nhau để kết xuất nội dung có điều kiện.
 
 </LearnMore>
 
-## Rendering lists {/*rendering-lists*/}
+## Kết xuất danh sách {/*rendering-lists*/}
 
-You will often want to display multiple similar components from a collection of data. You can use JavaScript's `filter()` and `map()` with React to filter and transform your array of data into an array of components.
+Bạn sẽ thường muốn hiển thị nhiều thành phần tương tự nhau từ một tập dữ liệu. Bạn có thể dùng `filter()` và `map()` của JavaScript cùng với React để lọc và biến đổi mảng dữ liệu của mình thành một mảng các thành phần.
 
-For each array item, you will need to specify a `key`. Usually, you will want to use an ID from the database as a `key`. Keys let React keep track of each item's place in the list even if the list changes.
+Với mỗi phần tử trong mảng, bạn cần chỉ định một `key`. Thông thường, bạn sẽ muốn dùng một ID từ cơ sở dữ liệu làm `key`. Key cho phép React theo dõi vị trí của từng phần tử trong danh sách ngay cả khi danh sách thay đổi.
 
 <Sandpack>
 
@@ -459,18 +459,18 @@ h2 { font-size: 20px; }
 
 <LearnMore path="/learn/rendering-lists">
 
-Read **[Rendering Lists](/learn/rendering-lists)** to learn how to render a list of components, and how to choose a key.
+Đọc **[Kết xuất Danh sách](/learn/rendering-lists)** để tìm hiểu cách kết xuất danh sách thành phần và cách chọn `key`.
 
 </LearnMore>
 
-## Keeping components pure {/*keeping-components-pure*/}
+## Giữ thành phần thuần {/*keeping-components-pure*/}
 
-Some JavaScript functions are *pure.* A pure function:
+Một số hàm JavaScript là *thuần*. Một hàm thuần:
 
-* **Minds its own business.** It does not change any objects or variables that existed before it was called.
-* **Same inputs, same output.** Given the same inputs, a pure function should always return the same result.
+* **Chỉ lo việc của nó.** Nó không thay đổi bất kỳ đối tượng hoặc biến nào đã tồn tại trước khi được gọi.
+* **Cùng đầu vào, cùng đầu ra.** Với cùng đầu vào, một hàm thuần phải luôn trả về cùng một kết quả.
 
-By strictly only writing your components as pure functions, you can avoid an entire class of baffling bugs and unpredictable behavior as your codebase grows. Here is an example of an impure component:
+Bằng cách nghiêm ngặt chỉ viết các thành phần của bạn như những hàm thuần, bạn có thể tránh được cả một nhóm lỗi khó hiểu và hành vi khó đoán khi codebase ngày càng lớn. Đây là một ví dụ về thành phần không thuần:
 
 <Sandpack>
 
@@ -496,7 +496,7 @@ export default function TeaSet() {
 
 </Sandpack>
 
-You can make this component pure by passing a prop instead of modifying a preexisting variable:
+Bạn có thể làm cho thành phần này trở nên thuần bằng cách truyền một prop thay vì sửa đổi một biến đã tồn tại từ trước:
 
 <Sandpack>
 
@@ -520,43 +520,43 @@ export default function TeaSet() {
 
 <LearnMore path="/learn/keeping-components-pure">
 
-Read **[Keeping Components Pure](/learn/keeping-components-pure)** to learn how to write components as pure, predictable functions.
+Đọc **[Giữ Thành phần thuần](/learn/keeping-components-pure)** để tìm hiểu cách viết thành phần như những hàm thuần, dễ đoán.
 
 </LearnMore>
 
-## Your UI as a tree {/*your-ui-as-a-tree*/}
+## UI của bạn như một cái cây {/*your-ui-as-a-tree*/}
 
-React uses trees to model the relationships between components and modules. 
+React dùng cây để mô hình hóa mối quan hệ giữa các thành phần và module.
 
-A React render tree is a representation of the parent and child relationship between components. 
+Cây kết xuất của React là biểu diễn mối quan hệ cha con giữa các thành phần.
 
-<Diagram name="generic_render_tree" height={250} width={500} alt="A tree graph with five nodes, with each node representing a component. The root node is located at the top the tree graph and is labelled 'Root Component'. It has two arrows extending down to two nodes labelled 'Component A' and 'Component C'. Each of the arrows is labelled with 'renders'. 'Component A' has a single 'renders' arrow to a node labelled 'Component B'. 'Component C' has a single 'renders' arrow to a node labelled 'Component D'.">
+<Diagram name="generic_render_tree" height={250} width={500} alt="Một sơ đồ cây có năm nút, mỗi nút đại diện cho một thành phần. Nút gốc nằm ở đỉnh sơ đồ cây và được gắn nhãn 'Root Component'. Từ đó có hai mũi tên kéo xuống hai nút mang nhãn 'Component A' và 'Component C'. Mỗi mũi tên đều có nhãn 'renders'. 'Component A' có một mũi tên 'renders' trỏ tới nút mang nhãn 'Component B'. 'Component C' có một mũi tên 'renders' trỏ tới nút mang nhãn 'Component D'.">
 
-An example React render tree.
-
-</Diagram>
-
-Components near the top of the tree, near the root component, are considered top-level components. Components with no child components are leaf components. This categorization of components is useful for understanding data flow and rendering performance.
-
-Modelling the relationship between JavaScript modules is another useful way to understand your app. We refer to it as a module dependency tree. 
-
-<Diagram name="generic_dependency_tree" height={250} width={500} alt="A tree graph with five nodes. Each node represents a JavaScript module. The top-most node is labelled 'RootModule.js'. It has three arrows extending to the nodes: 'ModuleA.js', 'ModuleB.js', and 'ModuleC.js'. Each arrow is labelled as 'imports'. 'ModuleC.js' node has a single 'imports' arrow that points to a node labelled 'ModuleD.js'.">
-
-An example module dependency tree.
+Ví dụ về cây kết xuất React.
 
 </Diagram>
 
-A dependency tree is often used by build tools to bundle all the relevant JavaScript code for the client to download and render. A large bundle size regresses user experience for React apps. Understanding the module dependency tree is helpful to debug such issues. 
+Các thành phần ở gần đỉnh cây, gần thành phần gốc, được xem là các thành phần cấp cao nhất. Những thành phần không có thành phần con là các thành phần lá. Việc phân loại này hữu ích để hiểu luồng dữ liệu và hiệu năng kết xuất.
+
+Mô hình hóa mối quan hệ giữa các module JavaScript là một cách hữu ích khác để hiểu ứng dụng của bạn. Chúng tôi gọi đó là cây phụ thuộc module.
+
+<Diagram name="generic_dependency_tree" height={250} width={500} alt="Một sơ đồ cây có năm nút. Mỗi nút đại diện cho một module JavaScript. Nút trên cùng được gắn nhãn 'RootModule.js'. Từ đó có ba mũi tên trỏ tới các nút: 'ModuleA.js', 'ModuleB.js' và 'ModuleC.js'. Mỗi mũi tên đều có nhãn 'imports'. Nút 'ModuleC.js' có một mũi tên 'imports' trỏ tới nút mang nhãn 'ModuleD.js'.">
+
+Ví dụ về cây phụ thuộc module.
+
+</Diagram>
+
+Cây phụ thuộc thường được các công cụ build dùng để đóng gói toàn bộ mã JavaScript liên quan để client tải về và kết xuất. Kích thước bundle lớn làm suy giảm trải nghiệm người dùng của ứng dụng React. Hiểu cây phụ thuộc module sẽ giúp bạn gỡ lỗi những vấn đề như vậy.
 
 <LearnMore path="/learn/understanding-your-ui-as-a-tree">
 
-Read **[Your UI as a Tree](/learn/understanding-your-ui-as-a-tree)** to learn how to create a render and module dependency trees for a React app and how they're useful mental models for improving user experience and performance.
+Đọc **[UI của bạn như một Cái cây](/learn/understanding-your-ui-as-a-tree)** để tìm hiểu cách tạo cây kết xuất và cây phụ thuộc module cho ứng dụng React, cũng như vì sao chúng là những mô hình tư duy hữu ích để cải thiện trải nghiệm người dùng và hiệu năng.
 
 </LearnMore>
 
 
-## What's next? {/*whats-next*/}
+## Tiếp theo là gì? {/*whats-next*/}
 
-Head over to [Your First Component](/learn/your-first-component) to start reading this chapter page by page!
+Hãy chuyển sang [Thành phần đầu tiên của bạn](/learn/your-first-component) để bắt đầu đọc chương này theo từng trang!
 
-Or, if you're already familiar with these topics, why not read about [Adding Interactivity](/learn/adding-interactivity)?
+Hoặc, nếu bạn đã quen với những chủ đề này, hãy đọc [Thêm tính tương tác](/learn/adding-interactivity).

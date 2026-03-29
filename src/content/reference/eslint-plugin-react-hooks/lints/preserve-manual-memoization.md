@@ -4,34 +4,34 @@ title: preserve-manual-memoization
 
 <Intro>
 
-Validates that existing manual memoization is preserved by the compiler. React Compiler will only compile components and hooks if its inference [matches or exceeds the existing manual memoization](/learn/react-compiler/introduction#what-should-i-do-about-usememo-usecallback-and-reactmemo).
+Kiểm tra rằng phần memoization thủ công hiện có được compiler giữ nguyên. React Compiler sẽ chỉ biên dịch component và Hook nếu suy luận của nó [phù hợp hoặc tốt hơn phần memoization thủ công hiện có](/learn/react-compiler/introduction#what-should-i-do-about-usememo-usecallback-and-reactmemo).
 
 </Intro>
 
-## Rule Details {/*rule-details*/}
+## Chi tiết quy tắc {/*rule-details*/}
 
-React Compiler preserves your existing `useMemo`, `useCallback`, and `React.memo` calls. If you've manually memoized something, the compiler assumes you had a good reason and won't remove it. However, incomplete dependencies prevent the compiler from understanding your code's data flow and applying further optimizations.
+React Compiler giữ nguyên các lời gọi `useMemo`, `useCallback` và `React.memo` hiện có của bạn. Nếu bạn đã tự memoize một thứ gì đó, compiler sẽ giả định rằng bạn có lý do chính đáng và sẽ không xóa nó đi. Tuy nhiên, dependency không đầy đủ sẽ khiến compiler không thể hiểu luồng dữ liệu trong code của bạn và áp dụng thêm các tối ưu hóa.
 
 ### Invalid {/*invalid*/}
 
-Examples of incorrect code for this rule:
+Ví dụ về code không đúng với quy tắc này:
 
 ```js
-// ❌ Missing dependencies in useMemo
+// ❌ Thiếu dependency trong useMemo
 function Component({ data, filter }) {
   const filtered = useMemo(
     () => data.filter(filter),
-    [data] // Missing 'filter' dependency
+    [data] // Thiếu dependency 'filter'
   );
 
   return <List items={filtered} />;
 }
 
-// ❌ Missing dependencies in useCallback
+// ❌ Thiếu dependency trong useCallback
 function Component({ onUpdate, value }) {
   const handleClick = useCallback(() => {
     onUpdate(value);
-  }, [onUpdate]); // Missing 'value'
+  }, [onUpdate]); // Thiếu 'value'
 
   return <button onClick={handleClick}>Update</button>;
 }
@@ -39,35 +39,35 @@ function Component({ onUpdate, value }) {
 
 ### Valid {/*valid*/}
 
-Examples of correct code for this rule:
+Ví dụ về code đúng với quy tắc này:
 
 ```js
-// ✅ Complete dependencies
+// ✅ Dependency đầy đủ
 function Component({ data, filter }) {
   const filtered = useMemo(
     () => data.filter(filter),
-    [data, filter] // All dependencies included
+    [data, filter] // Đã bao gồm mọi dependency
   );
 
   return <List items={filtered} />;
 }
 
-// ✅ Or let the compiler handle it
+// ✅ Hoặc để compiler tự xử lý
 function Component({ data, filter }) {
-  // No manual memoization needed
+  // Không cần memoization thủ công
   const filtered = data.filter(filter);
   return <List items={filtered} />;
 }
 ```
 
-## Troubleshooting {/*troubleshooting*/}
+## Khắc phục sự cố {/*troubleshooting*/}
 
-### Should I remove my manual memoization? {/*remove-manual-memoization*/}
+### Tôi có nên xóa phần memoization thủ công không? {/*remove-manual-memoization*/}
 
-You might wonder if React Compiler makes manual memoization unnecessary:
+Bạn có thể tự hỏi liệu React Compiler có khiến memoization thủ công trở nên không cần thiết nữa hay không:
 
 ```js
-// Do I still need this?
+// Tôi còn cần đoạn này không?
 function Component({items, sortBy}) {
   const sorted = useMemo(() => {
     return [...items].sort((a, b) => {
@@ -79,10 +79,10 @@ function Component({items, sortBy}) {
 }
 ```
 
-You can safely remove it if using React Compiler:
+Bạn có thể xóa nó một cách an toàn nếu đang dùng React Compiler:
 
 ```js
-// ✅ Better: Let the compiler optimize
+// ✅ Tốt hơn: để compiler tự tối ưu
 function Component({items, sortBy}) {
   const sorted = [...items].sort((a, b) => {
     return a[sortBy] - b[sortBy];

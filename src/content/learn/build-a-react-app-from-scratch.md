@@ -1,143 +1,143 @@
 ---
-title: Build a React app from Scratch
+title: Xây dựng ứng dụng React từ đầu
 ---
 
 <Intro>
 
-If your app has constraints not well-served by existing frameworks, you prefer to build your own framework, or you just want to learn the basics of a React app, you can build a React app from scratch.
+Nếu ứng dụng của bạn có những ràng buộc mà các framework hiện có chưa phục vụ tốt, bạn muốn tự xây dựng framework riêng, hoặc chỉ muốn học những điều cơ bản của một ứng dụng React, bạn có thể xây dựng ứng dụng React từ đầu.
 
 </Intro>
 
 <DeepDive>
 
-#### Consider using a framework {/*consider-using-a-framework*/}
+#### Hãy cân nhắc dùng framework {/*consider-using-a-framework*/}
 
-Starting from scratch is an easy way to get started using React, but a major tradeoff to be aware of is that going this route is often the same as building your own adhoc framework. As your requirements evolve, you may need to solve more framework-like problems that our recommended frameworks already have well developed and supported solutions for. 
+Bắt đầu từ đầu là một cách dễ để làm quen với React, nhưng đánh đổi lớn là con đường này thường tương đương với việc tự xây một framework tạm thời của riêng bạn. Khi yêu cầu của bạn thay đổi, bạn có thể phải giải quyết thêm nhiều vấn đề giống framework mà các framework chúng tôi khuyên dùng đã có lời giải chín muồi và được hỗ trợ tốt.
 
-For example, if in the future your app needs support for server-side rendering (SSR), static site generation (SSG), and/or React Server Components (RSC), you will have to implement those on your own. Similarly, future React features that require integrating at the framework level will have to be implemented on your own if you want to use them.
+Ví dụ, nếu sau này ứng dụng của bạn cần hỗ trợ server-side rendering (SSR), static site generation (SSG) và/hoặc React Server Components (RSC), bạn sẽ phải tự triển khai chúng. Tương tự, những tính năng React trong tương lai đòi hỏi tích hợp ở cấp framework cũng sẽ phải do bạn tự triển khai nếu muốn dùng.
 
-Our recommended frameworks also help you build better performing apps. For example, reducing or eliminating waterfalls from network requests makes for a better user experience. This might not be a high priority when you are building a toy project, but if your app gains users you may want to improve its performance.
+Các framework được chúng tôi khuyên dùng cũng giúp bạn xây dựng ứng dụng có hiệu năng tốt hơn. Chẳng hạn, việc giảm hoặc loại bỏ các waterfall từ network request mang lại trải nghiệm người dùng tốt hơn. Điều này có thể chưa phải ưu tiên khi bạn đang làm dự án nhỏ, nhưng nếu ứng dụng có thêm người dùng, bạn có thể sẽ muốn cải thiện hiệu năng.
 
-Going this route also makes it more difficult to get support, since the way you develop routing, data-fetching, and other features will be unique to your situation. You should only choose this option if you are comfortable tackling these problems on your own, or if you’re confident that you will never need these features.
+Đi theo hướng này cũng khiến việc nhận hỗ trợ trở nên khó hơn, vì cách bạn phát triển routing, data fetching và các tính năng khác sẽ mang tính riêng biệt với tình huống của bạn. Bạn chỉ nên chọn cách này nếu thấy thoải mái khi tự giải quyết các vấn đề đó, hoặc nếu chắc chắn rằng mình sẽ không bao giờ cần những tính năng này.
 
-For a list of recommended frameworks, check out [Creating a React App](/learn/creating-a-react-app).
+Để xem danh sách framework được khuyên dùng, hãy xem [Tạo một ứng dụng React](/learn/creating-a-react-app).
 
 </DeepDive>
 
 
-## Step 1: Install a build tool {/*step-1-install-a-build-tool*/}
+## Bước 1: Cài công cụ build {/*step-1-install-a-build-tool*/}
 
-The first step is to install a build tool like `vite`, `parcel`, or `rsbuild`. These build tools provide features to package and run source code, provide a development server for local development and a build command to deploy your app to a production server.
+Bước đầu tiên là cài một công cụ build như `vite`, `parcel` hoặc `rsbuild`. Các công cụ build này cung cấp khả năng đóng gói và chạy source code, máy chủ phát triển cho môi trường cục bộ và lệnh build để triển khai ứng dụng lên server production.
 
 ### Vite {/*vite*/}
 
-[Vite](https://vite.dev/) is a build tool that aims to provide a faster and leaner development experience for modern web projects.
+[Vite](https://vite.dev/) là một công cụ build hướng tới trải nghiệm phát triển nhanh hơn và gọn hơn cho các dự án web hiện đại.
 
 <TerminalBlock>
 npm create vite@latest my-app -- --template react-ts
 </TerminalBlock>
 
-Vite is opinionated and comes with sensible defaults out of the box. Vite has a rich ecosystem of plugins to support fast refresh, JSX,  Babel/SWC, and other common features. See Vite's [React plugin](https://vite.dev/plugins/#vitejs-plugin-react) or [React SWC plugin](https://vite.dev/plugins/#vitejs-plugin-react-swc) and [React SSR example project](https://vite.dev/guide/ssr.html#example-projects) to get started.
+Vite có tính quy ước và đi kèm các mặc định hợp lý ngay từ đầu. Vite có hệ sinh thái plugin phong phú để hỗ trợ fast refresh, JSX, Babel/SWC và các tính năng phổ biến khác. Hãy xem [plugin React của Vite](https://vite.dev/plugins/#vitejs-plugin-react) hoặc [plugin React SWC](https://vite.dev/plugins/#vitejs-plugin-react-swc) cùng [dự án ví dụ React SSR](https://vite.dev/guide/ssr.html#example-projects) để bắt đầu.
 
-Vite is already being used as a build tool in one of our [recommended frameworks](/learn/creating-a-react-app): [React Router](https://reactrouter.com/start/framework/installation).
+Vite đã được dùng làm công cụ build trong một trong các [framework được chúng tôi khuyên dùng](/learn/creating-a-react-app): [React Router](https://reactrouter.com/start/framework/installation).
 
 ### Parcel {/*parcel*/}
 
-[Parcel](https://parceljs.org/) combines a great out-of-the-box development experience with a scalable architecture that can take your project from just getting started to massive production applications.
+[Parcel](https://parceljs.org/) kết hợp trải nghiệm phát triển tuyệt vời ngay khi bắt đầu với một kiến trúc có thể mở rộng, đủ sức đưa dự án của bạn từ giai đoạn đầu đến các ứng dụng production quy mô lớn.
 
 <TerminalBlock>
 npm install --save-dev parcel
 </TerminalBlock>
 
-Parcel supports fast refresh, JSX, TypeScript, Flow, and styling out of the box. See [Parcel's React recipe](https://parceljs.org/recipes/react/#getting-started) to get started.
+Parcel hỗ trợ fast refresh, JSX, TypeScript, Flow và styling ngay từ đầu. Hãy xem [công thức React của Parcel](https://parceljs.org/recipes/react/#getting-started) để bắt đầu.
 
 ### Rsbuild {/*rsbuild*/}
 
-[Rsbuild](https://rsbuild.dev/) is an Rspack-powered build tool that provides a seamless development experience for React applications. It comes with carefully tuned defaults and performance optimizations ready to use.
+[Rsbuild](https://rsbuild.dev/) là công cụ build dựa trên Rspack, mang lại trải nghiệm phát triển liền mạch cho ứng dụng React. Nó đi kèm các cấu hình mặc định đã được tinh chỉnh cẩn thận và tối ưu hiệu năng sẵn sàng để dùng.
 
 <TerminalBlock>
 npx create-rsbuild --template react
 </TerminalBlock>
 
-Rsbuild includes built-in support for React features like fast refresh, JSX, TypeScript, and styling. See [Rsbuild's React guide](https://rsbuild.dev/guide/framework/react) to get started.
+Rsbuild có hỗ trợ tích hợp cho các tính năng React như fast refresh, JSX, TypeScript và styling. Hãy xem [hướng dẫn React của Rsbuild](https://rsbuild.dev/guide/framework/react) để bắt đầu.
 
 <Note>
 
-#### Metro for React Native {/*react-native*/}
+#### Metro cho React Native {/*react-native*/}
 
-If you're starting from scratch with React Native you'll need to use [Metro](https://metrobundler.dev/), the JavaScript bundler for React Native. Metro supports bundling for platforms like iOS and Android, but lacks many features when compared to the tools here. We recommend starting with Vite, Parcel, or Rsbuild unless your project requires React Native support.
+Nếu bạn bắt đầu từ đầu với React Native, bạn sẽ cần dùng [Metro](https://metrobundler.dev/), trình bundler JavaScript cho React Native. Metro hỗ trợ đóng gói cho các nền tảng như iOS và Android, nhưng thiếu nhiều tính năng so với các công cụ ở đây. Chúng tôi khuyên bạn nên bắt đầu với Vite, Parcel hoặc Rsbuild trừ khi dự án của bạn cần hỗ trợ React Native.
 
 </Note>
 
-## Step 2: Build Common Application Patterns {/*step-2-build-common-application-patterns*/}
+## Bước 2: Xây dựng các mẫu ứng dụng phổ biến {/*step-2-build-common-application-patterns*/}
 
-The build tools listed above start off with a client-only, single-page app (SPA), but don't include any further solutions for common functionality like routing, data fetching, or styling.
+Các công cụ build ở trên bắt đầu với một ứng dụng chỉ có client, kiểu single-page app (SPA), nhưng không bao gồm các giải pháp tiếp theo cho những chức năng phổ biến như routing, data fetching hay styling.
 
-The React ecosystem includes many tools for these problems. We've listed a few that are widely used as a starting point, but feel free to choose other tools if those work better for you.
+Hệ sinh thái React có nhiều công cụ cho các vấn đề này. Chúng tôi liệt kê một vài công cụ được dùng rộng rãi để bạn bắt đầu, nhưng bạn hoàn toàn có thể chọn công cụ khác nếu phù hợp hơn.
 
 ### Routing {/*routing*/}
 
-Routing determines what content or pages to display when a user visits a particular URL. You need to set up a router to map URLs to different parts of your app. You'll also need to handle nested routes, route parameters, and query parameters.  Routers can be configured within your code, or defined based on your component folder and file structures.
+Routing quyết định nội dung hoặc trang nào sẽ hiển thị khi người dùng truy cập một URL cụ thể. Bạn cần thiết lập router để ánh xạ URL tới các phần khác nhau trong ứng dụng. Bạn cũng sẽ phải xử lý nested routes, route parameters và query parameters. Router có thể được cấu hình trong code hoặc được định nghĩa dựa trên cấu trúc thư mục và tệp của component.
 
-Routers are a core part of modern applications, and are usually integrated with data fetching (including prefetching data for a whole page for faster loading), code splitting (to minimize client bundle sizes), and page rendering approaches (to decide how each page gets generated).
+Router là phần cốt lõi của ứng dụng hiện đại, và thường được tích hợp với data fetching, bao gồm cả prefetch dữ liệu cho cả một trang để tải nhanh hơn, code splitting để giảm kích thước bundle ở client, và các cách kết xuất trang để quyết định cách mỗi trang được tạo ra.
 
-We suggest using:
+Chúng tôi gợi ý dùng:
 
 - [React Router](https://reactrouter.com/start/data/custom)
 - [Tanstack Router](https://tanstack.com/router/latest)
 
 
-### Data Fetching {/*data-fetching*/}
+### Data fetching {/*data-fetching*/}
 
-Fetching data from a server or other data source is a key part of most applications. Doing this properly requires handling loading states, error states, and caching the fetched data, which can be complex.
+Lấy dữ liệu từ server hoặc nguồn dữ liệu khác là phần quan trọng của hầu hết ứng dụng. Làm điều đó đúng cách đòi hỏi phải xử lý trạng thái tải, trạng thái lỗi và bộ nhớ đệm cho dữ liệu đã lấy, điều này có thể khá phức tạp.
 
-Purpose-built data fetching libraries do the hard work of fetching and caching the data for you, letting you focus on what data your app needs and how to display it.  These libraries are typically used directly in your components, but can also be integrated into routing loaders for faster pre-fetching and better performance, and in server rendering as well.
+Các thư viện data fetching chuyên dụng làm giúp bạn phần khó trong việc lấy và cache dữ liệu, để bạn tập trung vào việc ứng dụng cần dữ liệu gì và hiển thị nó như thế nào. Những thư viện này thường được dùng trực tiếp trong component, nhưng cũng có thể tích hợp vào routing loader để prefetch nhanh hơn, hiệu năng tốt hơn, và cả trong server rendering.
 
-Note that fetching data directly in components can lead to slower loading times due to network request waterfalls, so we recommend prefetching data in router loaders or on the server as much as possible!  This allows a page's data to be fetched all at once as the page is being displayed.
+Lưu ý rằng việc lấy dữ liệu trực tiếp trong component có thể dẫn đến thời gian tải chậm hơn do waterfall từ network request, vì vậy chúng tôi khuyên bạn nên prefetch dữ liệu trong routing loader hoặc trên server càng nhiều càng tốt. Cách này cho phép dữ liệu của trang được lấy cùng lúc khi trang đang hiển thị.
 
-If you're fetching data from most backends or REST-style APIs, we suggest using:
+Nếu bạn lấy dữ liệu từ phần lớn backend hoặc API kiểu REST, chúng tôi gợi ý dùng:
 
 - [TanStack Query](https://tanstack.com/query/)
 - [SWR](https://swr.vercel.app/)
 - [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
 
-If you're fetching data from a GraphQL API, we suggest using:
+Nếu bạn lấy dữ liệu từ GraphQL API, chúng tôi gợi ý dùng:
 
 - [Apollo](https://www.apollographql.com/docs/react)
 - [Relay](https://relay.dev/)
 
 
-### Code-splitting {/*code-splitting*/}
+### Code splitting {/*code-splitting*/}
 
-Code-splitting is the process of breaking your app into smaller bundles that can be loaded on demand. An app's code size increases with every new feature and additional dependency. Apps can become slow to load because all of the code for the entire app needs to be sent before it can be used. Caching, reducing features/dependencies, and moving some code to run on the server can help mitigate slow loading but are incomplete solutions that can sacrifice functionality if overused.
+Code splitting là quá trình chia ứng dụng thành những bundle nhỏ hơn có thể tải theo nhu cầu. Kích thước code của ứng dụng tăng lên với mỗi tính năng mới và dependency bổ sung. Ứng dụng có thể tải chậm vì toàn bộ mã cho cả ứng dụng phải được gửi xuống trước khi dùng được. Cache, giảm bớt tính năng/dependency và chuyển một phần code sang chạy trên server có thể giúp giảm chậm tải, nhưng đó vẫn là những giải pháp chưa trọn vẹn và có thể hy sinh chức năng nếu lạm dụng.
 
-Similarly, if you rely on the apps using your framework to split the code, you might encounter situations where loading becomes slower than if no code splitting were happening at all. For example, [lazily loading](/reference/react/lazy) a chart delays sending the code needed to render the chart, splitting the chart code from the rest of the app. [Parcel supports code splitting with React.lazy](https://parceljs.org/recipes/react/#code-splitting). However, if the chart loads its data *after* it has been initially rendered you are now waiting twice. This is a waterfall: rather than fetching the data for the chart and sending the code to render it simultaneously, you must wait for each step to complete one after the other.
+Tương tự, nếu bạn phụ thuộc vào việc các ứng dụng dùng framework của bạn phải tự tách code, có thể sẽ có lúc thời gian tải còn chậm hơn cả khi không tách code. Ví dụ, [lazy loading](/reference/react/lazy) một biểu đồ sẽ trì hoãn việc gửi code cần thiết để kết xuất biểu đồ, tức tách code của biểu đồ khỏi phần còn lại của ứng dụng. [Parcel hỗ trợ code splitting với React.lazy](https://parceljs.org/recipes/react/#code-splitting). Tuy nhiên, nếu biểu đồ tải dữ liệu *sau khi* đã được kết xuất lần đầu, giờ bạn phải chờ hai lần. Đây là waterfall: thay vì vừa lấy dữ liệu cho biểu đồ vừa gửi code để kết xuất nó cùng lúc, bạn phải đợi từng bước hoàn thành lần lượt.
 
-Splitting code by route, when integrated with bundling and data fetching, can reduce the initial load time of your app and the time it takes for the largest visible content of the app to render ([Largest Contentful Paint](https://web.dev/articles/lcp)).
+Việc tách code theo route, khi được tích hợp với bundling và data fetching, có thể giảm thời gian tải ban đầu của ứng dụng cũng như thời gian để phần nội dung lớn nhất hiển thị trên màn hình được kết xuất ([Largest Contentful Paint](https://web.dev/articles/lcp)).
 
-For code-splitting instructions, see your build tool docs:
-- [Vite build optimizations](https://vite.dev/guide/features.html#build-optimizations)
-- [Parcel code splitting](https://parceljs.org/features/code-splitting/)
-- [Rsbuild code splitting](https://rsbuild.dev/guide/optimization/code-splitting)
+Để biết hướng dẫn code splitting, hãy xem tài liệu của công cụ build bạn dùng:
+- [Tối ưu build trong Vite](https://vite.dev/guide/features.html#build-optimizations)
+- [Code splitting trong Parcel](https://parceljs.org/features/code-splitting/)
+- [Code splitting trong Rsbuild](https://rsbuild.dev/guide/optimization/code-splitting)
 
-### Improving Application Performance {/*improving-application-performance*/}
+### Cải thiện hiệu năng ứng dụng {/*improving-application-performance*/}
 
-Since the build tool you select only supports single page apps (SPAs), you'll need to implement other [rendering patterns](https://www.patterns.dev/vanilla/rendering-patterns) like server-side rendering (SSR), static site generation (SSG), and/or React Server Components (RSC). Even if you don't need these features at first, in the future there may be some routes that would benefit SSR, SSG or RSC.
+Vì công cụ build bạn chọn chỉ hỗ trợ single-page app (SPA), bạn sẽ cần tự triển khai các [mẫu kết xuất](https://www.patterns.dev/vanilla/rendering-patterns) khác như server-side rendering (SSR), static site generation (SSG) và/hoặc React Server Components (RSC). Ngay cả khi ban đầu bạn chưa cần những tính năng này, trong tương lai có thể sẽ có một số route hưởng lợi từ SSR, SSG hoặc RSC.
 
-* **Single-page apps (SPA)** load a single HTML page and dynamically updates the page as the user interacts with the app. SPAs are easier to get started with, but they can have slower initial load times. SPAs are the default architecture for most build tools.
+* **Single-page app (SPA)** tải một trang HTML duy nhất và cập nhật trang một cách động khi người dùng tương tác. SPA dễ bắt đầu hơn nhưng có thể có thời gian tải ban đầu chậm hơn. SPA là kiến trúc mặc định của hầu hết công cụ build.
 
-* **Streaming Server-side rendering (SSR)** renders a page on the server and sends the fully rendered page to the client. SSR can improve performance, but it can be more complex to set up and maintain than a single-page app. With the addition of streaming, SSR can be very complex to set up and maintain. See [Vite's SSR guide]( https://vite.dev/guide/ssr).
+* **Streaming server-side rendering (SSR)** kết xuất trang trên server rồi gửi trang đã kết xuất hoàn chỉnh về cho client. SSR có thể cải thiện hiệu năng, nhưng việc thiết lập và bảo trì phức tạp hơn so với single-page app. Với streaming, SSR có thể trở nên rất phức tạp trong cả thiết lập lẫn bảo trì. Hãy xem [hướng dẫn SSR của Vite]( https://vite.dev/guide/ssr).
 
-* **Static site generation (SSG)** generates static HTML files for your app at build time. SSG can improve performance, but it can be more complex to set up and maintain than server-side rendering. See [Vite's SSG guide](https://vite.dev/guide/ssr.html#pre-rendering-ssg).
+* **Static site generation (SSG)** tạo các tệp HTML tĩnh cho ứng dụng ở thời điểm build. SSG có thể cải thiện hiệu năng, nhưng cũng phức tạp hơn để thiết lập và bảo trì so với server-side rendering. Hãy xem [hướng dẫn SSG của Vite](https://vite.dev/guide/ssr.html#pre-rendering-ssg).
 
-* **React Server Components (RSC)** lets you mix build-time, server-only, and interactive components in a single React tree. RSC can improve performance, but it currently requires deep expertise to set up and maintain. See [Parcel's RSC examples](https://github.com/parcel-bundler/rsc-examples).
+* **React Server Components (RSC)** cho phép bạn kết hợp các thành phần chạy ở thời điểm build, chỉ chạy trên server và thành phần tương tác trong cùng một cây React. RSC có thể cải thiện hiệu năng, nhưng hiện tại việc thiết lập và bảo trì đòi hỏi chuyên môn sâu. Hãy xem [các ví dụ RSC của Parcel](https://github.com/parcel-bundler/rsc-examples).
 
-Your rendering strategies need to integrate with your router so apps built with your framework can choose the rendering strategy on a per-route level. This will enable different rendering strategies without having to rewrite your whole app. For example, the landing page for your app might benefit from being statically generated (SSG), while a page with a content feed might perform best with server-side rendering. 
+Chiến lược kết xuất của bạn cần tích hợp với router để ứng dụng xây dựng bằng framework của bạn có thể chọn chiến lược kết xuất theo từng route. Điều này cho phép dùng nhiều chiến lược kết xuất khác nhau mà không phải viết lại toàn bộ ứng dụng. Ví dụ, landing page của ứng dụng có thể hưởng lợi từ static generation (SSG), trong khi trang có news feed có thể hoạt động tốt nhất với server-side rendering.
 
-Using the right rendering strategy for the right routes can decrease the time it takes for the first byte of content to be loaded ([Time to First Byte](https://web.dev/articles/ttfb)), the first piece of content to render ([First Contentful Paint](https://web.dev/articles/fcp)), and the largest visible content of the app to render ([Largest Contentful Paint](https://web.dev/articles/lcp)).
+Sử dụng đúng chiến lược kết xuất cho đúng route có thể giảm thời gian tải byte nội dung đầu tiên ([Time to First Byte](https://web.dev/articles/ttfb)), thời gian kết xuất phần nội dung đầu tiên ([First Contentful Paint](https://web.dev/articles/fcp)) và thời gian kết xuất phần nội dung lớn nhất nhìn thấy trên màn hình ([Largest Contentful Paint](https://web.dev/articles/lcp)).
 
-### And more... {/*and-more*/}
+### Và còn nữa... {/*and-more*/}
 
-These are just a few examples of the features a new app will need to consider when building from scratch. Many limitations you'll hit can be difficult to solve as each problem is interconnected with the others and can require deep expertise in problem areas you may not be familiar with. 
+Đây chỉ là vài ví dụ về những tính năng mà một ứng dụng mới cần cân nhắc khi xây dựng từ đầu. Nhiều giới hạn bạn gặp phải có thể khó giải quyết vì mỗi vấn đề đều liên kết với các vấn đề khác và có thể đòi hỏi chuyên môn sâu ở những lĩnh vực bạn chưa quen.
 
-If you don't want to solve these problems on your own, you can [get started with a framework](/learn/creating-a-react-app) that provides these features out of the box. 
+Nếu bạn không muốn tự giải quyết các vấn đề này, bạn có thể [bắt đầu với một framework](/learn/creating-a-react-app) đã cung cấp sẵn các tính năng đó.

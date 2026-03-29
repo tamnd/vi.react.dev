@@ -4,33 +4,33 @@ title: config
 
 <Intro>
 
-Validates the compiler [configuration options](/reference/react-compiler/configuration).
+Kiểm tra các [tùy chọn cấu hình](/reference/react-compiler/configuration) của compiler.
 
 </Intro>
 
-## Rule Details {/*rule-details*/}
+## Chi tiết quy tắc {/*rule-details*/}
 
-React Compiler accepts various [configuration options](/reference/react-compiler/configuration)  to control its behavior. This rule validates that your configuration uses correct option names and value types, preventing silent failures from typos or incorrect settings.
+React Compiler chấp nhận nhiều [tùy chọn cấu hình](/reference/react-compiler/configuration) để kiểm soát hành vi của nó. Quy tắc này kiểm tra rằng cấu hình của bạn dùng đúng tên tùy chọn và kiểu giá trị, nhờ đó ngăn những lỗi âm thầm do gõ sai hoặc thiết lập sai.
 
 ### Invalid {/*invalid*/}
 
-Examples of incorrect code for this rule:
+Ví dụ về code không đúng với quy tắc này:
 
 ```js
-// ❌ Unknown option name
+// ❌ Tên tùy chọn không xác định
 module.exports = {
   plugins: [
     ['babel-plugin-react-compiler', {
-      compileMode: 'all' // Typo: should be compilationMode
+      compileMode: 'all' // Gõ sai: phải là compilationMode
     }]
   ]
 };
 
-// ❌ Invalid option value
+// ❌ Giá trị tùy chọn không hợp lệ
 module.exports = {
   plugins: [
     ['babel-plugin-react-compiler', {
-      compilationMode: 'everything' // Invalid: use 'all' or 'infer'
+      compilationMode: 'everything' // Không hợp lệ: hãy dùng 'all' hoặc 'infer'
     }]
   ]
 };
@@ -38,10 +38,10 @@ module.exports = {
 
 ### Valid {/*valid*/}
 
-Examples of correct code for this rule:
+Ví dụ về code đúng với quy tắc này:
 
 ```js
-// ✅ Valid compiler configuration
+// ✅ Cấu hình compiler hợp lệ
 module.exports = {
   plugins: [
     ['babel-plugin-react-compiler', {
@@ -52,38 +52,38 @@ module.exports = {
 };
 ```
 
-## Troubleshooting {/*troubleshooting*/}
+## Khắc phục sự cố {/*troubleshooting*/}
 
-### Configuration not working as expected {/*config-not-working*/}
+### Cấu hình không hoạt động như mong đợi {/*config-not-working*/}
 
-Your compiler configuration might have typos or incorrect values:
+Cấu hình compiler của bạn có thể đang có lỗi gõ sai hoặc giá trị không đúng:
 
 ```js
-// ❌ Wrong: Common configuration mistakes
+// ❌ Sai: Những lỗi cấu hình thường gặp
 module.exports = {
   plugins: [
     ['babel-plugin-react-compiler', {
-      // Typo in option name
+      // Gõ sai tên tùy chọn
       compilationMod: 'all',
-      // Wrong value type
+      // Sai kiểu giá trị
       panicThreshold: true,
-      // Unknown option
+      // Tùy chọn không xác định
       optimizationLevel: 'max'
     }]
   ]
 };
 ```
 
-Check the [configuration documentation](/reference/react-compiler/configuration) for valid options:
+Hãy kiểm tra [tài liệu cấu hình](/reference/react-compiler/configuration) để biết các tùy chọn hợp lệ:
 
 ```js
-// ✅ Better: Valid configuration
+// ✅ Tốt hơn: Cấu hình hợp lệ
 module.exports = {
   plugins: [
     ['babel-plugin-react-compiler', {
-      compilationMode: 'all', // or 'infer'
-      panicThreshold: 'none', // or 'critical_errors', 'all_errors'
-      // Only use documented options
+      compilationMode: 'all', // hoặc 'infer'
+      panicThreshold: 'none', // hoặc 'critical_errors', 'all_errors'
+      // Chỉ dùng những tùy chọn đã được tài liệu hóa
     }]
   ]
 };

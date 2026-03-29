@@ -4,47 +4,47 @@ title: refs
 
 <Intro>
 
-Validates correct usage of refs, not reading/writing during render. See the "pitfalls" section in [`useRef()` usage](/reference/react/useRef#usage).
+Kiểm tra cách dùng ref đúng, không đọc hoặc ghi trong lúc kết xuất. Xem phần "pitfalls" trong [cách dùng `useRef()`](/reference/react/useRef#usage).
 
 </Intro>
 
-## Rule Details {/*rule-details*/}
+## Chi tiết luật {/*rule-details*/}
 
-Refs hold values that aren't used for rendering. Unlike state, changing a ref doesn't trigger a re-render. Reading or writing `ref.current` during render breaks React's expectations. Refs might not be initialized when you try to read them, and their values can be stale or inconsistent.
+Ref giữ những giá trị không được dùng để kết xuất. Khác với state, thay đổi ref không kích hoạt kết xuất lại. Việc đọc hoặc ghi `ref.current` trong lúc kết xuất sẽ phá vỡ kỳ vọng của React. Ref có thể chưa được khởi tạo khi bạn cố đọc nó, và giá trị của chúng có thể cũ hoặc không nhất quán.
 
-## How It Detects Refs {/*how-it-detects-refs*/}
+## Cách luật này phát hiện ref {/*how-it-detects-refs*/}
 
-The lint only applies these rules to values it knows are refs. A value is inferred as a ref when the compiler sees any of the following patterns:
+Lint này chỉ áp dụng các quy tắc đó cho những giá trị mà nó biết là ref. Một giá trị được suy ra là ref khi compiler thấy bất kỳ mẫu nào sau đây:
 
-- Returned from `useRef()` or `React.createRef()`.
+- Được trả về từ `useRef()` hoặc `React.createRef()`.
 
   ```js
   const scrollRef = useRef(null);
   ```
 
-- An identifier named `ref` or ending in `Ref` that reads from or writes to `.current`.
+- Một định danh có tên `ref` hoặc kết thúc bằng `Ref` mà đọc từ hoặc ghi vào `.current`.
 
   ```js
   buttonRef.current = node;
   ```
 
-- Passed through a JSX `ref` prop (for example `<div ref={someRef} />`).
+- Được truyền qua prop JSX `ref`, ví dụ `<div ref={someRef} />`.
 
   ```jsx
   <input ref={inputRef} />
   ```
 
-Once something is marked as a ref, that inference follows the value through assignments, destructuring, or helper calls. This lets the lint surface violations even when `ref.current` is accessed inside another function that received the ref as an argument.
+Khi một giá trị đã được đánh dấu là ref, suy luận đó sẽ đi theo giá trị qua các phép gán, destructuring hoặc lời gọi hàm trợ giúp. Điều này cho phép lint nêu ra vi phạm ngay cả khi `ref.current` được truy cập bên trong một hàm khác nhận ref làm đối số.
 
-## Common Violations {/*common-violations*/}
+## Các vi phạm thường gặp {/*common-violations*/}
 
-- Reading `ref.current` during render
-- Updating `refs` during render
-- Using `refs` for values that should be state
+- Đọc `ref.current` trong lúc kết xuất
+- Cập nhật `refs` trong lúc kết xuất
+- Dùng `refs` cho các giá trị đáng lẽ nên là state
 
-### Invalid {/*invalid*/}
+### Không hợp lệ {/*invalid*/}
 
-Examples of incorrect code for this rule:
+Ví dụ về mã không đúng cho luật này:
 
 ```js
 // ❌ Reading ref during render
@@ -62,9 +62,9 @@ function Component({value}) {
 }
 ```
 
-### Valid {/*valid*/}
+### Hợp lệ {/*valid*/}
 
-Examples of correct code for this rule:
+Ví dụ về mã đúng cho luật này:
 
 ```js
 // ✅ Read ref in effects/handlers
@@ -108,8 +108,8 @@ function Component() {
 }
 ```
 
-## Troubleshooting {/*troubleshooting*/}
+## Khắc phục sự cố {/*troubleshooting*/}
 
-### The lint flagged my plain object with `.current` {/*plain-object-current*/}
+### Lint đã đánh dấu object thường của tôi có `.current` {/*plain-object-current*/}
 
-The name heuristic intentionally treats `ref.current` and `fooRef.current` as real refs. If you're modeling a custom container object, pick a different name (for example, `box`) or move the mutable value into state. Renaming avoids the lint because the compiler stops inferring it as a ref.
+Heuristic về tên cố ý coi `ref.current` và `fooRef.current` là ref thực sự. Nếu bạn đang mô hình hóa một object bao chứa tùy biến, hãy chọn tên khác, ví dụ `box`, hoặc chuyển giá trị có thể thay đổi đó sang state. Việc đổi tên sẽ tránh lint này vì compiler sẽ ngừng suy luận nó là ref.

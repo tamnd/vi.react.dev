@@ -14,23 +14,23 @@ import type {RouteTag} from './Layout/getRouteMeta';
 
 const variantMap = {
   foundation: {
-    name: 'Foundation',
+    name: 'Nền tảng',
     classes: 'bg-yellow-50 text-white',
   },
   intermediate: {
-    name: 'Intermediate',
+    name: 'Trung cấp',
     classes: 'bg-purple-40 text-white',
   },
   advanced: {
-    name: 'Advanced',
+    name: 'Nâng cao',
     classes: 'bg-green-40 text-white',
   },
   experimental: {
-    name: 'Experimental',
+    name: 'Thử nghiệm',
     classes: 'bg-ui-orange text-white',
   },
   deprecated: {
-    name: 'Deprecated',
+    name: 'Không dùng nữa',
     classes: 'bg-red-40 text-white',
   },
 };
