@@ -1,46 +1,46 @@
 {
-  "title": "Community",
+  "title": "Cộng đồng",
   "path": "/community",
   "routes": [
     {
       "hasSectionHeader": true,
-      "sectionHeader": "GET INVOLVED"
+      "sectionHeader": "THAM GIA CỘNG ĐỒNG"
     },
     {
-      "title": "Community",
+      "title": "Cộng đồng",
       "path": "/community",
       "skipBreadcrumb": true,
       "routes": [
         {
-          "title": "React Conferences",
+          "title": "Hội nghị React",
           "path": "/community/conferences"
         },
         {
-          "title": "React Meetups",
+          "title": "Các meetup React",
           "path": "/community/meetups"
         },
         {
-          "title": "React Videos",
+          "title": "Video về React",
           "path": "/community/videos"
         },
         {
-          "title": "Meet the Team",
+          "title": "Gặp gỡ đội ngũ",
           "path": "/community/team"
         },
         {
-          "title": "Docs Contributors",
+          "title": "Người đóng góp cho tài liệu",
           "path": "/community/docs-contributors"
         },
         {
-          "title": "Translations",
+          "title": "Bản dịch",
           "path": "/community/translations"
         },
         {
-          "title": "Acknowledgements",
+          "title": "Lời cảm ơn",
           "path": "/community/acknowledgements"
         },
         {
-          "title": "Versioning Policy",
+          "title": "Chính sách phiên bản",
           "path": "/community/versioning-policy"
         }
       ]

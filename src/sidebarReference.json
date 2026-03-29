@@ -1,5 +1,5 @@
 {
-  "title": "API Reference",
+  "title": "Tham chiếu API",
   "path": "/reference/react",
   "routes": [
     {
@@ -7,7 +7,7 @@
       "sectionHeader": "react@{{version}}"
     },
     {
-      "title": "Overview",
+      "title": "Tổng quan",
       "path": "/reference/react"
     },
     {
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "title": "Components",
+      "title": "Thành phần",
       "path": "/reference/react/components",
       "routes": [
         {
@@ -120,7 +120,7 @@
       ]
     },
     {
-      "title": "APIs",
+      "title": "API",
       "path": "/reference/react/apis",
       "routes": [
         {
@@ -191,11 +191,11 @@
       ]
     },
     {
-      "title": "Components",
+      "title": "Thành phần",
       "path": "/reference/react-dom/components",
       "routes": [
         {
-          "title": "Common (e.g. <div>)",
+          "title": "Chung (ví dụ: <div>)",
           "path": "/reference/react-dom/components/common"
         },
         {
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "title": "APIs",
+      "title": "API",
       "path": "/reference/react-dom",
       "routes": [
         {
@@ -283,7 +283,7 @@
       ]
     },
     {
-      "title": "Client APIs",
+      "title": "API client",
       "path": "/reference/react-dom/client",
       "routes": [
         {
@@ -297,7 +297,7 @@
       ]
     },
     {
-      "title": "Server APIs",
+      "title": "API server",
       "path": "/reference/react-dom/server",
       "routes": [
         {
@@ -327,7 +327,7 @@
       ]
     },
     {
-      "title": "Static APIs",
+      "title": "API tĩnh",
       "path": "/reference/react-dom/static",
       "routes": [
         {
@@ -353,7 +353,7 @@
       "sectionHeader": "React Compiler"
     },
     {
-      "title": "Configuration",
+      "title": "Cấu hình",
       "path": "/reference/react-compiler/configuration",
       "routes": [
         {
@@ -379,7 +379,7 @@
       ]
     },
     {
-      "title": "Directives",
+      "title": "Chỉ thị",
       "path": "/reference/react-compiler/directives",
       "routes": [
         {
@@ -393,7 +393,7 @@
       ]
     },
     {
-      "title": "Compiling Libraries",
+      "title": "Biên dịch thư viện",
       "path": "/reference/react-compiler/compiling-libraries"
     },
     {
@@ -401,7 +401,7 @@
       "sectionHeader": "React DevTools"
     },
     {
-      "title": "React Performance tracks",
+      "title": "Dấu vết hiệu năng React",
       "path": "/reference/dev-tools/react-performance-tracks"
     },
     {
@@ -409,7 +409,7 @@
       "sectionHeader": "eslint-plugin-react-hooks"
     },
     {
-      "title": "Lints",
+      "title": "Quy tắc lint",
       "path": "/reference/eslint-plugin-react-hooks",
       "routes": [
         {
@@ -486,22 +486,22 @@
     },
     {
       "hasSectionHeader": true,
-      "sectionHeader": "Rules of React"
+      "sectionHeader": "Quy tắc của React"
     },
     {
-      "title": "Overview",
+      "title": "Tổng quan",
       "path": "/reference/rules",
       "routes": [
         {
-          "title": "Components and Hooks must be pure",
+          "title": "Thành phần và Hook phải thuần",
           "path": "/reference/rules/components-and-hooks-must-be-pure"
         },
         {
-          "title": "React calls Components and Hooks",
+          "title": "React gọi thành phần và Hook",
           "path": "/reference/rules/react-calls-components-and-hooks"
         },
         {
-          "title": "Rules of Hooks",
+          "title": "Quy tắc của Hook",
           "path": "/reference/rules/rules-of-hooks"
         }
       ]
@@ -534,10 +534,10 @@
     },
     {
       "hasSectionHeader": true,
-      "sectionHeader": "Legacy APIs"
+      "sectionHeader": "API cũ"
     },
     {
-      "title": "Legacy React APIs",
+      "title": "API React cũ",
       "path": "/reference/react/legacy",
       "routes": [
         {

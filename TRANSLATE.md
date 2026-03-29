@@ -19,7 +19,7 @@ This checklist is based on:
 
 ## Rules
 
-- [ ] Define Vietnamese terminology conventions before large-scale translation.
+- [x] Define Vietnamese terminology conventions before large-scale translation.
 - [ ] Keep code, identifiers, API names, package names, and version numbers in English.
 - [ ] Translate prose, headings, captions, alt text, labels, navigation text, and metadata.
 - [ ] Preserve frontmatter keys, anchors, MDX components, JSX snippets, import paths, and code fences.
@@ -43,12 +43,12 @@ This checklist is based on:
 
 ## Site Chrome And Project Files
 
-- [ ] Update [`src/siteConfig.js`](/Users/apple/github/tamnd/vi.react.dev/src/siteConfig.js) to use `languageCode: 'vi'`.
-- [ ] Translate [`src/sidebarHome.json`](/Users/apple/github/tamnd/vi.react.dev/src/sidebarHome.json).
-- [ ] Translate [`src/sidebarLearn.json`](/Users/apple/github/tamnd/vi.react.dev/src/sidebarLearn.json).
-- [ ] Translate [`src/sidebarReference.json`](/Users/apple/github/tamnd/vi.react.dev/src/sidebarReference.json).
-- [ ] Translate [`src/sidebarCommunity.json`](/Users/apple/github/tamnd/vi.react.dev/src/sidebarCommunity.json).
-- [ ] Translate [`src/sidebarBlog.json`](/Users/apple/github/tamnd/vi.react.dev/src/sidebarBlog.json).
+- [x] Update [`src/siteConfig.js`](/Users/apple/github/tamnd/vi.react.dev/src/siteConfig.js) to use `languageCode: 'vi'`.
+- [x] Translate [`src/sidebarHome.json`](/Users/apple/github/tamnd/vi.react.dev/src/sidebarHome.json).
+- [x] Translate [`src/sidebarLearn.json`](/Users/apple/github/tamnd/vi.react.dev/src/sidebarLearn.json).
+- [x] Translate [`src/sidebarReference.json`](/Users/apple/github/tamnd/vi.react.dev/src/sidebarReference.json).
+- [x] Translate [`src/sidebarCommunity.json`](/Users/apple/github/tamnd/vi.react.dev/src/sidebarCommunity.json).
+- [x] Translate [`src/sidebarBlog.json`](/Users/apple/github/tamnd/vi.react.dev/src/sidebarBlog.json).
 - [ ] Translate shared UI strings in layout, nav, footer, feedback, search, and MDX helper components.
 - [ ] Add or port a Vietnamese feedback widget equivalent to `zh-hans`'s `Feedback.tsx`.
 - [ ] Translate project-facing docs as needed:
