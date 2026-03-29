@@ -75,7 +75,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [x] `src/content/learn/describing-the-ui.md`
 - [x] `src/content/learn/your-first-component.md`
 - [x] `src/content/learn/importing-and-exporting-components.md`
-- [ ] `src/content/learn/writing-markup-with-jsx.md`
+- [x] `src/content/learn/writing-markup-with-jsx.md`
 - [ ] `src/content/learn/javascript-in-jsx-with-curly-braces.md`
 - [ ] `src/content/learn/passing-props-to-a-component.md`
 - [ ] `src/content/learn/conditional-rendering.md`
@@ -104,7 +104,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/learn/describing-the-ui.md`
 - [x] `src/content/learn/your-first-component.md`
 - [x] `src/content/learn/importing-and-exporting-components.md`
-- [ ] `src/content/learn/writing-markup-with-jsx.md`
+- [x] `src/content/learn/writing-markup-with-jsx.md`
 - [ ] `src/content/learn/javascript-in-jsx-with-curly-braces.md`
 - [ ] `src/content/learn/passing-props-to-a-component.md`
 - [ ] `src/content/learn/conditional-rendering.md`
@@ -233,7 +233,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/learn/understanding-your-ui-as-a-tree.md`
 - [ ] `src/content/learn/updating-arrays-in-state.md`
 - [ ] `src/content/learn/updating-objects-in-state.md`
-- [ ] `src/content/learn/writing-markup-with-jsx.md`
+- [x] `src/content/learn/writing-markup-with-jsx.md`
 - [ ] `src/content/learn/you-might-not-need-an-effect.md`
 - [x] `src/content/learn/your-first-component.md`
 
