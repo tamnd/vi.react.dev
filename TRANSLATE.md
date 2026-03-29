@@ -54,7 +54,7 @@ This checklist is based on:
 - [ ] Translate project-facing docs as needed:
   - [x] [`README.md`](/Users/apple/github/tamnd/vi.react.dev/README.md)
   - [x] [`CONTRIBUTING.md`](/Users/apple/github/tamnd/vi.react.dev/CONTRIBUTING.md)
-  - [ ] [`CODE_OF_CONDUCT.md`](/Users/apple/github/tamnd/vi.react.dev/CODE_OF_CONDUCT.md)
+  - [x] [`CODE_OF_CONDUCT.md`](/Users/apple/github/tamnd/vi.react.dev/CODE_OF_CONDUCT.md)
 
 ## `src/content` Translation Checklist
 
