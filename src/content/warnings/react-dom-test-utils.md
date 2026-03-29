@@ -1,10 +1,10 @@
 ---
-title: react-dom/test-utils Deprecation Warnings
+title: Cảnh báo ngừng hỗ trợ react-dom/test-utils
 ---
 
-## ReactDOMTestUtils.act() warning {/*reactdomtestutilsact-warning*/}
+## Cảnh báo ReactDOMTestUtils.act() {/*reactdomtestutilsact-warning*/}
 
-`act` from `react-dom/test-utils` has been deprecated in favor of `act` from `react`.
+`act` từ `react-dom/test-utils` đã bị ngừng hỗ trợ để nhường chỗ cho `act` từ `react`.
 
 Before:
 
@@ -18,15 +18,15 @@ After:
 import {act} from 'react';
 ```
 
-## Rest of ReactDOMTestUtils APIS {/*rest-of-reactdomtestutils-apis*/}
+## Các API ReactDOMTestUtils còn lại {/*rest-of-reactdomtestutils-apis*/}
 
-All APIs except `act` have been removed.
+Mọi API ngoại trừ `act` đều đã bị loại bỏ.
 
-The React Team recommends migrating your tests to [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/) for a modern and well supported testing experience.
+Đội ngũ React khuyến nghị chuyển bài kiểm thử của bạn sang [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/) để có trải nghiệm kiểm thử hiện đại và được hỗ trợ tốt.
 
 ### ReactDOMTestUtils.renderIntoDocument {/*reactdomtestutilsrenderintodocument*/}
 
-`renderIntoDocument` can be replaced with `render` from `@testing-library/react`.
+`renderIntoDocument` có thể được thay bằng `render` từ `@testing-library/react`.
 
 Before:
 
@@ -46,7 +46,7 @@ render(<Component />);
 
 ### ReactDOMTestUtils.Simulate {/*reactdomtestutilssimulate*/}
 
-`Simulate` can be replaced with `fireEvent` from `@testing-library/react`.
+`Simulate` có thể được thay bằng `fireEvent` từ `@testing-library/react`.
 
 Before:
 
@@ -66,9 +66,9 @@ const element = document.querySelector('button');
 fireEvent.click(element);
 ```
 
-Be aware that `fireEvent` dispatches an actual event on the element and doesn't just synthetically call the event handler.
+Lưu ý rằng `fireEvent` sẽ phát một sự kiện thật trên phần tử chứ không chỉ gọi hàm xử lý sự kiện theo cách giả lập.
 
-### List of all removed APIs {/*list-of-all-removed-apis-list-of-all-removed-apis*/}
+### Danh sách toàn bộ API đã bị loại bỏ {/*list-of-all-removed-apis-list-of-all-removed-apis*/}
 
 - `mockComponent()`
 - `isElement()`
