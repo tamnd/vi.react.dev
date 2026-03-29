@@ -21,57 +21,60 @@ Use this file to keep terminology stable across `learn`, `reference`, `blog`, si
 | English | Vietnamese | Status | Notes |
 | --- | --- | --- | --- |
 | React | React | approved | Keep brand name in English. |
-| component |  | proposed | |
-| Hook |  | proposed | Decide whether to keep `Hook` or translate. |
-| props |  | proposed | Usually keep lowercase code form in prose if needed. |
-| state |  | proposed | |
-| context |  | proposed | |
-| ref |  | proposed | |
-| effect |  | proposed | |
-| side effect |  | proposed | |
-| event handler |  | proposed | |
-| render |  | proposed | Decide verb and noun forms. |
-| rendering |  | proposed | |
-| commit |  | proposed | React rendering phase term, not Git term. |
-| reconciliation |  | proposed | |
-| hydration |  | proposed | |
-| server rendering |  | proposed | |
-| client |  | proposed | |
-| server |  | proposed | |
-| tree |  | proposed | |
-| node |  | proposed | |
-| compiler |  | proposed | Decide whether to keep `compiler` in English. |
-| React Compiler | React Compiler | proposed | Likely keep English product name. |
-| Server Components | Server Components | proposed | Likely keep English product name. |
-| Server Functions | Server Functions | proposed | |
-| escape hatch |  | proposed | |
-| pure |  | proposed | |
-| impure |  | proposed | |
-| memoization |  | proposed | |
-| batching |  | proposed | |
-| concurrency |  | proposed | |
-| transition |  | proposed | |
-| suspense | Suspense | proposed | Product/API name. |
+| component | thành phần | approved | Use `component` only when directly quoting API names or code. |
+| Hook | Hook | approved | Keep the React concept name in English. |
+| props | props | approved | Keep lowercase code form in prose. |
+| state | state | approved | May gloss once as `trạng thái` in beginner prose if needed. |
+| context | context | approved | Use `ngữ cảnh` only in generic prose, not for the React API term. |
+| ref | ref | approved | Keep the short API term in English. |
+| effect | Effect | approved | Keep `Effect` for the React concept; avoid generic `hiệu ứng`. |
+| side effect | tác dụng phụ | approved | Use for the programming concept outside the specific React `Effect` term. |
+| event handler | trình xử lý sự kiện | approved | |
+| render | kết xuất | approved | Use as verb or noun depending on sentence structure. |
+| rendering | kết xuất | approved | Prefer natural phrasing over literal repetition. |
+| commit | commit | approved | React rendering phase term, not Git commit message context. |
+| reconciliation | đối soát cây giao diện | proposed | Keep under review until used in translated docs. |
+| hydration | hydration | approved | Keep English technical term for now. |
+| server rendering | kết xuất phía máy chủ | approved | |
+| client | client | approved | Keep English technical term in docs prose. |
+| server | server | approved | Keep English technical term in docs prose. |
+| tree | cây | approved | |
+| node | nút | approved | |
+| compiler | trình biên dịch | approved | Generic term; product name stays English. |
+| React Compiler | React Compiler | approved | Keep product name in English. |
+| Server Components | Server Components | approved | Keep product name in English. |
+| Server Functions | Server Functions | approved | Keep product name in English. |
+| escape hatch | lối thoát | approved | Use technical prose carefully to keep it readable. |
+| pure | thuần | approved | Prefer short form in programming contexts. |
+| impure | không thuần | approved | |
+| memoization | ghi nhớ kết quả | approved | Prefer explanatory wording in prose when useful. |
+| batching | gộp lô cập nhật | approved | |
+| concurrency | đồng thời | approved | |
+| transition | chuyển tiếp | approved | Keep API names like `startTransition` unchanged. |
+| suspense | Suspense | approved | Keep product/API name in English. |
 
 ## Style Decisions
 
 | Topic | Decision | Status | Notes |
 | --- | --- | --- | --- |
-| Tone |  | proposed | Formal vs conversational Vietnamese. |
-| Person |  | proposed | `bạn`, `chúng ta`, or neutral imperative. |
-| Imperative instructions |  | proposed | Keep command steps concise. |
-| Section headers |  | proposed | Title case is not natural in Vietnamese. |
-| Sidebar labels |  | proposed | Shorter wording may be needed than in article titles. |
+| Tone | Direct, technical, and plain-language | approved | Avoid marketing tone or overly literary wording. |
+| Person | Use `bạn` for user-facing guidance | approved | Keep imperative steps natural and concise. |
+| Imperative instructions | Verb-first, short sentences | approved | Prefer clarity over literal translation. |
+| Section headers | Natural Vietnamese headings, not English title case | approved | |
+| Sidebar labels | Shorter than article titles when needed | approved | Optimize for scanability in nav. |
 
 ## Terms To Avoid
 
 | Avoid | Use Instead | Reason |
 | --- | --- | --- |
-|  |  |  |
+| hiển thị | kết xuất | `render` in React is broader than visual display. |
+| hiệu ứng | Effect | Avoid confusion with animation or visual effects. |
+| móc | Hook | Literal translation reads unnaturally in developer docs. |
+| đạo cụ | props | Literal translation is misleading in this context. |
+| hydrat hóa | hydration | Uncommon and awkward in Vietnamese frontend usage. |
 
 ## Open Questions
 
 - Should `Hook` stay in English everywhere?
-- Should `state` stay in English in beginner docs, or use a Vietnamese term in prose?
-- Should `render` be translated, transliterated, or kept in English depending on context?
 - Which product names should always remain in English?
+- Should `reconciliation` keep a Vietnamese term, or stay in English until we hit real usage friction?
