@@ -32,7 +32,7 @@ This checklist is based on:
 - [x] Add `upstream` remote pointing to `https://github.com/reactjs/react.dev`.
 - [x] Add `origin` remote pointing to `https://github.com/tamnd/vi.react.dev`.
 - [ ] Add contributor instructions for Vietnamese translation workflow.
-- [ ] Decide the first translation milestone and mark it in this file.
+- [x] Decide the first translation milestone and mark it in this file.
 
 ## Tracking Files
 
@@ -55,6 +55,41 @@ This checklist is based on:
   - [x] [`README.md`](/Users/apple/github/tamnd/vi.react.dev/README.md)
   - [x] [`CONTRIBUTING.md`](/Users/apple/github/tamnd/vi.react.dev/CONTRIBUTING.md)
   - [x] [`CODE_OF_CONDUCT.md`](/Users/apple/github/tamnd/vi.react.dev/CODE_OF_CONDUCT.md)
+
+## First Milestone: 30 Prioritized Pages
+
+Prioritize smaller docs and UI-adjacent pages first, then move into foundational Learn and Reference entry pages.
+
+- [ ] `src/content/errors/377.md`
+- [ ] `src/content/errors/generic.md`
+- [x] `src/content/errors/index.md`
+- [ ] `src/content/community/team.md`
+- [ ] `src/content/community/meetups.md`
+- [ ] `src/content/community/versioning-policy.md`
+- [ ] `src/content/community/videos.md`
+- [ ] `src/content/versions.md`
+- [ ] `src/content/blog/index.md`
+- [ ] `src/content/learn/index.md`
+- [ ] `src/content/learn/setup.md`
+- [ ] `src/content/learn/installation.md`
+- [ ] `src/content/learn/describing-the-ui.md`
+- [ ] `src/content/learn/your-first-component.md`
+- [ ] `src/content/learn/importing-and-exporting-components.md`
+- [ ] `src/content/learn/writing-markup-with-jsx.md`
+- [ ] `src/content/learn/javascript-in-jsx-with-curly-braces.md`
+- [ ] `src/content/learn/passing-props-to-a-component.md`
+- [ ] `src/content/learn/conditional-rendering.md`
+- [ ] `src/content/learn/rendering-lists.md`
+- [ ] `src/content/learn/keeping-components-pure.md`
+- [ ] `src/content/learn/responding-to-events.md`
+- [ ] `src/content/learn/state-a-components-memory.md`
+- [ ] `src/content/learn/adding-interactivity.md`
+- [ ] `src/content/learn/managing-state.md`
+- [ ] `src/content/reference/react/index.md`
+- [ ] `src/content/reference/react/apis.md`
+- [ ] `src/content/reference/react/components.md`
+- [ ] `src/content/reference/react/hooks.md`
+- [ ] `src/content/reference/react-dom/index.md`
 
 ## `src/content` Translation Checklist
 
@@ -96,7 +131,7 @@ This checklist is based on:
 - [ ] `src/content/community/conferences.md`
 - [x] `src/content/community/docs-contributors.md`
 - [x] `src/content/community/index.md`
-- [ ] `src/content/community/meetups.md`
+- [x] `src/content/community/meetups.md`
 - [ ] `src/content/community/team.md`
 - [x] `src/content/community/translations.md`
 - [ ] `src/content/community/versioning-policy.md`
@@ -106,7 +141,7 @@ This checklist is based on:
 
 - [ ] `src/content/errors/377.md`
 - [ ] `src/content/errors/generic.md`
-- [ ] `src/content/errors/index.md`
+- [x] `src/content/errors/index.md`
 
 ### Learn (`52`)
 
