@@ -351,9 +351,7 @@ export function Footer() {
           <FooterLink href="/community/docs-contributors">
             Người đóng góp cho tài liệu
           </FooterLink>
-          <FooterLink href="/community/acknowledgements">
-            Lời cảm ơn
-          </FooterLink>
+          <FooterLink href="/community/acknowledgements">Lời cảm ơn</FooterLink>
         </div>
         <div className="flex flex-col">
           <FooterLink isHeader={true}>Thêm</FooterLink>
