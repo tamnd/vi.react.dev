@@ -281,7 +281,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/react-dom/preinitModule.md`
 - [ ] `src/content/reference/react-dom/preload.md`
 - [ ] `src/content/reference/react-dom/preloadModule.md`
-- [ ] `src/content/reference/react-dom/server/index.md`
+- [x] `src/content/reference/react-dom/server/index.md`
 - [ ] `src/content/reference/react-dom/server/renderToPipeableStream.md`
 - [ ] `src/content/reference/react-dom/server/renderToReadableStream.md`
 - [ ] `src/content/reference/react-dom/server/renderToStaticMarkup.md`

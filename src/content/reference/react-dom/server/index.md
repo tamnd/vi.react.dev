@@ -1,44 +1,44 @@
 ---
-title: Server React DOM APIs
+title: API React DOM phía server
 ---
 
 <Intro>
 
-The `react-dom/server` APIs let you server-side render React components to HTML. These APIs are only used on the server at the top level of your app to generate the initial HTML. A [framework](/learn/creating-a-react-app#full-stack-frameworks) may call them for you. Most of your components don't need to import or use them.
+Các API `react-dom/server` cho phép bạn kết xuất component React thành HTML ở phía server. Những API này chỉ được dùng trên server ở tầng cao nhất của ứng dụng để tạo ra HTML ban đầu. Một [framework](/learn/creating-a-react-app#full-stack-frameworks) có thể gọi chúng thay bạn. Phần lớn component của bạn không cần import hay sử dụng chúng.
 
 </Intro>
 
 ---
 
-## Server APIs for Web Streams {/*server-apis-for-web-streams*/}
+## API server cho Web Streams {/*server-apis-for-web-streams*/}
 
-These methods are only available in the environments with [Web Streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API), which includes browsers, Deno, and some modern edge runtimes:
+Các phương thức này chỉ khả dụng trong những môi trường có [Web Streams](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API), bao gồm trình duyệt, Deno và một số edge runtime hiện đại:
 
-* [`renderToReadableStream`](/reference/react-dom/server/renderToReadableStream) renders a React tree to a [Readable Web Stream.](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream)
-* [`resume`](/reference/react-dom/server/renderToPipeableStream) resumes [`prerender`](/reference/react-dom/static/prerender) to a [Readable Web Stream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream).
+* [`renderToReadableStream`](/reference/react-dom/server/renderToReadableStream) kết xuất một cây React thành [Readable Web Stream.](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream)
+* [`resume`](/reference/react-dom/server/renderToPipeableStream) tiếp tục [`prerender`](/reference/react-dom/static/prerender) thành một [Readable Web Stream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream).
 
 
 <Note>
 
-Node.js also includes these methods for compatibility, but they are not recommended due to worse performance. Use the [dedicated Node.js APIs](#server-apis-for-nodejs-streams) instead.
+Node.js cũng có các phương thức này để tương thích, nhưng chúng không được khuyến nghị do hiệu năng kém hơn. Hãy dùng [API Node.js chuyên biệt](#server-apis-for-nodejs-streams) thay thế.
 
 </Note>
 ---
 
-## Server APIs for Node.js Streams {/*server-apis-for-nodejs-streams*/}
+## API server cho Node.js Streams {/*server-apis-for-nodejs-streams*/}
 
-These methods are only available in the environments with [Node.js Streams:](https://nodejs.org/api/stream.html)
+Các phương thức này chỉ khả dụng trong những môi trường có [Node.js Streams:](https://nodejs.org/api/stream.html)
 
-* [`renderToPipeableStream`](/reference/react-dom/server/renderToPipeableStream) renders a React tree to a pipeable [Node.js Stream.](https://nodejs.org/api/stream.html)
-* [`resumeToPipeableStream`](/reference/react-dom/server/renderToPipeableStream) resumes [`prerenderToNodeStream`](/reference/react-dom/static/prerenderToNodeStream) to a pipeable [Node.js Stream.](https://nodejs.org/api/stream.html)
+* [`renderToPipeableStream`](/reference/react-dom/server/renderToPipeableStream) kết xuất một cây React thành [Node.js Stream](https://nodejs.org/api/stream.html) có thể pipe.
+* [`resumeToPipeableStream`](/reference/react-dom/server/renderToPipeableStream) tiếp tục [`prerenderToNodeStream`](/reference/react-dom/static/prerenderToNodeStream) thành [Node.js Stream](https://nodejs.org/api/stream.html) có thể pipe.
 
 ---
 
-## Legacy Server APIs for non-streaming environments {/*legacy-server-apis-for-non-streaming-environments*/}
+## API server cũ cho môi trường không hỗ trợ stream {/*legacy-server-apis-for-non-streaming-environments*/}
 
-These methods can be used in the environments that don't support streams:
+Những phương thức này có thể được dùng trong các môi trường không hỗ trợ stream:
 
-* [`renderToString`](/reference/react-dom/server/renderToString) renders a React tree to a string.
-* [`renderToStaticMarkup`](/reference/react-dom/server/renderToStaticMarkup) renders a non-interactive React tree to a string.
+* [`renderToString`](/reference/react-dom/server/renderToString) kết xuất một cây React thành chuỗi.
+* [`renderToStaticMarkup`](/reference/react-dom/server/renderToStaticMarkup) kết xuất một cây React không tương tác thành chuỗi.
 
-They have limited functionality compared to the streaming APIs.
+Chúng có chức năng hạn chế hơn so với các API stream.
