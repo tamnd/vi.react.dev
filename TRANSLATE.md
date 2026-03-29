@@ -93,18 +93,9 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 
 ## Current Working Set: Next 30 Pages
 
+Refreshed on 2026-03-29 after completing `src/content/learn/importing-and-exporting-components.md`.
 Work through these in order. Keep one reviewed page per commit and update this checklist after each completed page.
 
-- [x] `src/content/community/versioning-policy.md`
-- [x] `src/content/versions.md`
-- [x] `src/content/blog/index.md`
-- [x] `src/content/learn/index.md`
-- [x] `src/content/learn/setup.md`
-- [x] `src/content/learn/installation.md`
-- [x] `src/content/learn/describing-the-ui.md`
-- [x] `src/content/learn/your-first-component.md`
-- [x] `src/content/learn/importing-and-exporting-components.md`
-- [x] `src/content/learn/writing-markup-with-jsx.md`
 - [ ] `src/content/learn/javascript-in-jsx-with-curly-braces.md`
 - [ ] `src/content/learn/passing-props-to-a-component.md`
 - [ ] `src/content/learn/conditional-rendering.md`
@@ -114,11 +105,6 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/learn/state-a-components-memory.md`
 - [ ] `src/content/learn/adding-interactivity.md`
 - [ ] `src/content/learn/managing-state.md`
-- [x] `src/content/reference/react/index.md`
-- [x] `src/content/reference/react/apis.md`
-- [x] `src/content/reference/react/components.md`
-- [x] `src/content/reference/react/hooks.md`
-- [x] `src/content/reference/react-dom/index.md`
 - [ ] `src/content/learn/understanding-your-ui-as-a-tree.md`
 - [ ] `src/content/learn/thinking-in-react.md`
 - [ ] `src/content/learn/state-as-a-snapshot.md`
@@ -129,6 +115,17 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/learn/sharing-state-between-components.md`
 - [ ] `src/content/learn/preserving-and-resetting-state.md`
 - [ ] `src/content/learn/extracting-state-logic-into-a-reducer.md`
+- [ ] `src/content/learn/reacting-to-input-with-state.md`
+- [ ] `src/content/learn/choosing-the-state-structure.md`
+- [ ] `src/content/learn/passing-data-deeply-with-context.md`
+- [ ] `src/content/learn/scaling-up-with-reducer-and-context.md`
+- [ ] `src/content/learn/escape-hatches.md`
+- [ ] `src/content/learn/referencing-values-with-refs.md`
+- [ ] `src/content/learn/manipulating-the-dom-with-refs.md`
+- [ ] `src/content/learn/synchronizing-with-effects.md`
+- [ ] `src/content/learn/lifecycle-of-reactive-effects.md`
+- [ ] `src/content/learn/separating-events-from-effects.md`
+- [ ] `src/content/learn/removing-effect-dependencies.md`
 
 ## `src/content` Translation Checklist
 
