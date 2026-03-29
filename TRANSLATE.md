@@ -142,7 +142,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/blog/2025/02/14/sunsetting-create-react-app.md`
 - [ ] `src/content/blog/2025/04/23/react-labs-view-transitions-activity-and-more.md`
 - [ ] `src/content/blog/2025/10/01/react-19-2.md`
-- [ ] `src/content/blog/2025/10/07/introducing-the-react-foundation.md`
+- [x] `src/content/blog/2025/10/07/introducing-the-react-foundation.md`
 - [ ] `src/content/blog/2025/10/07/react-compiler-1.md`
 - [ ] `src/content/blog/2025/10/16/react-conf-2025-recap.md`
 - [ ] `src/content/blog/2025/12/03/critical-security-vulnerability-in-react-server-components.md`

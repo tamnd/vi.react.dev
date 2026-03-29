@@ -1,11 +1,11 @@
 ---
-title: "Introducing the React Foundation"
+title: "Giới thiệu React Foundation"
 author: Seth Webster, Matt Carroll, Joe Savona
 date: 2025/10/07
-description: Today, we're announcing our plans to create the React Foundation a new technical governance structure
+description: Hôm nay, chúng tôi công bố kế hoạch thành lập React Foundation và một cấu trúc quản trị kỹ thuật mới.
 ---
 
-October 7, 2025 by [Seth Webster](https://x.com/sethwebster), [Matt Carroll](https://x.com/mattcarrollcode), [Joe Savona](https://x.com/en_JS), [Sophie Alpert](https://x.com/sophiebits)
+Ngày 7 tháng 10 năm 2025 bởi [Seth Webster](https://x.com/sethwebster), [Matt Carroll](https://x.com/mattcarrollcode), [Joe Savona](https://x.com/en_JS), [Sophie Alpert](https://x.com/sophiebits)
 
 ---
 
@@ -23,27 +23,27 @@ October 7, 2025 by [Seth Webster](https://x.com/sethwebster), [Matt Carroll](htt
 
 <Intro>
 
-Today, we're announcing our plans to create the React Foundation and a new technical governance structure.
+Hôm nay, chúng tôi công bố kế hoạch thành lập React Foundation và một cấu trúc quản trị kỹ thuật mới.
 
 </Intro>
 
 ---
 
-We open sourced React over a decade ago to help developers build great user experiences. From its earliest days, React has received substantial contributions from contributors outside of Meta. Over time, the number of contributors and the scope of their contributions has grown significantly. What started out as a tool developed for Meta has expanded into a project that spans multiple companies with regular contributions from across the ecosystem. React has outgrown the confines of any one company.
+Chúng tôi đã mã nguồn mở React từ hơn một thập kỷ trước để giúp các nhà phát triển xây dựng trải nghiệm người dùng tuyệt vời. Ngay từ những ngày đầu, React đã nhận được nhiều đóng góp đáng kể từ các cộng tác viên bên ngoài Meta. Theo thời gian, số lượng người đóng góp và phạm vi đóng góp của họ đã tăng lên rõ rệt. Điều khởi đầu là một công cụ được phát triển cho Meta nay đã mở rộng thành một dự án trải dài qua nhiều công ty với những đóng góp thường xuyên từ khắp hệ sinh thái. React đã vượt ra khỏi khuôn khổ của bất kỳ một công ty nào.
 
-To better serve the React community, we are announcing our plans to move React and React Native from Meta to a new React Foundation. As a part of this change, we will also be implementing a new independent technical governance structure. We believe these changes will enable us to give React ecosystem projects more resources.
+Để phục vụ cộng đồng React tốt hơn, chúng tôi công bố kế hoạch chuyển React và React Native từ Meta sang một React Foundation mới. Là một phần của thay đổi này, chúng tôi cũng sẽ triển khai một cấu trúc quản trị kỹ thuật độc lập mới. Chúng tôi tin rằng những thay đổi này sẽ giúp chúng tôi có thể dành thêm nguồn lực cho các dự án trong hệ sinh thái React.
 
 ## The React Foundation {/*the-react-foundation*/}
 
-We will make the React Foundation the new home for React, React Native, and some supporting projects like JSX. The React Foundation’s mission will be to support the React community and ecosystem. Once implemented, the React Foundation will
+Chúng tôi sẽ biến React Foundation thành ngôi nhà mới của React, React Native và một số dự án hỗ trợ như JSX. Sứ mệnh của React Foundation sẽ là hỗ trợ cộng đồng và hệ sinh thái React. Khi được triển khai, React Foundation sẽ
 
-* Maintain React’s infrastructure like GitHub, CI, and trademarks
-* Organize React Conf
-* Create initiatives to support the React ecosystem like financial support of ecosystem projects, issuing grants, and creating programs
+* Duy trì hạ tầng của React như GitHub, CI và nhãn hiệu
+* Tổ chức React Conf
+* Tạo ra các sáng kiến hỗ trợ hệ sinh thái React như hỗ trợ tài chính cho các dự án trong hệ sinh thái, cấp tài trợ và xây dựng chương trình
 
-The React Foundation will be governed by a board of directors, with Seth Webster serving as the executive director. This board will direct funds and resources to support React’s development, community, and ecosystem. We believe that this is the best structure to ensure that the React Foundation is vendor-neutral and reflects the best interests of the community.
+React Foundation sẽ được điều hành bởi một hội đồng quản trị, với Seth Webster giữ vai trò giám đốc điều hành. Hội đồng này sẽ định hướng nguồn quỹ và tài nguyên để hỗ trợ sự phát triển, cộng đồng và hệ sinh thái của React. Chúng tôi tin rằng đây là cấu trúc tốt nhất để bảo đảm React Foundation giữ được tính trung lập với nhà cung cấp và phản ánh lợi ích tốt nhất của cộng đồng.
 
-The founding corporate members of the React Foundation will be Amazon, Callstack, Expo, Meta, Microsoft, Software Mansion, and Vercel. These companies have had a major impact on the React and React Native ecosystems and we are grateful for their support. We are excited to welcome even more members in the future.
+Các thành viên doanh nghiệp sáng lập của React Foundation sẽ là Amazon, Callstack, Expo, Meta, Microsoft, Software Mansion và Vercel. Những công ty này đã có ảnh hưởng lớn tới hệ sinh thái React và React Native, và chúng tôi biết ơn sự hỗ trợ của họ. Chúng tôi rất mong được chào đón thêm nhiều thành viên hơn nữa trong tương lai.
 
 <div style={{display: 'flex', justifyContent: 'center', margin: '2rem'}}>
   <picture >
@@ -56,12 +56,12 @@ The founding corporate members of the React Foundation will be Amazon, Callstack
   </picture>
 </div>
 
-## React’s technical governance {/*reacts-technical-governance*/}
+## Quản trị kỹ thuật của React {/*reacts-technical-governance*/}
 
-We believe that React's technical direction should be set by the people who contribute to and maintain React. As React moves to a foundation, it is important that no single company or organization is overrepresented. To achieve this, we plan to define a new technical governance structure for React that is independent from the React Foundation.
+Chúng tôi tin rằng định hướng kỹ thuật của React nên được quyết định bởi những người đóng góp và duy trì React. Khi React chuyển sang một foundation, điều quan trọng là không một công ty hay tổ chức nào được đại diện quá mức. Để đạt được điều đó, chúng tôi dự định xác định một cấu trúc quản trị kỹ thuật mới cho React, độc lập với React Foundation.
 
-As a part of creating React’s new technical governance structure we will reach out to the community for feedback. Once finalized, we will share details in a future post.
+Trong quá trình xây dựng cấu trúc quản trị kỹ thuật mới của React, chúng tôi sẽ tìm đến cộng đồng để nhận phản hồi. Khi hoàn tất, chúng tôi sẽ chia sẻ chi tiết trong một bài viết sau.
 
-## Thank you {/*thank-you*/}
+## Cảm ơn {/*thank-you*/}
 
-React's incredible growth is thanks to the thousands of people, companies, and projects that have shaped React. The creation of the React Foundation is a testament to the strength and vibrancy of the React community. Together, the React Foundation and React’s new technical governance will ensure that React’s future is secure for years to come.
+Sự phát triển đáng kinh ngạc của React là nhờ hàng nghìn con người, công ty và dự án đã góp phần định hình React. Việc tạo ra React Foundation là minh chứng cho sức mạnh và sức sống của cộng đồng React. Cùng nhau, React Foundation và cấu trúc quản trị kỹ thuật mới của React sẽ bảo đảm tương lai của React được vững chắc trong nhiều năm tới.
