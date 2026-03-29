@@ -65,7 +65,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [x] `src/content/errors/index.md`
 - [x] `src/content/community/team.md`
 - [x] `src/content/community/meetups.md`
-- [ ] `src/content/community/versioning-policy.md`
+- [x] `src/content/community/versioning-policy.md`
 - [x] `src/content/community/videos.md`
 - [ ] `src/content/versions.md`
 - [ ] `src/content/blog/index.md`
@@ -95,7 +95,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 
 Work through these in order. Keep one reviewed page per commit and update this checklist after each completed page.
 
-- [ ] `src/content/community/versioning-policy.md`
+- [x] `src/content/community/versioning-policy.md`
 - [ ] `src/content/versions.md`
 - [ ] `src/content/blog/index.md`
 - [ ] `src/content/learn/index.md`
@@ -159,7 +159,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/community/meetups.md`
 - [x] `src/content/community/team.md`
 - [x] `src/content/community/translations.md`
-- [ ] `src/content/community/versioning-policy.md`
+- [x] `src/content/community/versioning-policy.md`
 - [x] `src/content/community/videos.md`
 
 ### Errors (`3`)
