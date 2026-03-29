@@ -348,7 +348,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/rsc/use-client.md`
 - [ ] `src/content/reference/rsc/use-server.md`
 - [ ] `src/content/reference/rules/components-and-hooks-must-be-pure.md`
-- [ ] `src/content/reference/rules/index.md`
+- [x] `src/content/reference/rules/index.md`
 - [ ] `src/content/reference/rules/react-calls-components-and-hooks.md`
 - [ ] `src/content/reference/rules/rules-of-hooks.md`
 
