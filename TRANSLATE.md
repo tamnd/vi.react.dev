@@ -87,7 +87,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [ ] `src/content/learn/managing-state.md`
 - [ ] `src/content/reference/react/index.md`
 - [ ] `src/content/reference/react/apis.md`
-- [ ] `src/content/reference/react/components.md`
+- [x] `src/content/reference/react/components.md`
 - [ ] `src/content/reference/react/hooks.md`
 - [ ] `src/content/reference/react-dom/index.md`
 
@@ -309,7 +309,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/react/cacheSignal.md`
 - [ ] `src/content/reference/react/captureOwnerStack.md`
 - [ ] `src/content/reference/react/cloneElement.md`
-- [ ] `src/content/reference/react/components.md`
+- [x] `src/content/reference/react/components.md`
 - [ ] `src/content/reference/react/createContext.md`
 - [ ] `src/content/reference/react/createElement.md`
 - [ ] `src/content/reference/react/createRef.md`
