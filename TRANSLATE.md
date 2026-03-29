@@ -70,7 +70,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [x] `src/content/versions.md`
 - [ ] `src/content/blog/index.md`
 - [ ] `src/content/learn/index.md`
-- [ ] `src/content/learn/setup.md`
+- [x] `src/content/learn/setup.md`
 - [ ] `src/content/learn/installation.md`
 - [ ] `src/content/learn/describing-the-ui.md`
 - [ ] `src/content/learn/your-first-component.md`
@@ -99,7 +99,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/versions.md`
 - [ ] `src/content/blog/index.md`
 - [ ] `src/content/learn/index.md`
-- [ ] `src/content/learn/setup.md`
+- [x] `src/content/learn/setup.md`
 - [ ] `src/content/learn/installation.md`
 - [ ] `src/content/learn/describing-the-ui.md`
 - [ ] `src/content/learn/your-first-component.md`
@@ -208,7 +208,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/learn/rsc-sandbox-test.md`
 - [ ] `src/content/learn/scaling-up-with-reducer-and-context.md`
 - [ ] `src/content/learn/separating-events-from-effects.md`
-- [ ] `src/content/learn/setup.md`
+- [x] `src/content/learn/setup.md`
 - [ ] `src/content/learn/sharing-state-between-components.md`
 - [ ] `src/content/learn/state-a-components-memory.md`
 - [ ] `src/content/learn/state-as-a-snapshot.md`
