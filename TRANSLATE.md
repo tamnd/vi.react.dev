@@ -68,7 +68,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [x] `src/content/community/versioning-policy.md`
 - [x] `src/content/community/videos.md`
 - [x] `src/content/versions.md`
-- [ ] `src/content/blog/index.md`
+- [x] `src/content/blog/index.md`
 - [ ] `src/content/learn/index.md`
 - [x] `src/content/learn/setup.md`
 - [ ] `src/content/learn/installation.md`
@@ -97,7 +97,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 
 - [x] `src/content/community/versioning-policy.md`
 - [x] `src/content/versions.md`
-- [ ] `src/content/blog/index.md`
+- [x] `src/content/blog/index.md`
 - [ ] `src/content/learn/index.md`
 - [x] `src/content/learn/setup.md`
 - [ ] `src/content/learn/installation.md`
@@ -148,7 +148,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/blog/2025/12/03/critical-security-vulnerability-in-react-server-components.md`
 - [ ] `src/content/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components.md`
 - [ ] `src/content/blog/2026/02/24/the-react-foundation.md`
-- [ ] `src/content/blog/index.md`
+- [x] `src/content/blog/index.md`
 
 ### Community (`9`)
 
