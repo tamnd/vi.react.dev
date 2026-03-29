@@ -57,7 +57,7 @@ export default function BrandMenu({children}: {children: React.ReactNode}) {
           sideOffset={0}
           align="end">
           <ContextMenu.Label className="ps-4 pt-2 text-base text-tertiary dark:text-tertiary-dark">
-            Dark Mode
+            Chế độ tối
           </ContextMenu.Label>
           <DownloadMenuItem
             fileName="react_logo_dark.svg"
@@ -82,10 +82,10 @@ export default function BrandMenu({children}: {children: React.ReactNode}) {
             <span className="w-8">
               <IconCopy />
             </span>
-            <span>Copy dark mode color</span>
+            <span>Sao chép màu chế độ tối</span>
           </MenuItem>
           <ContextMenu.Label className="ps-4 text-base text-tertiary dark:text-tertiary-dark">
-            Light Mode
+            Chế độ sáng
           </ContextMenu.Label>
           <DownloadMenuItem
             fileName="react_logo_light.svg"
@@ -110,7 +110,7 @@ export default function BrandMenu({children}: {children: React.ReactNode}) {
             <span className="w-8">
               <IconCopy />
             </span>
-            <span>Copy light mode color</span>
+            <span>Sao chép màu chế độ sáng</span>
           </MenuItem>
           <div className="uwu-visible flex flex-col">
             <ContextMenu.Separator className="" />
@@ -125,7 +125,7 @@ export default function BrandMenu({children}: {children: React.ReactNode}) {
               <span className="w-8">
                 <IconClose />
               </span>
-              <span>Turn off</span>
+              <span>Tắt</span>
             </MenuItem>
             <DownloadMenuItem fileName="react_uwu_png" href="/images/uwu.png">
               <span className="w-8">
@@ -141,7 +141,7 @@ export default function BrandMenu({children}: {children: React.ReactNode}) {
                 <span className="w-8">
                   <IconNewPage />
                 </span>
-                <span>Logo by @sawaratsuki1004</span>
+                <span>Logo bởi @sawaratsuki1004</span>
               </MenuItem>
             </ExternalLink>
           </div>
