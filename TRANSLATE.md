@@ -246,7 +246,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/use-memo.md`
 - [ ] `src/content/reference/react-compiler/compilationMode.md`
 - [x] `src/content/reference/react-compiler/compiling-libraries.md`
-- [ ] `src/content/reference/react-compiler/configuration.md`
+- [x] `src/content/reference/react-compiler/configuration.md`
 - [ ] `src/content/reference/react-compiler/directives.md`
 - [ ] `src/content/reference/react-compiler/directives/use-memo.md`
 - [ ] `src/content/reference/react-compiler/directives/use-no-memo.md`
