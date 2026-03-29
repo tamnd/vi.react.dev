@@ -61,7 +61,7 @@ This checklist is based on:
 Prioritize smaller docs and UI-adjacent pages first, then move into foundational Learn and Reference entry pages.
 
 - [ ] `src/content/errors/377.md`
-- [ ] `src/content/errors/generic.md`
+- [x] `src/content/errors/generic.md`
 - [x] `src/content/errors/index.md`
 - [ ] `src/content/community/team.md`
 - [ ] `src/content/community/meetups.md`
@@ -140,7 +140,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 ### Errors (`3`)
 
 - [ ] `src/content/errors/377.md`
-- [ ] `src/content/errors/generic.md`
+- [x] `src/content/errors/generic.md`
 - [x] `src/content/errors/index.md`
 
 ### Learn (`52`)
