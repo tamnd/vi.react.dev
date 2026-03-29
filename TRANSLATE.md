@@ -53,7 +53,7 @@ This checklist is based on:
 - [ ] Add or port a Vietnamese feedback widget equivalent to `zh-hans`'s `Feedback.tsx`.
 - [ ] Translate project-facing docs as needed:
   - [x] [`README.md`](/Users/apple/github/tamnd/vi.react.dev/README.md)
-  - [ ] [`CONTRIBUTING.md`](/Users/apple/github/tamnd/vi.react.dev/CONTRIBUTING.md)
+  - [x] [`CONTRIBUTING.md`](/Users/apple/github/tamnd/vi.react.dev/CONTRIBUTING.md)
   - [ ] [`CODE_OF_CONDUCT.md`](/Users/apple/github/tamnd/vi.react.dev/CODE_OF_CONDUCT.md)
 
 ## `src/content` Translation Checklist
