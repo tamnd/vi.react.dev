@@ -231,7 +231,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/eslint-plugin-react-hooks/lints/config.md`
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/error-boundaries.md`
 - [ ] `src/content/reference/eslint-plugin-react-hooks/lints/exhaustive-deps.md`
-- [ ] `src/content/reference/eslint-plugin-react-hooks/lints/gating.md`
+- [x] `src/content/reference/eslint-plugin-react-hooks/lints/gating.md`
 - [ ] `src/content/reference/eslint-plugin-react-hooks/lints/globals.md`
 - [ ] `src/content/reference/eslint-plugin-react-hooks/lints/immutability.md`
 - [ ] `src/content/reference/eslint-plugin-react-hooks/lints/incompatible-library.md`
