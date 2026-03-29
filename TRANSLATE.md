@@ -130,7 +130,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/blog/2021/12/17/react-conf-2021-recap.md`
 - [ ] `src/content/blog/2022/03/08/react-18-upgrade-guide.md`
 - [ ] `src/content/blog/2022/03/29/react-v18.md`
-- [ ] `src/content/blog/2022/06/15/react-labs-what-we-have-been-working-on-june-2022.md`
+- [x] `src/content/blog/2022/06/15/react-labs-what-we-have-been-working-on-june-2022.md`
 - [ ] `src/content/blog/2023/03/16/introducing-react-dev.md`
 - [ ] `src/content/blog/2023/03/22/react-labs-what-we-have-been-working-on-march-2023.md`
 - [ ] `src/content/blog/2023/05/03/react-canaries.md`
