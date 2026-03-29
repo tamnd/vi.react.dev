@@ -95,7 +95,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 
 ### Root Pages (`2`)
 
-- [ ] `src/content/index.md`
+- [x] `src/content/index.md`
 - [ ] `src/content/versions.md`
 
 ### Blog (`24`)
