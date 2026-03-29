@@ -74,7 +74,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [x] `src/content/learn/installation.md`
 - [x] `src/content/learn/describing-the-ui.md`
 - [x] `src/content/learn/your-first-component.md`
-- [ ] `src/content/learn/importing-and-exporting-components.md`
+- [x] `src/content/learn/importing-and-exporting-components.md`
 - [ ] `src/content/learn/writing-markup-with-jsx.md`
 - [ ] `src/content/learn/javascript-in-jsx-with-curly-braces.md`
 - [ ] `src/content/learn/passing-props-to-a-component.md`
@@ -103,7 +103,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/learn/installation.md`
 - [x] `src/content/learn/describing-the-ui.md`
 - [x] `src/content/learn/your-first-component.md`
-- [ ] `src/content/learn/importing-and-exporting-components.md`
+- [x] `src/content/learn/importing-and-exporting-components.md`
 - [ ] `src/content/learn/writing-markup-with-jsx.md`
 - [ ] `src/content/learn/javascript-in-jsx-with-curly-braces.md`
 - [ ] `src/content/learn/passing-props-to-a-component.md`
@@ -194,7 +194,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/learn/editor-setup.md`
 - [ ] `src/content/learn/escape-hatches.md`
 - [ ] `src/content/learn/extracting-state-logic-into-a-reducer.md`
-- [ ] `src/content/learn/importing-and-exporting-components.md`
+- [x] `src/content/learn/importing-and-exporting-components.md`
 - [x] `src/content/learn/index.md`
 - [x] `src/content/learn/installation.md`
 - [ ] `src/content/learn/javascript-in-jsx-with-curly-braces.md`
