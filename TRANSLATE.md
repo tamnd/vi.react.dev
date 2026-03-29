@@ -275,7 +275,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/reference/react-dom/hooks/index.md`
 - [ ] `src/content/reference/react-dom/hooks/useFormStatus.md`
 - [x] `src/content/reference/react-dom/index.md`
-- [ ] `src/content/reference/react-dom/preconnect.md`
+- [x] `src/content/reference/react-dom/preconnect.md`
 - [ ] `src/content/reference/react-dom/prefetchDNS.md`
 - [ ] `src/content/reference/react-dom/preinit.md`
 - [ ] `src/content/reference/react-dom/preinitModule.md`
