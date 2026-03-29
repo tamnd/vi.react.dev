@@ -73,7 +73,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [x] `src/content/learn/setup.md`
 - [x] `src/content/learn/installation.md`
 - [x] `src/content/learn/describing-the-ui.md`
-- [ ] `src/content/learn/your-first-component.md`
+- [x] `src/content/learn/your-first-component.md`
 - [ ] `src/content/learn/importing-and-exporting-components.md`
 - [ ] `src/content/learn/writing-markup-with-jsx.md`
 - [ ] `src/content/learn/javascript-in-jsx-with-curly-braces.md`
@@ -91,7 +91,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [x] `src/content/reference/react/hooks.md`
 - [x] `src/content/reference/react-dom/index.md`
 
-## Current Working Set: Next 20 Pages
+## Current Working Set: Next 30 Pages
 
 Work through these in order. Keep one reviewed page per commit and update this checklist after each completed page.
 
@@ -102,7 +102,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/learn/setup.md`
 - [x] `src/content/learn/installation.md`
 - [x] `src/content/learn/describing-the-ui.md`
-- [ ] `src/content/learn/your-first-component.md`
+- [x] `src/content/learn/your-first-component.md`
 - [ ] `src/content/learn/importing-and-exporting-components.md`
 - [ ] `src/content/learn/writing-markup-with-jsx.md`
 - [ ] `src/content/learn/javascript-in-jsx-with-curly-braces.md`
@@ -115,6 +115,20 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/learn/adding-interactivity.md`
 - [ ] `src/content/learn/managing-state.md`
 - [x] `src/content/reference/react/index.md`
+- [x] `src/content/reference/react/apis.md`
+- [x] `src/content/reference/react/components.md`
+- [x] `src/content/reference/react/hooks.md`
+- [x] `src/content/reference/react-dom/index.md`
+- [ ] `src/content/learn/understanding-your-ui-as-a-tree.md`
+- [ ] `src/content/learn/thinking-in-react.md`
+- [ ] `src/content/learn/state-as-a-snapshot.md`
+- [ ] `src/content/learn/render-and-commit.md`
+- [ ] `src/content/learn/queueing-a-series-of-state-updates.md`
+- [ ] `src/content/learn/updating-objects-in-state.md`
+- [ ] `src/content/learn/updating-arrays-in-state.md`
+- [ ] `src/content/learn/sharing-state-between-components.md`
+- [ ] `src/content/learn/preserving-and-resetting-state.md`
+- [ ] `src/content/learn/extracting-state-logic-into-a-reducer.md`
 
 ## `src/content` Translation Checklist
 
@@ -221,7 +235,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/learn/updating-objects-in-state.md`
 - [ ] `src/content/learn/writing-markup-with-jsx.md`
 - [ ] `src/content/learn/you-might-not-need-an-effect.md`
-- [ ] `src/content/learn/your-first-component.md`
+- [x] `src/content/learn/your-first-component.md`
 
 ### Reference (`126`)
 
