@@ -256,7 +256,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/react-compiler/target.md`
 - [ ] `src/content/reference/react-dom/client/createRoot.md`
 - [ ] `src/content/reference/react-dom/client/hydrateRoot.md`
-- [ ] `src/content/reference/react-dom/client/index.md`
+- [x] `src/content/reference/react-dom/client/index.md`
 - [ ] `src/content/reference/react-dom/components/common.md`
 - [ ] `src/content/reference/react-dom/components/form.md`
 - [ ] `src/content/reference/react-dom/components/index.md`
