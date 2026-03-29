@@ -252,7 +252,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/react-compiler/directives/use-no-memo.md`
 - [ ] `src/content/reference/react-compiler/gating.md`
 - [ ] `src/content/reference/react-compiler/logger.md`
-- [ ] `src/content/reference/react-compiler/panicThreshold.md`
+- [x] `src/content/reference/react-compiler/panicThreshold.md`
 - [ ] `src/content/reference/react-compiler/target.md`
 - [ ] `src/content/reference/react-dom/client/createRoot.md`
 - [ ] `src/content/reference/react-dom/client/hydrateRoot.md`
