@@ -63,7 +63,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [x] `src/content/errors/377.md`
 - [x] `src/content/errors/generic.md`
 - [x] `src/content/errors/index.md`
-- [ ] `src/content/community/team.md`
+- [x] `src/content/community/team.md`
 - [x] `src/content/community/meetups.md`
 - [ ] `src/content/community/versioning-policy.md`
 - [x] `src/content/community/videos.md`
@@ -132,7 +132,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [x] `src/content/community/docs-contributors.md`
 - [x] `src/content/community/index.md`
 - [x] `src/content/community/meetups.md`
-- [ ] `src/content/community/team.md`
+- [x] `src/content/community/team.md`
 - [x] `src/content/community/translations.md`
 - [ ] `src/content/community/versioning-policy.md`
 - [x] `src/content/community/videos.md`
