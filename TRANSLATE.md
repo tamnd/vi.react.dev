@@ -269,7 +269,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/react-dom/components/select.md`
 - [ ] `src/content/reference/react-dom/components/style.md`
 - [ ] `src/content/reference/react-dom/components/textarea.md`
-- [ ] `src/content/reference/react-dom/components/title.md`
+- [x] `src/content/reference/react-dom/components/title.md`
 - [ ] `src/content/reference/react-dom/createPortal.md`
 - [ ] `src/content/reference/react-dom/flushSync.md`
 - [x] `src/content/reference/react-dom/hooks/index.md`
