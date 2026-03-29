@@ -284,7 +284,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/reference/react-dom/server/index.md`
 - [ ] `src/content/reference/react-dom/server/renderToPipeableStream.md`
 - [ ] `src/content/reference/react-dom/server/renderToReadableStream.md`
-- [ ] `src/content/reference/react-dom/server/renderToStaticMarkup.md`
+- [x] `src/content/reference/react-dom/server/renderToStaticMarkup.md`
 - [ ] `src/content/reference/react-dom/server/renderToString.md`
 - [ ] `src/content/reference/react-dom/server/resume.md`
 - [ ] `src/content/reference/react-dom/server/resumeToPipeableStream.md`
