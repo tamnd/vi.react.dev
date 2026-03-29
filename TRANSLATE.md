@@ -147,7 +147,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/blog/2025/10/16/react-conf-2025-recap.md`
 - [ ] `src/content/blog/2025/12/03/critical-security-vulnerability-in-react-server-components.md`
 - [ ] `src/content/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components.md`
-- [ ] `src/content/blog/2026/02/24/the-react-foundation.md`
+- [x] `src/content/blog/2026/02/24/the-react-foundation.md`
 - [x] `src/content/blog/index.md`
 
 ### Community (`9`)
