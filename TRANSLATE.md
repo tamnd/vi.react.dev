@@ -320,7 +320,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/react/index.md`
 - [ ] `src/content/reference/react/isValidElement.md`
 - [ ] `src/content/reference/react/lazy.md`
-- [ ] `src/content/reference/react/legacy.md`
+- [x] `src/content/reference/react/legacy.md`
 - [ ] `src/content/reference/react/memo.md`
 - [ ] `src/content/reference/react/startTransition.md`
 - [ ] `src/content/reference/react/use.md`
