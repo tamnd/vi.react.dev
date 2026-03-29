@@ -91,6 +91,31 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [ ] `src/content/reference/react/hooks.md`
 - [ ] `src/content/reference/react-dom/index.md`
 
+## Current Working Set: Next 20 Pages
+
+Work through these in order. Keep one reviewed page per commit and update this checklist after each completed page.
+
+- [ ] `src/content/community/versioning-policy.md`
+- [ ] `src/content/versions.md`
+- [ ] `src/content/blog/index.md`
+- [ ] `src/content/learn/index.md`
+- [ ] `src/content/learn/setup.md`
+- [ ] `src/content/learn/installation.md`
+- [ ] `src/content/learn/describing-the-ui.md`
+- [ ] `src/content/learn/your-first-component.md`
+- [ ] `src/content/learn/importing-and-exporting-components.md`
+- [ ] `src/content/learn/writing-markup-with-jsx.md`
+- [ ] `src/content/learn/javascript-in-jsx-with-curly-braces.md`
+- [ ] `src/content/learn/passing-props-to-a-component.md`
+- [ ] `src/content/learn/conditional-rendering.md`
+- [ ] `src/content/learn/rendering-lists.md`
+- [ ] `src/content/learn/keeping-components-pure.md`
+- [ ] `src/content/learn/responding-to-events.md`
+- [ ] `src/content/learn/state-a-components-memory.md`
+- [ ] `src/content/learn/adding-interactivity.md`
+- [ ] `src/content/learn/managing-state.md`
+- [ ] `src/content/reference/react/index.md`
+
 ## `src/content` Translation Checklist
 
 ### Root Pages (`2`)
