@@ -342,7 +342,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/react/useState.md`
 - [ ] `src/content/reference/react/useSyncExternalStore.md`
 - [ ] `src/content/reference/react/useTransition.md`
-- [ ] `src/content/reference/rsc/directives.md`
+- [x] `src/content/reference/rsc/directives.md`
 - [ ] `src/content/reference/rsc/server-components.md`
 - [ ] `src/content/reference/rsc/server-functions.md`
 - [ ] `src/content/reference/rsc/use-client.md`
