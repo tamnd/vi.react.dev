@@ -175,7 +175,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/learn/build-a-react-app-from-scratch.md`
 - [ ] `src/content/learn/choosing-the-state-structure.md`
 - [ ] `src/content/learn/conditional-rendering.md`
-- [ ] `src/content/learn/creating-a-react-app.md`
+- [x] `src/content/learn/creating-a-react-app.md`
 - [x] `src/content/learn/describing-the-ui.md`
 - [x] `src/content/learn/editor-setup.md`
 - [ ] `src/content/learn/escape-hatches.md`
