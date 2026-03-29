@@ -288,7 +288,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/react-dom/server/renderToString.md`
 - [ ] `src/content/reference/react-dom/server/resume.md`
 - [ ] `src/content/reference/react-dom/server/resumeToPipeableStream.md`
-- [ ] `src/content/reference/react-dom/static/index.md`
+- [x] `src/content/reference/react-dom/static/index.md`
 - [ ] `src/content/reference/react-dom/static/prerender.md`
 - [ ] `src/content/reference/react-dom/static/prerenderToNodeStream.md`
 - [ ] `src/content/reference/react-dom/static/resumeAndPrerender.md`
