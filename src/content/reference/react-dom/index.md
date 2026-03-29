@@ -1,53 +1,53 @@
 ---
-title: React DOM APIs
+title: API React DOM
 ---
 
 <Intro>
 
-The `react-dom` package contains methods that are only supported for the web applications (which run in the browser DOM environment). They are not supported for React Native.
+Package `react-dom` chứa các phương thức chỉ được hỗ trợ cho ứng dụng web, tức là chạy trong môi trường DOM của trình duyệt. Chúng không được hỗ trợ cho React Native.
 
 </Intro>
 
 ---
 
-## APIs {/*apis*/}
+## API {/*apis*/}
 
-These APIs can be imported from your components. They are rarely used:
+Các API này có thể được import từ component của bạn. Chúng hiếm khi được dùng:
 
-* [`createPortal`](/reference/react-dom/createPortal) lets you render child components in a different part of the DOM tree.
-* [`flushSync`](/reference/react-dom/flushSync) lets you force React to flush a state update and update the DOM synchronously.
+* [`createPortal`](/reference/react-dom/createPortal) cho phép bạn kết xuất component con ở một phần khác của cây DOM.
+* [`flushSync`](/reference/react-dom/flushSync) cho phép bạn buộc React flush một cập nhật state và cập nhật DOM theo cách đồng bộ.
 
-## Resource Preloading APIs {/*resource-preloading-apis*/}
+## API tải trước tài nguyên {/*resource-preloading-apis*/}
 
-These APIs can be used to make apps faster by pre-loading resources such as scripts, stylesheets, and fonts as soon as you know you need them, for example before navigating to another page where the resources will be used.
+Những API này có thể được dùng để làm ứng dụng nhanh hơn bằng cách tải trước các tài nguyên như script, stylesheet và font ngay khi bạn biết mình sẽ cần đến chúng, ví dụ trước khi điều hướng sang một trang khác nơi các tài nguyên đó sẽ được dùng.
 
-[React-based frameworks](/learn/creating-a-react-app) frequently handle resource loading for you, so you might not have to call these APIs yourself. Consult your framework's documentation for details.
+[Framework dựa trên React](/learn/creating-a-react-app) thường xử lý việc tải tài nguyên thay bạn, nên có thể bạn sẽ không cần tự gọi các API này. Hãy xem tài liệu của framework để biết chi tiết.
 
-* [`prefetchDNS`](/reference/react-dom/prefetchDNS) lets you prefetch the IP address of a DNS domain name that you expect to connect to.
-* [`preconnect`](/reference/react-dom/preconnect) lets you connect to a server you expect to request resources from, even if you don't know what resources you'll need yet.
-* [`preload`](/reference/react-dom/preload) lets you fetch a stylesheet, font, image, or external script that you expect to use.
-* [`preloadModule`](/reference/react-dom/preloadModule) lets you fetch an ESM module that you expect to use.
-* [`preinit`](/reference/react-dom/preinit) lets you fetch and evaluate an external script or fetch and insert a stylesheet.
-* [`preinitModule`](/reference/react-dom/preinitModule) lets you fetch and evaluate an ESM module.
-
----
-
-## Entry points {/*entry-points*/}
-
-The `react-dom` package provides two additional entry points:
-
-* [`react-dom/client`](/reference/react-dom/client) contains APIs to render React components on the client (in the browser).
-* [`react-dom/server`](/reference/react-dom/server) contains APIs to render React components on the server.
+* [`prefetchDNS`](/reference/react-dom/prefetchDNS) cho phép bạn tìm nạp trước địa chỉ IP của một tên miền DNS mà bạn dự kiến sẽ kết nối tới.
+* [`preconnect`](/reference/react-dom/preconnect) cho phép bạn kết nối tới một server mà bạn dự kiến sẽ yêu cầu tài nguyên từ đó, ngay cả khi bạn chưa biết mình sẽ cần tài nguyên gì.
+* [`preload`](/reference/react-dom/preload) cho phép bạn tìm nạp một stylesheet, font, hình ảnh hoặc script bên ngoài mà bạn dự kiến sẽ dùng.
+* [`preloadModule`](/reference/react-dom/preloadModule) cho phép bạn tìm nạp một module ESM mà bạn dự kiến sẽ dùng.
+* [`preinit`](/reference/react-dom/preinit) cho phép bạn tìm nạp và đánh giá một script bên ngoài hoặc tìm nạp và chèn một stylesheet.
+* [`preinitModule`](/reference/react-dom/preinitModule) cho phép bạn tìm nạp và đánh giá một module ESM.
 
 ---
 
-## Removed APIs {/*removed-apis*/}
+## Điểm vào {/*entry-points*/}
 
-These APIs were removed in React 19:
+Package `react-dom` cung cấp thêm hai điểm vào:
 
-* [`findDOMNode`](https://18.react.dev/reference/react-dom/findDOMNode): see [alternatives](https://18.react.dev/reference/react-dom/findDOMNode#alternatives).
-* [`hydrate`](https://18.react.dev/reference/react-dom/hydrate): use [`hydrateRoot`](/reference/react-dom/client/hydrateRoot) instead.
-* [`render`](https://18.react.dev/reference/react-dom/render): use [`createRoot`](/reference/react-dom/client/createRoot) instead.
-* [`unmountComponentAtNode`](/reference/react-dom/unmountComponentAtNode): use [`root.unmount()`](/reference/react-dom/client/createRoot#root-unmount) instead.
-* [`renderToNodeStream`](https://18.react.dev/reference/react-dom/server/renderToNodeStream): use [`react-dom/server`](/reference/react-dom/server) APIs instead.
-* [`renderToStaticNodeStream`](https://18.react.dev/reference/react-dom/server/renderToStaticNodeStream): use [`react-dom/server`](/reference/react-dom/server) APIs instead.
+* [`react-dom/client`](/reference/react-dom/client) chứa các API để kết xuất component React ở phía client, tức là trong trình duyệt.
+* [`react-dom/server`](/reference/react-dom/server) chứa các API để kết xuất component React ở phía server.
+
+---
+
+## API đã bị loại bỏ {/*removed-apis*/}
+
+Các API này đã bị loại bỏ trong React 19:
+
+* [`findDOMNode`](https://18.react.dev/reference/react-dom/findDOMNode): xem [các lựa chọn thay thế](https://18.react.dev/reference/react-dom/findDOMNode#alternatives).
+* [`hydrate`](https://18.react.dev/reference/react-dom/hydrate): hãy dùng [`hydrateRoot`](/reference/react-dom/client/hydrateRoot) thay thế.
+* [`render`](https://18.react.dev/reference/react-dom/render): hãy dùng [`createRoot`](/reference/react-dom/client/createRoot) thay thế.
+* [`unmountComponentAtNode`](/reference/react-dom/unmountComponentAtNode): hãy dùng [`root.unmount()`](/reference/react-dom/client/createRoot#root-unmount) thay thế.
+* [`renderToNodeStream`](https://18.react.dev/reference/react-dom/server/renderToNodeStream): hãy dùng các API [`react-dom/server`](/reference/react-dom/server) thay thế.
+* [`renderToStaticNodeStream`](https://18.react.dev/reference/react-dom/server/renderToStaticNodeStream): hãy dùng các API [`react-dom/server`](/reference/react-dom/server) thay thế.

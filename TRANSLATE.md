@@ -89,7 +89,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [x] `src/content/reference/react/apis.md`
 - [x] `src/content/reference/react/components.md`
 - [ ] `src/content/reference/react/hooks.md`
-- [ ] `src/content/reference/react-dom/index.md`
+- [x] `src/content/reference/react-dom/index.md`
 
 ## Current Working Set: Next 20 Pages
 
@@ -274,7 +274,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/react-dom/flushSync.md`
 - [x] `src/content/reference/react-dom/hooks/index.md`
 - [ ] `src/content/reference/react-dom/hooks/useFormStatus.md`
-- [ ] `src/content/reference/react-dom/index.md`
+- [x] `src/content/reference/react-dom/index.md`
 - [ ] `src/content/reference/react-dom/preconnect.md`
 - [ ] `src/content/reference/react-dom/prefetchDNS.md`
 - [ ] `src/content/reference/react-dom/preinit.md`
