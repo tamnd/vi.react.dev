@@ -238,7 +238,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/preserve-manual-memoization.md`
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/purity.md`
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/refs.md`
-- [ ] `src/content/reference/eslint-plugin-react-hooks/lints/rules-of-hooks.md`
+- [x] `src/content/reference/eslint-plugin-react-hooks/lints/rules-of-hooks.md`
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/set-state-in-effect.md`
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/set-state-in-render.md`
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/static-components.md`
