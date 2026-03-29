@@ -98,7 +98,7 @@ This checklist is based on:
 - [ ] `src/content/community/index.md`
 - [ ] `src/content/community/meetups.md`
 - [ ] `src/content/community/team.md`
-- [ ] `src/content/community/translations.md`
+- [x] `src/content/community/translations.md`
 - [ ] `src/content/community/versioning-policy.md`
 - [ ] `src/content/community/videos.md`
 
