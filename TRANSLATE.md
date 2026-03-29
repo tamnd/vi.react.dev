@@ -71,7 +71,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [x] `src/content/blog/index.md`
 - [x] `src/content/learn/index.md`
 - [x] `src/content/learn/setup.md`
-- [ ] `src/content/learn/installation.md`
+- [x] `src/content/learn/installation.md`
 - [ ] `src/content/learn/describing-the-ui.md`
 - [ ] `src/content/learn/your-first-component.md`
 - [ ] `src/content/learn/importing-and-exporting-components.md`
@@ -100,7 +100,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/blog/index.md`
 - [x] `src/content/learn/index.md`
 - [x] `src/content/learn/setup.md`
-- [ ] `src/content/learn/installation.md`
+- [x] `src/content/learn/installation.md`
 - [ ] `src/content/learn/describing-the-ui.md`
 - [ ] `src/content/learn/your-first-component.md`
 - [ ] `src/content/learn/importing-and-exporting-components.md`
@@ -182,7 +182,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/learn/extracting-state-logic-into-a-reducer.md`
 - [ ] `src/content/learn/importing-and-exporting-components.md`
 - [x] `src/content/learn/index.md`
-- [ ] `src/content/learn/installation.md`
+- [x] `src/content/learn/installation.md`
 - [ ] `src/content/learn/javascript-in-jsx-with-curly-braces.md`
 - [ ] `src/content/learn/keeping-components-pure.md`
 - [ ] `src/content/learn/lifecycle-of-reactive-effects.md`
