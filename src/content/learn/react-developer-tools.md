@@ -4,30 +4,30 @@ title: React Developer Tools
 
 <Intro>
 
-Use React Developer Tools to inspect React [components](/learn/your-first-component), edit [props](/learn/passing-props-to-a-component) and [state](/learn/state-a-components-memory), and identify performance problems.
+Dùng React Developer Tools để kiểm tra [component](/learn/your-first-component) React, chỉnh sửa [props](/learn/passing-props-to-a-component) và [state](/learn/state-a-components-memory), cũng như xác định các vấn đề về hiệu năng.
 
 </Intro>
 
 <YouWillLearn>
 
-* How to install React Developer Tools
+* Cách cài đặt React Developer Tools
 
 </YouWillLearn>
 
-## Browser extension {/*browser-extension*/}
+## Tiện ích mở rộng trình duyệt {/*browser-extension*/}
 
-The easiest way to debug websites built with React is to install the React Developer Tools browser extension. It is available for several popular browsers:
+Cách dễ nhất để gỡ lỗi các website được xây bằng React là cài tiện ích mở rộng React Developer Tools cho trình duyệt. Nó có sẵn cho một số trình duyệt phổ biến:
 
-* [Install for **Chrome**](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-* [Install for **Firefox**](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
-* [Install for **Edge**](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
+* [Cài cho **Chrome**](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+* [Cài cho **Firefox**](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
+* [Cài cho **Edge**](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
 
-Now, if you visit a website **built with React,** you will see the _Components_ and _Profiler_ panels.
+Bây giờ, nếu bạn truy cập một website **được xây bằng React,** bạn sẽ thấy các bảng _Components_ và _Profiler_.
 
 ![React Developer Tools extension](/images/docs/react-devtools-extension.png)
 
-### Safari and other browsers {/*safari-and-other-browsers*/}
-For other browsers (for example, Safari), install the [`react-devtools`](https://www.npmjs.com/package/react-devtools) npm package:
+### Safari và các trình duyệt khác {/*safari-and-other-browsers*/}
+Với các trình duyệt khác, ví dụ Safari, hãy cài package npm [`react-devtools`](https://www.npmjs.com/package/react-devtools):
 ```bash
 # Yarn
 yarn global add react-devtools
@@ -36,26 +36,26 @@ yarn global add react-devtools
 npm install -g react-devtools
 ```
 
-Next open the developer tools from the terminal:
+Tiếp theo, mở developer tools từ terminal:
 ```bash
 react-devtools
 ```
 
-Then connect your website by adding the following `<script>` tag to the beginning of your website's `<head>`:
+Sau đó kết nối website của bạn bằng cách thêm thẻ `<script>` sau vào đầu phần `<head>` của website:
 ```html {3}
 <html>
   <head>
     <script src="http://localhost:8097"></script>
 ```
 
-Reload your website in the browser now to view it in developer tools.
+Hãy tải lại website trong trình duyệt để xem nó trong developer tools.
 
 ![React Developer Tools standalone](/images/docs/react-devtools-standalone.png)
 
-## Mobile (React Native) {/*mobile-react-native*/}
+## Di động (React Native) {/*mobile-react-native*/}
 
-To inspect apps built with [React Native](https://reactnative.dev/), you can use [React Native DevTools](https://reactnative.dev/docs/react-native-devtools), the built-in debugger that deeply integrates React Developer Tools. All features work identically to the browser extension, including native element highlighting and selection.
+Để kiểm tra các ứng dụng được xây bằng [React Native](https://reactnative.dev/), bạn có thể dùng [React Native DevTools](https://reactnative.dev/docs/react-native-devtools), trình gỡ lỗi tích hợp sẵn được tích hợp sâu với React Developer Tools. Mọi tính năng đều hoạt động giống hệt tiện ích trình duyệt, bao gồm tô sáng và chọn phần tử native.
 
-[Learn more about debugging in React Native.](https://reactnative.dev/docs/debugging)
+[Tìm hiểu thêm về gỡ lỗi trong React Native.](https://reactnative.dev/docs/debugging)
 
-> For versions of React Native earlier than 0.76, please use the standalone build of React DevTools by following the [Safari and other browsers](#safari-and-other-browsers) guide above.
+> Với các phiên bản React Native cũ hơn 0.76, hãy dùng bản dựng độc lập của React DevTools bằng cách làm theo hướng dẫn [Safari và các trình duyệt khác](#safari-and-other-browsers) ở trên.

@@ -197,7 +197,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/learn/react-compiler/index.md`
 - [ ] `src/content/learn/react-compiler/installation.md`
 - [ ] `src/content/learn/react-compiler/introduction.md`
-- [ ] `src/content/learn/react-developer-tools.md`
+- [x] `src/content/learn/react-developer-tools.md`
 - [ ] `src/content/learn/reacting-to-input-with-state.md`
 - [ ] `src/content/learn/referencing-values-with-refs.md`
 - [ ] `src/content/learn/removing-effect-dependencies.md`
