@@ -354,7 +354,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 
 ### Warnings (`6`)
 
-- [ ] `src/content/warnings/invalid-aria-prop.md`
+- [x] `src/content/warnings/invalid-aria-prop.md`
 - [ ] `src/content/warnings/invalid-hook-call-warning.md`
 - [ ] `src/content/warnings/react-dom-test-utils.md`
 - [ ] `src/content/warnings/react-test-renderer.md`
