@@ -1,23 +1,23 @@
 ---
-title: Rules of Hooks
+title: Các quy tắc của Hook
 ---
 
 <Intro>
-Hooks are defined using JavaScript functions, but they represent a special type of reusable UI logic with restrictions on where they can be called.
+Hook được định nghĩa bằng các hàm JavaScript, nhưng chúng đại diện cho một kiểu logic UI có thể tái sử dụng đặc biệt, với những giới hạn về nơi chúng có thể được gọi.
 </Intro>
 
 <InlineToc />
 
 ---
 
-##  Only call Hooks at the top level {/*only-call-hooks-at-the-top-level*/}
+## Chỉ gọi Hook ở cấp cao nhất {/*only-call-hooks-at-the-top-level*/}
 
-Functions whose names start with `use` are called [*Hooks*](/reference/react) in React.
+Trong React, các hàm có tên bắt đầu bằng `use` được gọi là [*Hook*](/reference/react).
 
-**Don’t call Hooks inside loops, conditions, nested functions, or `try`/`catch`/`finally` blocks.** Instead, always use Hooks at the top level of your React function, before any early returns. You can only call Hooks while React is rendering a function component:
+**Đừng gọi Hook bên trong vòng lặp, điều kiện, hàm lồng nhau hoặc khối `try`/`catch`/`finally`.** Thay vào đó, hãy luôn dùng Hook ở cấp cao nhất của hàm React, trước mọi lệnh return sớm. Bạn chỉ có thể gọi Hook khi React đang kết xuất một function component:
 
-* ✅ Call them at the top level in the body of a [function component](/learn/your-first-component).
-* ✅ Call them at the top level in the body of a [custom Hook](/learn/reusing-logic-with-custom-hooks).
+* ✅ Gọi chúng ở cấp cao nhất trong thân của [function component](/learn/your-first-component).
+* ✅ Gọi chúng ở cấp cao nhất trong thân của [custom Hook](/learn/reusing-logic-with-custom-hooks).
 
 ```js{2-3,8-9}
 function Counter() {
@@ -33,16 +33,16 @@ function useWindowWidth() {
 }
 ```
 
-It’s **not** supported to call Hooks (functions starting with `use`) in any other cases, for example:
+Việc gọi Hook, tức các hàm bắt đầu bằng `use`, trong các trường hợp khác là **không được hỗ trợ**, ví dụ:
 
-* 🔴 Do not call Hooks inside conditions or loops.
-* 🔴 Do not call Hooks after a conditional `return` statement.
-* 🔴 Do not call Hooks in event handlers.
-* 🔴 Do not call Hooks in class components.
-* 🔴 Do not call Hooks inside functions passed to `useMemo`, `useReducer`, or `useEffect`.
-* 🔴 Do not call Hooks inside `try`/`catch`/`finally` blocks.
+* 🔴 Không gọi Hook trong điều kiện hoặc vòng lặp.
+* 🔴 Không gọi Hook sau lệnh `return` có điều kiện.
+* 🔴 Không gọi Hook trong event handler.
+* 🔴 Không gọi Hook trong class component.
+* 🔴 Không gọi Hook bên trong hàm được truyền vào `useMemo`, `useReducer` hoặc `useEffect`.
+* 🔴 Không gọi Hook bên trong khối `try`/`catch`/`finally`.
 
-If you break these rules, you might see this error.
+Nếu bạn phá vỡ các quy tắc này, bạn có thể thấy lỗi sau.
 
 ```js{3-4,11-12,20-21}
 function Bad({ cond }) {
@@ -105,24 +105,24 @@ function Bad() {
 }
 ```
 
-You can use the [`eslint-plugin-react-hooks` plugin](https://www.npmjs.com/package/eslint-plugin-react-hooks) to catch these mistakes.
+Bạn có thể dùng plugin [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks) để bắt những lỗi này.
 
 <Note>
 
-[Custom Hooks](/learn/reusing-logic-with-custom-hooks) *may* call other Hooks (that's their whole purpose). This works because custom Hooks are also supposed to only be called while a function component is rendering.
+[Custom Hook](/learn/reusing-logic-with-custom-hooks) *có thể* gọi các Hook khác, đó chính là mục đích của chúng. Điều này hoạt động vì custom Hook cũng chỉ được gọi khi function component đang kết xuất.
 
 </Note>
 
 ---
 
-## Only call Hooks from React functions {/*only-call-hooks-from-react-functions*/}
+## Chỉ gọi Hook từ các hàm React {/*only-call-hooks-from-react-functions*/}
 
-Don’t call Hooks from regular JavaScript functions. Instead, you can:
+Đừng gọi Hook từ các hàm JavaScript thông thường. Thay vào đó, bạn có thể:
 
-✅ Call Hooks from React function components.
-✅ Call Hooks from [custom Hooks](/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component).
+✅ Gọi Hook từ React function component.
+✅ Gọi Hook từ [custom Hook](/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component).
 
-By following this rule, you ensure that all stateful logic in a component is clearly visible from its source code.
+Làm theo quy tắc này giúp bạn bảo đảm mọi logic có state trong component đều hiển hiện rõ ràng ngay trong source code của nó.
 
 ```js {2,5}
 function FriendList() {
