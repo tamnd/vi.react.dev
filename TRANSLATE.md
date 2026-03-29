@@ -131,7 +131,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [ ] `src/content/community/conferences.md`
 - [x] `src/content/community/docs-contributors.md`
 - [x] `src/content/community/index.md`
-- [x] `src/content/community/meetups.md`
+- [ ] `src/content/community/meetups.md`
 - [ ] `src/content/community/team.md`
 - [x] `src/content/community/translations.md`
 - [ ] `src/content/community/versioning-policy.md`
