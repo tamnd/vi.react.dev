@@ -192,7 +192,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/learn/passing-props-to-a-component.md`
 - [ ] `src/content/learn/preserving-and-resetting-state.md`
 - [ ] `src/content/learn/queueing-a-series-of-state-updates.md`
-- [ ] `src/content/learn/react-compiler/debugging.md`
+- [x] `src/content/learn/react-compiler/debugging.md`
 - [ ] `src/content/learn/react-compiler/incremental-adoption.md`
 - [x] `src/content/learn/react-compiler/index.md`
 - [ ] `src/content/learn/react-compiler/installation.md`
