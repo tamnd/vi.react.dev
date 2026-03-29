@@ -272,7 +272,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/reference/react-dom/components/title.md`
 - [ ] `src/content/reference/react-dom/createPortal.md`
 - [ ] `src/content/reference/react-dom/flushSync.md`
-- [ ] `src/content/reference/react-dom/hooks/index.md`
+- [x] `src/content/reference/react-dom/hooks/index.md`
 - [ ] `src/content/reference/react-dom/hooks/useFormStatus.md`
 - [ ] `src/content/reference/react-dom/index.md`
 - [ ] `src/content/reference/react-dom/preconnect.md`
