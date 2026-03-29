@@ -1,7 +1,7 @@
 ---
-title: Special Props Warning
+title: Cảnh báo về Prop đặc biệt
 ---
 
-Most props on a JSX element are passed on to the component, however, there are two special props (`ref` and `key`) which are used by React, and are thus not forwarded to the component.
+Hầu hết các prop trên một phần tử JSX sẽ được truyền tiếp vào component. Tuy nhiên, có hai prop đặc biệt (`ref` và `key`) được React sử dụng, nên sẽ không được chuyển tiếp vào component.
 
-For instance, you can't read `props.key` from a component. If you need to access the same value within the child component, you should pass it as a different prop (ex: `<ListItemWrapper key={result.id} id={result.id} />` and read `props.id`). While this may seem redundant, it's important to separate app logic from hints to React.
+Ví dụ, bạn không thể đọc `props.key` từ bên trong component. Nếu cần truy cập cùng giá trị đó trong component con, bạn nên truyền nó bằng một prop khác, chẳng hạn `<ListItemWrapper key={result.id} id={result.id} />` rồi đọc `props.id`. Dù điều này có vẻ dư thừa, việc tách logic của ứng dụng khỏi các gợi ý dành cho React là rất quan trọng.

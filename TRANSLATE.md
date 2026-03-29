@@ -67,7 +67,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 - [x] `src/content/community/meetups.md`
 - [x] `src/content/community/versioning-policy.md`
 - [x] `src/content/community/videos.md`
-- [ ] `src/content/versions.md`
+- [x] `src/content/versions.md`
 - [ ] `src/content/blog/index.md`
 - [ ] `src/content/learn/index.md`
 - [ ] `src/content/learn/setup.md`
@@ -96,7 +96,7 @@ Prioritize smaller docs and UI-adjacent pages first, then move into foundational
 Work through these in order. Keep one reviewed page per commit and update this checklist after each completed page.
 
 - [x] `src/content/community/versioning-policy.md`
-- [ ] `src/content/versions.md`
+- [x] `src/content/versions.md`
 - [ ] `src/content/blog/index.md`
 - [ ] `src/content/learn/index.md`
 - [ ] `src/content/learn/setup.md`
@@ -121,7 +121,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 ### Root Pages (`2`)
 
 - [x] `src/content/index.md`
-- [ ] `src/content/versions.md`
+- [x] `src/content/versions.md`
 
 ### Blog (`24`)
 
@@ -358,7 +358,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/warnings/invalid-hook-call-warning.md`
 - [ ] `src/content/warnings/react-dom-test-utils.md`
 - [ ] `src/content/warnings/react-test-renderer.md`
-- [ ] `src/content/warnings/special-props.md`
+- [x] `src/content/warnings/special-props.md`
 - [ ] `src/content/warnings/unknown-prop.md`
 
 ## Non-Markdown Text Assets
