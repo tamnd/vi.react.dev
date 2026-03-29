@@ -239,7 +239,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/purity.md`
 - [ ] `src/content/reference/eslint-plugin-react-hooks/lints/refs.md`
 - [ ] `src/content/reference/eslint-plugin-react-hooks/lints/rules-of-hooks.md`
-- [ ] `src/content/reference/eslint-plugin-react-hooks/lints/set-state-in-effect.md`
+- [x] `src/content/reference/eslint-plugin-react-hooks/lints/set-state-in-effect.md`
 - [ ] `src/content/reference/eslint-plugin-react-hooks/lints/set-state-in-render.md`
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/static-components.md`
 - [x] `src/content/reference/eslint-plugin-react-hooks/lints/unsupported-syntax.md`

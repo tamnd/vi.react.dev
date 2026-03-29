@@ -4,29 +4,29 @@ title: set-state-in-effect
 
 <Intro>
 
-Validates against calling setState synchronously in an effect, which can lead to re-renders that degrade performance.
+Kiểm tra để ngăn việc gọi setState đồng bộ bên trong effect, vì điều này có thể dẫn đến các lần kết xuất lại làm giảm hiệu năng.
 
 </Intro>
 
-## Rule Details {/*rule-details*/}
+## Chi tiết luật {/*rule-details*/}
 
-Setting state immediately inside an effect forces React to restart the entire render cycle. When you update state in an effect, React must re-render your component, apply changes to the DOM, and then run effects again. This creates an extra render pass that could have been avoided by transforming data directly during render or deriving state from props. Transform data at the top level of your component instead. This code will naturally re-run when props or state change without triggering additional render cycles.
+Việc đặt state ngay bên trong effect buộc React phải khởi động lại toàn bộ chu kỳ kết xuất. Khi bạn cập nhật state trong effect, React phải kết xuất lại thành phần, áp dụng thay đổi vào DOM, rồi chạy effect lần nữa. Điều này tạo ra một lượt kết xuất thừa mà lẽ ra có thể tránh được bằng cách biến đổi dữ liệu trực tiếp trong lúc kết xuất hoặc suy ra state từ props. Thay vào đó, hãy biến đổi dữ liệu ở cấp cao nhất của thành phần. Đoạn mã đó sẽ tự chạy lại khi props hoặc state thay đổi mà không kích hoạt thêm chu kỳ kết xuất.
 
-Synchronous `setState` calls in effects trigger immediate re-renders before the browser can paint, causing performance issues and visual jank. React has to render twice: once to apply the state update, then again after effects run. This double rendering is wasteful when the same result could be achieved with a single render.
+Các lệnh gọi `setState` đồng bộ trong effect kích hoạt kết xuất lại ngay lập tức trước khi trình duyệt kịp vẽ, gây ra vấn đề hiệu năng và hiện tượng giật hình. React phải kết xuất hai lần: một lần để áp dụng cập nhật state, rồi một lần nữa sau khi effect chạy. Việc kết xuất kép này là lãng phí khi cùng kết quả đó có thể đạt được chỉ với một lần kết xuất.
 
-In many cases, you may also not need an effect at all. Please see [You Might Not Need an Effect](/learn/you-might-not-need-an-effect) for more information.
+Trong nhiều trường hợp, bạn thậm chí không cần effect. Hãy xem [Bạn Có thể Không Cần Effect](/learn/you-might-not-need-an-effect) để biết thêm chi tiết.
 
-## Common Violations {/*common-violations*/}
+## Các vi phạm thường gặp {/*common-violations*/}
 
-This rule catches several patterns where synchronous setState is used unnecessarily:
+Luật này bắt một số mẫu nơi setState đồng bộ bị dùng không cần thiết:
 
-- Setting loading state synchronously
-- Deriving state from props in effects
-- Transforming data in effects instead of render
+- Đặt state loading một cách đồng bộ
+- Suy ra state từ props trong effect
+- Biến đổi dữ liệu trong effect thay vì trong lúc kết xuất
 
-### Invalid {/*invalid*/}
+### Không hợp lệ {/*invalid*/}
 
-Examples of incorrect code for this rule:
+Ví dụ về mã không đúng cho luật này:
 
 ```js
 // ❌ Synchronous setState in effect
@@ -67,9 +67,9 @@ function Component({selectedId, items}) {
 }
 ```
 
-### Valid {/*valid*/}
+### Hợp lệ {/*valid*/}
 
-Examples of correct code for this rule:
+Ví dụ về mã đúng cho luật này:
 
 ```js
 // ✅ setState in an effect is fine if the value comes from a ref
@@ -90,4 +90,4 @@ function Component({selectedId, items}) {
 }
 ```
 
-**When something can be calculated from the existing props or state, don't put it in state.** Instead, calculate it during rendering. This makes your code faster, simpler, and less error-prone. Learn more in [You Might Not Need an Effect](/learn/you-might-not-need-an-effect).
+**Khi một giá trị có thể được tính từ props hoặc state hiện có, đừng đặt nó vào state.** Thay vào đó, hãy tính nó trong lúc kết xuất. Cách này giúp code nhanh hơn, đơn giản hơn và ít lỗi hơn. Tìm hiểu thêm trong [Bạn Có thể Không Cần Effect](/learn/you-might-not-need-an-effect).
