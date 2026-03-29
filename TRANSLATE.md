@@ -194,7 +194,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 - [ ] `src/content/learn/queueing-a-series-of-state-updates.md`
 - [ ] `src/content/learn/react-compiler/debugging.md`
 - [ ] `src/content/learn/react-compiler/incremental-adoption.md`
-- [ ] `src/content/learn/react-compiler/index.md`
+- [x] `src/content/learn/react-compiler/index.md`
 - [ ] `src/content/learn/react-compiler/installation.md`
 - [ ] `src/content/learn/react-compiler/introduction.md`
 - [ ] `src/content/learn/react-developer-tools.md`
