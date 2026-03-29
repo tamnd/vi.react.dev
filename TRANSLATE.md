@@ -170,7 +170,7 @@ Work through these in order. Keep one reviewed page per commit and update this c
 
 ### Learn (`52`)
 
-- [ ] `src/content/learn/add-react-to-an-existing-project.md`
+- [x] `src/content/learn/add-react-to-an-existing-project.md`
 - [ ] `src/content/learn/adding-interactivity.md`
 - [x] `src/content/learn/build-a-react-app-from-scratch.md`
 - [ ] `src/content/learn/choosing-the-state-structure.md`

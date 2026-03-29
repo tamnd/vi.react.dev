@@ -1,59 +1,59 @@
 ---
-title: Add React to an Existing Project
+title: Thêm React vào dự án hiện có
 ---
 
 <Intro>
 
-If you want to add some interactivity to your existing project, you don't have to rewrite it in React. Add React to your existing stack, and render interactive React components anywhere.
+Nếu bạn muốn thêm một ít tính tương tác vào dự án hiện có, bạn không cần phải viết lại toàn bộ nó bằng React. Hãy thêm React vào stack hiện tại của bạn và kết xuất các thành phần React tương tác ở bất cứ đâu.
 
 </Intro>
 
 <Note>
 
-**You need to install [Node.js](https://nodejs.org/en/) for local development.** Although you can [try React](/learn/installation#try-react) online or with a simple HTML page, realistically most JavaScript tooling you'll want to use for development requires Node.js.
+**Bạn cần cài [Node.js](https://nodejs.org/en/) để phát triển cục bộ.** Dù bạn có thể [thử React](/learn/installation#try-react) trực tuyến hoặc với một trang HTML đơn giản, trên thực tế phần lớn công cụ JavaScript bạn muốn dùng để phát triển đều cần Node.js.
 
 </Note>
 
-## Using React for an entire subroute of your existing website {/*using-react-for-an-entire-subroute-of-your-existing-website*/}
+## Dùng React cho toàn bộ một subroute của website hiện có {/*using-react-for-an-entire-subroute-of-your-existing-website*/}
 
-Let's say you have an existing web app at `example.com` built with another server technology (like Rails), and you want to implement all routes starting with `example.com/some-app/` fully with React.
+Giả sử bạn có một ứng dụng web tại `example.com` được xây bằng công nghệ server khác, như Rails, và bạn muốn triển khai toàn bộ các route bắt đầu bằng `example.com/some-app/` hoàn toàn bằng React.
 
-Here's how we recommend to set it up:
+Đây là cách chúng tôi khuyên bạn nên thiết lập:
 
-1. **Build the React part of your app** using one of the [React-based frameworks](/learn/creating-a-react-app).
-2. **Specify `/some-app` as the *base path*** in your framework's configuration (here's how: [Next.js](https://nextjs.org/docs/app/api-reference/config/next-config-js/basePath), [Gatsby](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/path-prefix/)).
-3. **Configure your server or a proxy** so that all requests under `/some-app/` are handled by your React app.
+1. **Xây dựng phần React của ứng dụng** bằng một trong các [framework dựa trên React](/learn/creating-a-react-app).
+2. **Chỉ định `/some-app` làm *base path*** trong cấu hình của framework (xem cách làm với [Next.js](https://nextjs.org/docs/app/api-reference/config/next-config-js/basePath), [Gatsby](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/path-prefix/)).
+3. **Cấu hình server hoặc proxy** để mọi yêu cầu dưới `/some-app/` đều được ứng dụng React của bạn xử lý.
 
-This ensures the React part of your app can [benefit from the best practices](/learn/build-a-react-app-from-scratch#consider-using-a-framework) baked into those frameworks.
+Điều này bảo đảm phần React trong ứng dụng của bạn có thể [hưởng lợi từ các thực hành tốt nhất](/learn/build-a-react-app-from-scratch#consider-using-a-framework) được tích hợp sẵn trong các framework đó.
 
-Many React-based frameworks are full-stack and let your React app take advantage of the server. However, you can use the same approach even if you can't or don't want to run JavaScript on the server. In that case, serve the HTML/CSS/JS export ([`next export` output](https://nextjs.org/docs/advanced-features/static-html-export) for Next.js, default for Gatsby) at `/some-app/` instead.
+Nhiều framework dựa trên React là full-stack và cho phép ứng dụng React của bạn tận dụng server. Tuy nhiên, bạn vẫn có thể dùng cách tiếp cận tương tự ngay cả khi không thể hoặc không muốn chạy JavaScript trên server. Trong trường hợp đó, hãy phục vụ bản export HTML/CSS/JS ([đầu ra của `next export`](https://nextjs.org/docs/advanced-features/static-html-export) với Next.js, mặc định của Gatsby) tại `/some-app/`.
 
-## Using React for a part of your existing page {/*using-react-for-a-part-of-your-existing-page*/}
+## Dùng React cho một phần của trang hiện có {/*using-react-for-a-part-of-your-existing-page*/}
 
-Let's say you have an existing page built with another technology (either a server one like Rails, or a client one like Backbone), and you want to render interactive React components somewhere on that page. That's a common way to integrate React--in fact, it's how most React usage looked at Meta for many years!
+Giả sử bạn có một trang hiện có được xây bằng công nghệ khác, có thể ở phía server như Rails hoặc phía client như Backbone, và bạn muốn kết xuất các thành phần React tương tác ở đâu đó trên trang đó. Đây là một cách tích hợp React rất phổ biến. Thực tế, đó cũng là cách phần lớn việc dùng React ở Meta diễn ra trong nhiều năm.
 
-You can do this in two steps:
+Bạn có thể làm điều này qua hai bước:
 
-1. **Set up a JavaScript environment** that lets you use the [JSX syntax](/learn/writing-markup-with-jsx), split your code into modules with the [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) / [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) syntax, and use packages (for example, React) from the [npm](https://www.npmjs.com/) package registry.
-2. **Render your React components** where you want to see them on the page.
+1. **Thiết lập môi trường JavaScript** cho phép bạn dùng [cú pháp JSX](/learn/writing-markup-with-jsx), chia code thành module bằng cú pháp [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) / [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export), và dùng các package, ví dụ React, từ registry [npm](https://www.npmjs.com/).
+2. **Kết xuất các thành phần React của bạn** ở nơi bạn muốn chúng xuất hiện trên trang.
 
-The exact approach depends on your existing page setup, so let's walk through some details.
+Cách làm chính xác phụ thuộc vào cách trang hiện tại của bạn được thiết lập, vì vậy hãy đi qua một vài chi tiết.
 
-### Step 1: Set up a modular JavaScript environment {/*step-1-set-up-a-modular-javascript-environment*/}
+### Bước 1: Thiết lập môi trường JavaScript dạng module {/*step-1-set-up-a-modular-javascript-environment*/}
 
-A modular JavaScript environment lets you write your React components in individual files, as opposed to writing all of your code in a single file. It also lets you use all the wonderful packages published by other developers on the [npm](https://www.npmjs.com/) registry--including React itself! How you do this depends on your existing setup:
+Môi trường JavaScript dạng module cho phép bạn viết các thành phần React trong từng tệp riêng thay vì nhét toàn bộ code vào một tệp duy nhất. Nó cũng cho phép bạn dùng toàn bộ những package tuyệt vời mà các nhà phát triển khác đã xuất bản lên registry [npm](https://www.npmjs.com/), bao gồm cả React! Cách thực hiện điều này phụ thuộc vào cấu hình hiện tại của bạn:
 
-* **If your app is already split into files that use `import` statements,** try to use the setup you already have. Check whether writing `<div />` in your JS code causes a syntax error. If it causes a syntax error, you might need to [transform your JavaScript code with Babel](https://babeljs.io/setup), and enable the [Babel React preset](https://babeljs.io/docs/babel-preset-react) to use JSX.
+* **Nếu ứng dụng của bạn đã được tách thành các tệp dùng câu lệnh `import`,** hãy thử tận dụng thiết lập hiện có. Kiểm tra xem việc viết `<div />` trong code JS có gây lỗi cú pháp không. Nếu có, bạn có thể cần [biến đổi code JavaScript bằng Babel](https://babeljs.io/setup), và bật [Babel React preset](https://babeljs.io/docs/babel-preset-react) để dùng JSX.
 
-* **If your app doesn't have an existing setup for compiling JavaScript modules,** set it up with [Vite](https://vite.dev/). The Vite community maintains [many integrations with backend frameworks](https://github.com/vitejs/awesome-vite#integrations-with-backends), including Rails, Django, and Laravel. If your backend framework is not listed, [follow this guide](https://vite.dev/guide/backend-integration.html) to manually integrate Vite builds with your backend.
+* **Nếu ứng dụng của bạn chưa có thiết lập biên dịch module JavaScript,** hãy thiết lập bằng [Vite](https://vite.dev/). Cộng đồng Vite duy trì [nhiều tích hợp với framework backend](https://github.com/vitejs/awesome-vite#integrations-with-backends), bao gồm Rails, Django và Laravel. Nếu framework backend của bạn không có trong danh sách, hãy [làm theo hướng dẫn này](https://vite.dev/guide/backend-integration.html) để tích hợp thủ công build của Vite với backend của bạn.
 
-To check whether your setup works, run this command in your project folder:
+Để kiểm tra xem thiết lập của bạn có hoạt động không, hãy chạy lệnh này trong thư mục dự án:
 
 <TerminalBlock>
 npm install react react-dom
 </TerminalBlock>
 
-Then add these lines of code at the top of your main JavaScript file (it might be called `index.js` or `main.js`):
+Sau đó thêm những dòng code sau vào đầu tệp JavaScript chính của bạn, có thể tên là `index.js` hoặc `main.js`:
 
 <Sandpack>
 
@@ -81,17 +81,17 @@ root.render(<h1>Hello, world</h1>);
 
 </Sandpack>
 
-If the entire content of your page was replaced by a "Hello, world!", everything worked! Keep reading.
+Nếu toàn bộ nội dung trên trang được thay bằng "Hello, world!", tức là mọi thứ đã hoạt động. Hãy đọc tiếp.
 
 <Note>
 
-Integrating a modular JavaScript environment into an existing project for the first time can feel intimidating, but it's worth it! If you get stuck, try our [community resources](/community) or the [Vite Chat](https://chat.vite.dev/).
+Việc tích hợp môi trường JavaScript dạng module vào một dự án hiện có lần đầu có thể khiến bạn thấy ngợp, nhưng nó rất đáng. Nếu bị mắc kẹt, hãy thử dùng [tài nguyên cộng đồng](/community) hoặc [Vite Chat](https://chat.vite.dev/).
 
 </Note>
 
-### Step 2: Render React components anywhere on the page {/*step-2-render-react-components-anywhere-on-the-page*/}
+### Bước 2: Kết xuất các thành phần React ở bất cứ đâu trên trang {/*step-2-render-react-components-anywhere-on-the-page*/}
 
-In the previous step, you put this code at the top of your main file:
+Ở bước trước, bạn đã đặt đoạn code này ở đầu tệp chính:
 
 ```js
 import { createRoot } from 'react-dom/client';
@@ -104,11 +104,11 @@ const root = createRoot(document.getElementById('app'));
 root.render(<h1>Hello, world</h1>);
 ```
 
-Of course, you don't actually want to clear the existing HTML content!
+Dĩ nhiên, trên thực tế bạn sẽ không muốn xóa toàn bộ nội dung HTML hiện có.
 
-Delete this code.
+Hãy xóa đoạn code đó.
 
-Instead, you probably want to render your React components in specific places in your HTML. Open your HTML page (or the server templates that generate it) and add a unique [`id`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) attribute to any tag, for example:
+Thay vào đó, có lẽ bạn muốn kết xuất các thành phần React của mình tại những vị trí cụ thể trong HTML. Hãy mở trang HTML của bạn, hoặc các template server tạo ra nó, rồi thêm một thuộc tính [`id`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) duy nhất vào bất kỳ thẻ nào, ví dụ:
 
 ```html
 <!-- ... somewhere in your html ... -->
@@ -116,7 +116,7 @@ Instead, you probably want to render your React components in specific places in
 <!-- ... more html ... -->
 ```
 
-This lets you find that HTML element with [`document.getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById) and pass it to [`createRoot`](/reference/react-dom/client/createRoot) so that you can render your own React component inside:
+Điều này cho phép bạn tìm phần tử HTML đó bằng [`document.getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById) và truyền nó vào [`createRoot`](/reference/react-dom/client/createRoot) để có thể kết xuất thành phần React của riêng bạn bên trong:
 
 <Sandpack>
 
@@ -147,10 +147,10 @@ root.render(<NavigationBar />);
 
 </Sandpack>
 
-Notice how the original HTML content from `index.html` is preserved, but your own `NavigationBar` React component now appears inside the `<nav id="navigation">` from your HTML. Read the [`createRoot` usage documentation](/reference/react-dom/client/createRoot#rendering-a-page-partially-built-with-react) to learn more about rendering React components inside an existing HTML page.
+Hãy để ý rằng nội dung HTML gốc từ `index.html` vẫn được giữ nguyên, nhưng thành phần React `NavigationBar` của riêng bạn giờ xuất hiện bên trong `<nav id="navigation">` trong HTML. Hãy đọc [tài liệu sử dụng `createRoot`](/reference/react-dom/client/createRoot#rendering-a-page-partially-built-with-react) để tìm hiểu thêm về cách kết xuất các thành phần React bên trong một trang HTML hiện có.
 
-When you adopt React in an existing project, it's common to start with small interactive components (like buttons), and then gradually keep "moving upwards" until eventually your entire page is built with React. If you ever reach that point, we recommend migrating to [a React framework](/learn/creating-a-react-app) right after to get the most out of React.
+Khi áp dụng React vào một dự án hiện có, bạn thường sẽ bắt đầu với các thành phần tương tác nhỏ, chẳng hạn nút bấm, rồi dần dần "đi lên" cho tới khi cuối cùng toàn bộ trang được xây bằng React. Nếu bạn đạt đến điểm đó, chúng tôi khuyên bạn nên chuyển sang [một framework React](/learn/creating-a-react-app) ngay sau đó để tận dụng React tối đa.
 
-## Using React Native in an existing native mobile app {/*using-react-native-in-an-existing-native-mobile-app*/}
+## Dùng React Native trong ứng dụng mobile native hiện có {/*using-react-native-in-an-existing-native-mobile-app*/}
 
-[React Native](https://reactnative.dev/) can also be integrated into existing native apps incrementally. If you have an existing native app for Android (Java or Kotlin) or iOS (Objective-C or Swift), [follow this guide](https://reactnative.dev/docs/integration-with-existing-apps) to add a React Native screen to it.
+[React Native](https://reactnative.dev/) cũng có thể được tích hợp dần vào các ứng dụng native hiện có. Nếu bạn đã có một ứng dụng native hiện có cho Android (Java hoặc Kotlin) hoặc iOS (Objective-C hoặc Swift), hãy [làm theo hướng dẫn này](https://reactnative.dev/docs/integration-with-existing-apps) để thêm một màn hình React Native vào đó.
