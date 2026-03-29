@@ -92,7 +92,7 @@ This checklist is based on:
 
 ### Community (`9`)
 
-- [ ] `src/content/community/acknowledgements.md`
+- [x] `src/content/community/acknowledgements.md`
 - [ ] `src/content/community/conferences.md`
 - [x] `src/content/community/docs-contributors.md`
 - [ ] `src/content/community/index.md`
